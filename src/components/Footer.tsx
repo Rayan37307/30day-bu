@@ -2,7 +2,7 @@ import React from 'react';
 
 export function Footer() {
   return (
-    <footer className="overflow-hidden text-white bg-[#050505] border-neutral-800 border-t pt-24">
+    <footer className="overflow-hidden text-white bg-[#050505] border-neutral-800 border-t pt-16">
       {/* Giant Brand Text */}
       <div 
         className="text-center w-full mb-20 px-4"
@@ -11,7 +11,7 @@ export function Footer() {
           WebkitMaskImage: 'linear-gradient(180deg, transparent, black 0%, black 55%, transparent)' 
         }}
       >
-        <h1 className="text-[15vw] leading-[0.7] select-none font-normal footer-brand-text text-[#141414] tracking-tighter mix-blend-screen scale-y-110">
+        <h1 className="text-[13vw] leading-[0.7] select-none font-normal footer-brand-text text-[#141414] tracking-tighter mix-blend-screen scale-y-110">
           BACKBENCHERS
         </h1>
       </div>

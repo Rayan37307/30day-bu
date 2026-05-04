@@ -1,3 +1,5 @@
+"use client";
+
 import { useRef } from "react";
 import { Brain, Video, Cpu, Rocket } from "lucide-react";
 import gsap from "gsap";
@@ -6,130 +8,143 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const modules = [
+  {
+    id: "01",
+    title: "দ্য ইনার গেম",
+    subtitle: "দিন ১-৭: প্যাশন এবং প্রোডাক্টিভিটি",
+    icon: <Brain className="text-red-400" size={28} strokeWidth={1.5} />,
+    accentColor: "#ff3b3b",
+    accentBg: "rgba(255,59,59,0.08)",
+    glowColor: "rgba(255,59,59,0.15)",
+    points: [
+      "ইকিগাই ফ্রেমওয়ার্ক ব্যবহার করে জীবনের আসল প্যাশন খুঁজে বের করা।",
+      "অলসতা দূর করা এবং কার্যকরী অভ্যাস গড়ে তোলা।",
+      "দ্রুত জ্ঞান অর্জনের জন্য নিউরোসায়েন্স-সমর্থিত স্টাডি টিপস।",
+    ],
+  },
+  {
+    id: "02",
+    title: "ক্রিয়েটর ইকোনমি",
+    subtitle: "দিন ৮-১৫: কন্টেন্ট এবং এডিটিং",
+    icon: <Video className="text-purple-400" size={28} strokeWidth={1.5} />,
+    accentColor: "#a855f7",
+    accentBg: "rgba(168,85,247,0.08)",
+    glowColor: "rgba(168,85,247,0.15)",
+    points: [
+      "একটি আধুনিক কন্টেন্ট ক্রিয়েশন ওয়ার্কফ্লো সেটআপ করা।",
+      "এআই টুল ব্যবহার করে দ্রুত হাই-রিটেনশন ভিডিও এডিট করা।",
+      "অ্যালগরিদম ডমিনেট করার মতো হুক এবং স্টোরিটেলিং স্ক্রিপ্ট লেখা।",
+    ],
+  },
+  {
+    id: "03",
+    title: "দ্য টেকনিক্যাল এজ",
+    subtitle: "দিন ১৬-২৫: এআই এর মাধ্যমে কোডিং",
+    icon: <Cpu className="text-emerald-400" size={28} strokeWidth={1.5} />,
+    accentColor: "#10b981",
+    accentBg: "rgba(16,185,129,0.08)",
+    glowColor: "rgba(16,185,129,0.15)",
+    points: [
+      "প্রম্পট ইঞ্জিনিয়ারিংয়ের সম্পূর্ণ গাইডলাইন।",
+      "কোড টাইপ না করেই লজিক এবং আর্কিটেকচার তৈরি করা।",
+      "এআই ব্যবহার করে আপনার প্রথম ফুল-ফাংশনাল ওয়েব অ্যাপ ডিপ্লয় করা।",
+    ],
+  },
+  {
+    id: "04",
+    title: "ইন্টিগ্রেশন এবং লঞ্চ",
+    subtitle: "দিন ২৬-৩০: সবকিছুর বাস্তবায়ন",
+    icon: <Rocket className="text-amber-400" size={28} strokeWidth={1.5} />,
+    accentColor: "#f59e0b",
+    accentBg: "rgba(245,158,11,0.08)",
+    glowColor: "rgba(245,158,11,0.15)",
+    points: [
+      "আপনার প্যাশনের সাথে নতুন টেকনিক্যাল স্কিলের সমন্বয় করা।",
+      "আপনার পরবর্তী বড় লক্ষ্যের জন্য একটি ৯০-দিনের অ্যাকশন প্ল্যান তৈরি করা।",
+      "ফাইনাল প্রশ্নোত্তর, প্রজেক্ট রিভিউ এবং গ্র্যাজুয়েশন।",
+    ],
+  },
+];
+
 export function Modules() {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const modules = [
-    {
-      id: "01",
-      title: "দ্য ইনার গেম",
-      subtitle: "দিন ১-৭: প্যাশন এবং প্রোডাক্টিভিটি",
-      icon: <Brain className="text-red-400" size={28} strokeWidth={1.5} />,
-      accentColor: "#ff3b3b",
-      accentBg: "rgba(255,59,59,0.08)",
-      glowColor: "rgba(255,59,59,0.15)",
-      points: [
-        "ইকিগাই ফ্রেমওয়ার্ক ব্যবহার করে জীবনের আসল প্যাশন খুঁজে বের করা।",
-        "অলসতা দূর করা এবং কার্যকরী অভ্যাস গড়ে তোলা।",
-        "দ্রুত জ্ঞান অর্জনের জন্য নিউরোসায়েন্স-সমর্থিত স্টাডি টিপস।",
-      ],
-    },
-    {
-      id: "02",
-      title: "ক্রিয়েটর ইকোনমি",
-      subtitle: "দিন ৮-১৫: কন্টেন্ট এবং এডিটিং",
-      icon: <Video className="text-purple-400" size={28} strokeWidth={1.5} />,
-      accentColor: "#a855f7",
-      accentBg: "rgba(168,85,247,0.08)",
-      glowColor: "rgba(168,85,247,0.15)",
-      points: [
-        "একটি আধুনিক কন্টেন্ট ক্রিয়েশন ওয়ার্কফ্লো সেটআপ করা।",
-        "এআই টুল ব্যবহার করে দ্রুত হাই-রিটেনশন ভিডিও এডিট করা।",
-        "অ্যালগরিদম ডমিনেট করার মতো হুক এবং স্টোরিটেলিং স্ক্রিপ্ট লেখা।",
-      ],
-    },
-    {
-      id: "03",
-      title: "দ্য টেকনিক্যাল এজ",
-      subtitle: "দিন ১৬-২৫: এআই এর মাধ্যমে কোডিং",
-      icon: <Cpu className="text-emerald-400" size={28} strokeWidth={1.5} />,
-      accentColor: "#10b981",
-      accentBg: "rgba(16,185,129,0.08)",
-      glowColor: "rgba(16,185,129,0.15)",
-      points: [
-        "প্রম্পট ইঞ্জিনিয়ারিংয়ের সম্পূর্ণ গাইডলাইন।",
-        "কোড টাইপ না করেই লজিক এবং আর্কিটেকচার তৈরি করা।",
-        "এআই ব্যবহার করে আপনার প্রথম ফুল-ফাংশনাল ওয়েব অ্যাপ ডিপ্লয় করা।",
-      ],
-    },
-    {
-      id: "04",
-      title: "ইন্টিগ্রেশন এবং লঞ্চ",
-      subtitle: "দিন ২৬-৩০: সবকিছুর বাস্তবায়ন",
-      icon: <Rocket className="text-amber-400" size={28} strokeWidth={1.5} />,
-      accentColor: "#f59e0b",
-      accentBg: "rgba(245,158,11,0.08)",
-      glowColor: "rgba(245,158,11,0.15)",
-      points: [
-        "আপনার প্যাশনের সাথে নতুন টেকনিক্যাল স্কিলের সমন্বয় করা।",
-        "আপনার পরবর্তী বড় লক্ষ্যের জন্য একটি ৯০-দিনের অ্যাকশন প্ল্যান তৈরি করা।",
-        "ফাইনাল প্রশ্নোত্তর, প্রজেক্ট রিভিউ এবং গ্র্যাজুয়েশন।",
-      ],
-    },
-  ];
-
   useGSAP(
     () => {
-      const cards = gsap.utils.toArray<HTMLElement>(".module-card");
+      const wrappers = gsap.utils.toArray<HTMLElement>(".card-wrapper");
+      
+      // 1. Force all cards (except the first one) to start below the screen
+      gsap.set(wrappers.slice(1), { y: "100vh" });
 
-      cards.forEach((card, i) => {
-        const isLast = i === cards.length - 1;
-        const inner = card.querySelector(".module-card-inner");
-
-        // Scale down + fade as subsequent cards stack on top
-        if (!isLast && inner) {
-          gsap.to(inner, {
-            scale: 0.9,
-            opacity: 0.3,
-            ease: "none",
-            scrollTrigger: {
-              trigger: cards[i + 1],
-              start: "top 80%",
-              end: "top 20%",
-              scrub: true,
-            },
-          });
-        }
+      // 2. Pin the container and create a timeline tied to the scroll
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top top",     // Pin exactly when the section hits the top
+          end: `+=${wrappers.length * 100}%`, // Scroll distance (400vh for 4 cards)
+          pin: true,
+          scrub: 1, // Smooth scrubbing
+        },
       });
 
-      // Refresh ScrollTrigger to ensure all markers are correct
-      ScrollTrigger.refresh();
+      wrappers.forEach((wrapper, i) => {
+        if (i === 0) return; // Skip first card (it's already in the center)
+
+        const syncLabel = `card-${i}`;
+
+        // 3. Bring the current card up from the bottom
+        tl.to(wrapper, {
+            y: "0vh",
+            ease: "none",
+        }, syncLabel);
+
+        // 4. At the EXACT SAME TIME, scale down ALL previously stacked cards
+        for (let j = 0; j < i; j++) {
+          const prevInner = wrappers[j].querySelector(".card-inner");
+          tl.to(prevInner, {
+              scale: 1 - ((i - j) * 0.05), // Drops by 0.05 scale each step back
+              opacity: 1 - ((i - j) * 0.1), // Fades slightly for depth
+              filter: "blur(2px)", // Optional blur effect
+              ease: "none"
+          }, syncLabel);
+        }
+      });
     },
     { scope: containerRef }
   );
 
   return (
-    <section className="relative w-full max-w-[940px] mx-auto px-6 pt-48 pb-32" id="product">
-      {/* Section Header */}
-      <div className="text-center mb-32">
+    <div className="bg-transparent">
+      {/* Header Section (Scrolls normally) */}
+      <section className="pt-40 pb-20 px-6 text-center">
         <p className="text-xs font-bold tracking-[0.2em] uppercase text-white/30 mb-4">
           কোর্স কারিকুলাম
         </p>
         <h2 className="font-display font-medium text-4xl md:text-5xl mb-4 text-white">
-          ৩০-দিনের{" "}
-          <span className="text-electric-blue font-bold">রোডম্যাপ</span>
+          ৩০-দিনের <span className="text-blue-500 font-bold">রোডম্যাপ</span>
         </h2>
         <p className="text-slate-400 max-w-xl mx-auto text-lg pt-2 leading-relaxed">
-          প্রতিদিন নতুন কিছু শিখুন। নিচে কোর্সের ৪টি ধাপের ব্রেকডাউন দেওয়া
-          হলো।
+          প্রতিদিন নতুন কিছু শিখুন। নিচে কোর্সের ৪টি ধাপের ব্রেকডাউন দেওয়া হলো।
         </p>
-      </div>
+      </section>
 
-      {/* Stacking Cards — Using CSS Sticky for maximum robustness */}
-      <div ref={containerRef} className="relative flex flex-col gap-12 pb-[40vh]">
-        {modules.map((mod, idx) => (
+      {/* Pinned Stacking Cards Section */}
+      <section ref={containerRef} className="relative flex items-center justify-center h-screen w-full overflow-hidden px-4 md:px-6">
+        {modules.map((mod, i) => (
           <div
             key={mod.id}
-            className="module-card sticky w-full will-change-transform"
-            style={{
-              top: `${80 + idx * 32}px`,
-              zIndex: idx + 1,
-              transformOrigin: "center top",
-            }}
+            className="card-wrapper absolute inset-0 flex items-center justify-center w-full h-full will-change-transform"
+            style={{ zIndex: i + 1 }}
           >
+            {/* 
+              origin-top: Scales from the top edge, not the center
+              top: calc... Creates the visual "stacked edges" offset effect
+            */}
             <div
-              className="module-card-inner relative overflow-hidden rounded-[28px] border border-white/[0.06] bg-[#0a0a0d] flex flex-col md:flex-row transition-shadow duration-500 shadow-[0_30px_60px_rgba(0,0,0,0.6)]"
+              className="card-inner relative w-full max-w-[940px] origin-top flex flex-col md:flex-row overflow-hidden rounded-[28px] border border-white/[0.06] bg-[#0a0a0d] shadow-[0_30px_60px_rgba(0,0,0,0.6)] will-change-transform"
               style={{
+                top: `calc(-5vh + ${i * 30}px)`, 
                 boxShadow: `0 0 0 1px rgba(255,255,255,0.04), 0 30px 60px rgba(0,0,0,0.6), 0 0 80px ${mod.glowColor}`,
               }}
             >
@@ -143,12 +158,12 @@ export function Modules() {
 
               {/* Left panel */}
               <div
-                className="relative w-full md:w-[42%] p-10 md:p-12 flex flex-col justify-between border-b md:border-b-0 md:border-r border-white/[0.05]"
+                className="relative flex w-full flex-col justify-between border-b border-white/[0.05] p-8 md:w-[42%] md:border-b-0 md:border-r md:p-12"
                 style={{ background: mod.accentBg }}
               >
-                <div className="flex items-center justify-between mb-10">
+                <div className="mb-10 flex items-center justify-between">
                   <span
-                    className="text-[11px] font-bold tracking-[0.18em] uppercase px-3 py-1.5 rounded-full border"
+                    className="rounded-full border px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em]"
                     style={{
                       color: mod.accentColor,
                       borderColor: `${mod.accentColor}30`,
@@ -158,7 +173,7 @@ export function Modules() {
                     Module {mod.id}
                   </span>
                   <div
-                    className="w-11 h-11 rounded-2xl border border-white/10 flex items-center justify-center"
+                    className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10"
                     style={{ background: `${mod.accentColor}15` }}
                   >
                     {mod.icon}
@@ -166,31 +181,28 @@ export function Modules() {
                 </div>
 
                 <div>
-                  <h3 className="font-display font-semibold text-2xl md:text-[1.65rem] text-white leading-tight mb-3">
+                  <h3 className="mb-3 font-display text-2xl font-semibold leading-tight text-white md:text-[1.65rem]">
                     {mod.title}
                   </h3>
-                  <p className="text-slate-400 text-[14px] leading-relaxed">
+                  <p className="text-[14px] leading-relaxed text-slate-400">
                     {mod.subtitle}
                   </p>
                 </div>
 
                 <div
-                  className="absolute -bottom-10 -left-10 w-40 h-40 rounded-full blur-3xl opacity-20 pointer-events-none"
+                  className="pointer-events-none absolute -bottom-10 -left-10 h-40 w-40 rounded-full blur-3xl opacity-20"
                   style={{ background: mod.accentColor }}
                 />
               </div>
 
               {/* Right panel — steps */}
-              <div className="w-full md:w-[58%] p-10 md:p-12 flex items-center">
-                <ul className="w-full space-y-7 relative">
-                  <div className="absolute left-[18px] top-5 bottom-5 w-px bg-white/[0.06]" />
+              <div className="flex w-full items-center p-8 md:w-[58%] md:p-12 bg-[#0e0e12]">
+                <ul className="relative w-full space-y-7">
+                  <div className="absolute bottom-5 left-[18px] top-5 w-px bg-white/[0.06]" />
                   {mod.points.map((point, pIdx) => (
-                    <li
-                      key={pIdx}
-                      className="flex items-start gap-5 relative"
-                    >
+                    <li key={pIdx} className="relative flex items-start gap-5">
                       <div
-                        className="relative z-10 mt-0.5 w-9 h-9 rounded-xl flex items-center justify-center shrink-0 border border-white/[0.07] bg-[#0e0e12]"
+                        className="relative z-10 mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-white/[0.07] bg-[#0e0e12]"
                         style={{
                           boxShadow: `0 0 0 3px ${mod.accentColor}12, inset 0 1px 2px rgba(255,255,255,0.06)`,
                         }}
@@ -202,7 +214,7 @@ export function Modules() {
                           {pIdx + 1}
                         </span>
                       </div>
-                      <span className="text-slate-300 text-[14.5px] leading-relaxed pt-1.5">
+                      <span className="pt-1.5 text-[14.5px] leading-relaxed text-slate-300">
                         {point}
                       </span>
                     </li>
@@ -212,7 +224,7 @@ export function Modules() {
             </div>
           </div>
         ))}
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }
