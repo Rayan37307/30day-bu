@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Galada&family=Inter:wght@400;500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Galada&family=Inter:wght@400;500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -9,6 +9,7 @@
   
   --font-sans: "Inter", "Hind Siliguri", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Galada", cursive;
+  --font-oswald: "Oswald", sans-serif;
 }
 
 body {
@@ -45,5 +46,35 @@ h1, h2, h3, h4, h5, h6, .font-display {
 
 .animate-marquee-reverse {
   animation: marquee-reverse 40s linear infinite;
+}
+
+@keyframes animationIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes noodle {
+  0% { stroke-dashoffset: 1000; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes beam-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-noodle {
+  stroke-dasharray: 1000;
+  animation: noodle 5s linear infinite;
+}
+
+.animate-noodle-delayed {
+  stroke-dasharray: 1000;
+  animation: noodle 5s linear infinite;
+  animation-delay: 2.5s;
+}
+
+.animate-beam-spin {
+  animation: beam-spin 8s linear infinite;
 }
 

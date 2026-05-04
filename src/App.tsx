@@ -13,6 +13,7 @@ import { CTABanner } from './components/CTABanner';
 import { Footer } from './components/Footer';
 import { Mentor } from './components/Mentor';
 import { Preloader } from './components/Preloader';
+import { Approach } from './components/Approach';
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -70,6 +71,7 @@ export default function App() {
           {/* <Navbar /> */}
           <Hero />
           <CTABanner />
+          <Approach />
 
           <Modules />
           {/* <Mentor /> */}
