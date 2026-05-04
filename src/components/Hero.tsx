@@ -62,7 +62,7 @@ export function Hero() {
             </span>
           </div>
           <h1
-            className="sm:text-6xl md:text-7xl lg:text-8xl leading-[1.1] text-5xl text-white tracking-tight font-display animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.2s_both]">
+            className="sm:text-6xl text-white md:text-7xl lg:text-8xl leading-[1.1] text-5xl text-white tracking-tight font-display animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.2s_both]">
             প্যাশন থেকে প্রফিট: 
             <br className="hidden sm:block" />
             এআই এবং ক্রিয়েটর ইকোনমি
