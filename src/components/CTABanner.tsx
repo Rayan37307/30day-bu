@@ -25,7 +25,7 @@ export function CTABanner() {
   }, []);
 
   return (
-    <div className="w-full max-w-[1200px] mx-auto px-6 mt-4 md:mt-8 relative z-20 mb-20">
+    <div className="w-full max-w-[1200px] mx-auto max-md:px-6 mt-4 md:mt-8 relative z-20 mb-20">
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

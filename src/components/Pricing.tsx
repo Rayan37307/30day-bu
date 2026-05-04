@@ -10,7 +10,7 @@ export function Pricing() {
   ];
 
   return (
-    <div className="mx-auto max-w-[1200px] px-6" id="pricing">
+    <div className="mx-auto max-w-[1200px] max-md:px-6" id="pricing">
       <div className="flex flex-col gap-x-16 gap-y-16 rounded-lg border border-border-subtle bg-surface mt-20 mb-20 px-6 py-20 relative overflow-hidden">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 w-full relative z-10">
