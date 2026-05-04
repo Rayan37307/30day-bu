@@ -14,6 +14,7 @@ import { Footer } from './components/Footer';
 import { Mentor } from './components/Mentor';
 import { Preloader } from './components/Preloader';
 import { Approach } from './components/Approach';
+import { Features } from './components/Features';
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -78,7 +79,7 @@ export default function App() {
           <Hero />
           <CTABanner />
           <Approach />
-
+          <Features />
           <Modules />
           {/* <Mentor /> */}
           <SocialProof />
