@@ -64,6 +64,12 @@ export default function App() {
         {/* Global Background Elements */}
         <div className="fixed inset-0 z-0 pointer-events-none">
           <div className="absolute inset-0 bg-grid-pattern opacity-40 [mask-image:radial-gradient(ellipse_at_center,black_70%,transparent_100%)]" />
+          
+          {/* Red Splashes/Gradients */}
+          <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-electric-blue/10 blur-[120px] opacity-60" />
+          <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-electric-blue/5 blur-[150px] opacity-40" />
+          <div className="absolute top-[40%] right-[-5%] w-[30%] h-[40%] rounded-full bg-electric-blue/10 blur-[100px] opacity-30" />
+          <div className="absolute bottom-[20%] left-[5%] w-[40%] h-[30%] rounded-full bg-electric-blue/5 blur-[120px] opacity-40" />
         </div>
 
         {/* Main Content Hierarchy */}

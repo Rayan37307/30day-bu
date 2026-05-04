@@ -50,6 +50,9 @@ export function Hero() {
       </div>
     </header>
     <div className="z-10 relative">
+      {/* Background Glow for Hero */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[60%] bg-electric-blue/10 blur-[120px] rounded-full pointer-events-none -z-10" />
+      
       <div className="sm:pt-28 md:pt-32 lg:pt-40 max-w-[1200px] mx-auto pt-28 px-6 pb-24 text-center">
         <div className="mx-auto max-w-4xl">
           <div

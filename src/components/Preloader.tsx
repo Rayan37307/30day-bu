@@ -48,10 +48,16 @@ export function Preloader({ onComplete }: PreloaderProps) {
       ref={containerRef}
       className="fixed inset-0 z-[100] flex items-center justify-center overflow-hidden"
     >
-      {/* The Black Panel that slides up */}
-      <div
-        className="absolute inset-0 bg-navy-deep border-b border-border-subtle"
-      />
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
+        <img 
+          src="/bgloader.jpg" 
+          alt="" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+        <div className="absolute inset-0 border-b border-border-subtle" />
+      </div>
 
       {/* Text Content - now moves with the container */}
       <div className="relative z-10 px-6 text-center">
