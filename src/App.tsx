@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Lenis from 'lenis';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -12,10 +12,15 @@ import { Navbar } from './components/Navbar';
 import { CTABanner } from './components/CTABanner';
 import { Footer } from './components/Footer';
 import { Mentor } from './components/Mentor';
+import { Preloader } from './components/Preloader';
 
 export default function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
-    // Initialize Lenis
+    if (isLoading) return;
+
+    // Initialize Lenis only after loading
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -27,39 +32,44 @@ export default function App() {
     lenis.on('scroll', ScrollTrigger.update);
 
     // Add Lenis to GSAP's ticker
-    gsap.ticker.add((time) => {
+    const tickerCallback = (time: number) => {
       lenis.raf(time * 1000);
-    });
+    };
+    gsap.ticker.add(tickerCallback);
 
     // Disable GSAP's default lag smoothing to avoid sync issues
     gsap.ticker.lagSmoothing(0);
 
     return () => {
       lenis.destroy();
-      gsap.ticker.remove(lenis.raf);
+      gsap.ticker.remove(tickerCallback);
     };
-  }, []);
+  }, [isLoading]);
 
   return (
-    <div className="relative min-h-screen overflow-x-hidden bg-navy-deep flex flex-col">
-      {/* Global Background Elements */}
-      <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-grid-pattern opacity-40 [mask-image:radial-gradient(ellipse_at_center,black_70%,transparent_100%)]" />
-      </div>
+    <>
+      {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
+      
+      <div className={`relative min-h-screen overflow-x-hidden bg-navy-deep flex flex-col ${isLoading ? 'h-screen overflow-hidden' : ''}`}>
+        {/* Global Background Elements */}
+        <div className="fixed inset-0 z-0 pointer-events-none">
+          <div className="absolute inset-0 bg-grid-pattern opacity-40 [mask-image:radial-gradient(ellipse_at_center,black_70%,transparent_100%)]" />
+        </div>
 
-      {/* Main Content Hierarchy */}
-      <div className="relative z-10 flex flex-col items-center w-full">
-        <Navbar />
-        <Hero />
-        <CTABanner />
+        {/* Main Content Hierarchy */}
+        <div className="relative z-10 flex flex-col items-center w-full">
+          <Navbar />
+          <Hero />
+          <CTABanner />
 
-        <Modules />
-        {/* <Mentor /> */}
-        <SocialProof />
-        <Pricing />
-        <FAQ />
-        <Footer />
+          <Modules />
+          {/* <Mentor /> */}
+          <SocialProof />
+          <Pricing />
+          <FAQ />
+          <Footer />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
