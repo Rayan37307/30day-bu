@@ -16,27 +16,26 @@ export function Approach() {
             </span>
             <div className="h-px flex-1 bg-white/10"></div>
             <span className="uppercase text-xs tracking-widest text-gray-500 font-sans">
-              Our Approach
+              আমাদের কাজের পদ্ধতি
             </span>
           </div>
 
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
             <div className="max-w-3xl flex flex-col gap-6">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-white font-oswald font-light">
-                Built for deep focus.
-                <span className="block text-gray-500 font-oswald font-light">
-                  Designed for real progress.
+              <h2 className="text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-white font-display font-normal">
+                গভীর মনোযোগের জন্য তৈরি।
+                <span className="block text-gray-500 font-display font-normal">
+                  প্রকৃত উন্নতির জন্য ডিজাইন করা।
                 </span>
               </h2>
 
               <p className="text-lg text-gray-400 font-light max-w-xl leading-relaxed font-sans">
-                A calm and structured productivity system that helps teams stay focused,
-                move faster, and track meaningful results over time.
+                একটি শান্ত এবং সুশৃঙ্খল প্রোডাক্টিভিটি সিস্টেম যা আপনাকে ফোকাসড থাকতে, দ্রুত কাজ করতে এবং সময়ের সাথে অর্থপূর্ণ ফলাফল ট্র্যাক করতে সাহায্য করে।
               </p>
             </div>
 
             <button className="group flex items-center gap-2 px-6 py-3 border border-white/15 text-white text-sm font-medium rounded-full hover:bg-white/5 transition font-sans whitespace-nowrap">
-              <span>Explore Features</span>
+              <span>ফিচারগুলো দেখুন</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 transition-transform group-hover:translate-x-1">
                 <path d="M5 12h14"></path>
                 <path d="m12 5 7 7-7 7"></path>
