@@ -1,4 +1,6 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { Check, Rocket } from 'lucide-react';
 
 export function Pricing() {
   const features = [
@@ -11,7 +13,12 @@ export function Pricing() {
 
   return (
     <div className="mx-auto max-w-[1200px] max-md:px-6" id="pricing">
-      <div className="flex flex-col gap-x-16 gap-y-16 rounded-lg border border-border-subtle bg-surface mt-20 mb-20 px-6 py-20 relative overflow-hidden">
+      <motion.div 
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="flex flex-col gap-x-16 gap-y-16 rounded-lg border border-border-subtle bg-surface mt-20 mb-20 px-6 py-20 relative overflow-hidden">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 w-full relative z-10">
           <div className="flex flex-col gap-6 w-full">
@@ -51,7 +58,23 @@ export function Pricing() {
           </div>
 
           {/* Pricing Card */}
-          <div className="overflow-hidden z-10 group bg-surface w-full max-w-[1200px] border-border-subtle border rounded-lg relative shadow-2xl">
+          <motion.div 
+            whileHover={{ y: -5, scale: 1.005 }}
+            className="overflow-hidden z-10 group bg-surface w-full max-w-[1200px] border-border-subtle border rounded-lg relative shadow-2xl transition-all duration-500">
+            
+            {/* Floating Pulse Badge */}
+            <div className="absolute top-6 right-6 z-20">
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+              </span>
+            </div>
+            
+            <div className="absolute top-6 right-12 z-20">
+              <span className="text-[10px] font-mono font-bold tracking-widest text-red-400 uppercase bg-red-500/10 px-2 py-1 rounded border border-red-500/20">
+                প্রো চয়েস
+              </span>
+            </div>
             {/* Card Background */}
             <div className="pointer-events-none bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#2e1a1a] via-surface to-surface absolute inset-0"></div>
             {/* Stars Effect */}
@@ -102,10 +125,18 @@ export function Pricing() {
                 {/* Features List */}
                 <ul className="space-y-6 pt-2">
                   {features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-4 text-white text-xl font-light font-sans">
-                      <span className="w-1.5 h-1.5 rounded-full bg-red-500 shrink-0 shadow-[0_0_8px_rgba(239,68,68,0.8)]"></span>
+                    <motion.li 
+                      initial={{ opacity: 0, x: 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ delay: idx * 0.1 }}
+                      key={idx} 
+                      className="flex items-center gap-4 text-white text-xl font-light font-sans group/item"
+                    >
+                      <span className="w-6 h-6 rounded-full bg-red-500/10 flex items-center justify-center shrink-0 border border-red-500/20 group-hover/item:bg-red-500/20 transition-colors">
+                        <Check size={14} className="text-red-400" />
+                      </span>
                       {feature}
-                    </li>
+                    </motion.li>
                   ))}
                 </ul>
 
@@ -117,9 +148,9 @@ export function Pricing() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </section>
-      </div>
+      </motion.div>
     </div>
   );
 }
