@@ -50,7 +50,7 @@ export function Hero() {
       </div>
     </header>
     <div className="z-10 relative">
-      <div className="sm:pt-28 md:pt-32 lg:pt-40 max-w-7xl mx-auto pt-28 px-6 pb-24 text-center">
+      <div className="sm:pt-28 md:pt-32 lg:pt-40 max-w-[1200px] mx-auto pt-28 px-6 pb-24 text-center">
         <div className="mx-auto max-w-4xl">
           <div
             className="mb-8 inline-flex items-center gap-3 rounded-full bg-white/10 px-3 py-2 ring-1 ring-white/15 backdrop-blur animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.1s_both]">

@@ -122,7 +122,7 @@ export function Modules() {
           কোর্স কারিকুলাম
         </p>
         <h2 className="font-display font-medium text-4xl md:text-5xl mb-4 text-white">
-          ৩০-দিনের <span className="text-blue-500 font-bold">রোডম্যাপ</span>
+          ৩০-দিনের <span className="text-red-500 font-bold">রোডম্যাপ</span>
         </h2>
         <p className="text-slate-400 max-w-xl mx-auto text-lg pt-2 leading-relaxed">
           প্রতিদিন নতুন কিছু শিখুন। নিচে কোর্সের ৪টি ধাপের ব্রেকডাউন দেওয়া হলো।
@@ -142,7 +142,7 @@ export function Modules() {
               top: calc... Creates the visual "stacked edges" offset effect
             */}
             <div
-              className="card-inner relative w-full max-w-[940px] origin-top flex flex-col md:flex-row overflow-hidden rounded-[28px] border border-white/[0.06] bg-[#0a0a0d] shadow-[0_30px_60px_rgba(0,0,0,0.6)] will-change-transform"
+              className="card-inner relative w-full max-w-[1200px] origin-top flex flex-col md:flex-row overflow-hidden rounded-[28px] border border-white/[0.06] bg-[#0a0a0d] shadow-[0_30px_60px_rgba(0,0,0,0.6)] will-change-transform"
               style={{
                 top: `calc(-5vh + ${i * 30}px)`, 
                 boxShadow: `0 0 0 1px rgba(255,255,255,0.04), 0 30px 60px rgba(0,0,0,0.6), 0 0 80px ${mod.glowColor}`,

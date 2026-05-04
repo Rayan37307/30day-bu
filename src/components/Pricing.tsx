@@ -10,7 +10,7 @@ export function Pricing() {
   ];
 
   return (
-    <div className="mx-auto max-w-7xl px-6" id="pricing">
+    <div className="mx-auto max-w-[1200px] px-6" id="pricing">
       <div className="flex flex-col gap-x-16 gap-y-16 rounded-3xl border border-white/10 bg-[#0A0A0C] mt-24 mb-24 px-8 pt-8 pb-16 relative overflow-hidden">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 w-full relative z-10">
@@ -51,7 +51,7 @@ export function Pricing() {
           </div>
 
           {/* Pricing Card */}
-          <div className="overflow-hidden z-10 group bg-[#0A0A0C] w-full max-w-6xl border-white/10 border rounded-[3rem] relative shadow-2xl">
+          <div className="overflow-hidden z-10 group bg-[#0A0A0C] w-full max-w-[1200px] border-white/10 border rounded-[3rem] relative shadow-2xl">
             {/* Card Background */}
             <div className="pointer-events-none bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#2e1a1a] via-[#0A0A0C] to-[#0A0A0C] absolute inset-0"></div>
             {/* Stars Effect */}

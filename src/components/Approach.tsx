@@ -3,7 +3,7 @@ import React from 'react';
 export function Approach() {
   return (
     <section 
-      className="animate-entry delay-200 [animation:animationIn_0.8s_ease-out_0.1s_both] animate-on-scroll lg:mx-auto bg-gradient-to-br from-white/10 via-white/0 to-white/10 max-w-7xl rounded-3xl mt-24 mx-auto mb-24 p-10 relative border border-white/10"
+      className="animate-entry delay-200 [animation:animationIn_0.8s_ease-out_0.1s_both] animate-on-scroll lg:mx-auto bg-gradient-to-br from-white/10 via-white/0 to-white/10 max-w-[1200px] rounded-3xl mt-24 mx-auto mb-24 p-10 relative border border-white/10"
       style={{ position: 'relative' }}
     >
       {/* Main Grid */}
@@ -45,7 +45,7 @@ export function Approach() {
         </div>
 
         {/* Features Grid */}
-        <div className="min-h-[560px] flex md:mt-0 w-full max-w-6xl mt-16 mx-auto px-4 relative items-center justify-center">
+        <div className="min-h-[560px] flex md:mt-0 w-full max-w-[1200px] mt-16 mx-auto px-4 relative items-center justify-center">
           {/* SVG Connections with Noodles */}
           <svg className="absolute inset-0 hidden h-full w-full pointer-events-none md:block" viewBox="0 0 1000 560" preserveAspectRatio="xMidYMid meet">
             <defs>

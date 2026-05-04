@@ -1,5 +1,21 @@
+@font-face {
+  font-family: 'KaiumFont';
+  src: url('/kaium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Galada&family=Inter:wght@400;500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&family=Oswald:wght@200;300;400;500;600;700&family=Anton&display=swap');
 @import "tailwindcss";
+
+@font-face {
+  font-family: 'Kaium';
+  src: url('/kaium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 @theme {
   --color-electric-blue: #ff3b3b;
@@ -8,7 +24,7 @@
   --color-navy-card: #0a0a0a;
   
   --font-sans: "Inter", "Hind Siliguri", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Galada", cursive;
+  --font-display: "KaiumFont", "Galada", cursive;
   --font-oswald: "Oswald", sans-serif;
   --font-anton: "Anton", sans-serif;
 }
@@ -18,7 +34,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, .font-display {
-  font-family: "Galada", cursive;
+  font-family: "KaiumFont", "Galada", cursive !important;
 }
 
 .bg-grid-pattern {
@@ -29,6 +45,10 @@ h1, h2, h3, h4, h5, h6, .font-display {
 
 .glass-panel {
   @apply bg-white/5 backdrop-blur-xl border border-white/10;
+}
+
+.section-container {
+  @apply w-full max-w-[1200px] mx-auto px-6;
 }
 
 @keyframes marquee {
