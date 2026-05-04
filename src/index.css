@@ -2,10 +2,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-electric-blue: #0ea5e9;
-  --color-electric-blue-hover: #0284c7;
-  --color-navy-deep: #020617;
-  --color-navy-card: #0f172a;
+  --color-electric-blue: #ff3b3b;
+  --color-electric-blue-hover: #d32f2f;
+  --color-navy-deep: #000000;
+  --color-navy-card: #0a0a0a;
   
   --font-sans: "Inter", "Hind Siliguri", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Galada", cursive;

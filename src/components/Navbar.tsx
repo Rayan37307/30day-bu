@@ -30,7 +30,7 @@ export function Navbar() {
 
         {/* Buttons */}
         <div className="flex items-center gap-2 md:ml-4">
-          <button className="w-[46px] h-[46px] rounded-[14px] bg-electric-blue flex items-center justify-center text-white hover:bg-electric-blue-hover transition-colors shadow-[0_0_15px_rgba(0,123,255,0.4)] hover:shadow-[0_0_20px_rgba(0,123,255,0.7)] group">
+          <button className="w-[46px] h-[46px] rounded-[14px] bg-electric-blue flex items-center justify-center text-white hover:bg-electric-blue-hover transition-colors shadow-[0_0_15px_rgba(255,59,59,0.4)] hover:shadow-[0_0_20px_rgba(255,59,59,0.7)] group">
             <MessageSquareQuote size={22} strokeWidth={2} className="transform transition-transform group-hover:scale-110" />
           </button>
         </div>

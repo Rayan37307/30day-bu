@@ -34,11 +34,11 @@ export function CTABanner() {
         className="relative flex flex-col md:flex-row items-center justify-between rounded-[24px] overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.6)] border border-electric-blue/30 w-full"
       >
         {/* Background Gradients & Shapes to match the reference */}
-        <div className="absolute inset-0 bg-[#161c24]" /> {/* Base Dark */}
+        <div className="absolute inset-0 bg-black" /> {/* Base Dark */}
         
         {/* Diagonal Accent Shape (Left) */}
         <div 
-          className="absolute inset-y-0 left-0 w-[120%] md:w-[65%] bg-[#003d7a]" 
+          className="absolute inset-y-0 left-0 w-[120%] md:w-[65%] bg-[#7a0000]" 
           style={{ clipPath: 'polygon(0 0, 100% 0, 85% 100%, 0 100%)' }} 
         />
 
@@ -48,7 +48,7 @@ export function CTABanner() {
           {/* Left: Timer */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <div className="flex items-center gap-2 text-white font-normal text-xl md:text-base lg:text-xl mb-1 lg:mb-2 tracking-wide font-display">
-              <div className="bg-white text-[#003d7a] px-2 py-0.5 rounded text-xs font-black uppercase tracking-widest relative -top-0.5 font-sans">Live</div>
+              <div className="bg-white text-[#7a0000] px-2 py-0.5 rounded text-xs font-black uppercase tracking-widest relative -top-0.5 font-sans">Live</div>
               শুরু হতে বাকি:
             </div>
             <div className="font-mono font-black text-5xl md:text-4xl lg:text-5xl text-white drop-shadow-md tracking-tighter">
@@ -62,7 +62,7 @@ export function CTABanner() {
                <span className="font-display font-normal text-5xl md:text-4xl lg:text-5xl text-white drop-shadow-sm">৳১০০০</span>
                <span className="text-slate-400 line-through text-2xl md:text-lg lg:text-xl mb-1 lg:mb-1.5 font-medium">৳৫০০০</span>
              </div>
-             <p className="text-[#66b2ff] text-base md:text-xs lg:text-base font-bold mt-1 lg:mt-2 tracking-wide drop-shadow-sm w-full text-center">৮০% ছাড় - সীমিত সময়ের অফার</p>
+             <p className="text-[#ff6666] text-base md:text-xs lg:text-base font-bold mt-1 lg:mt-2 tracking-wide drop-shadow-sm w-full text-center">৮০% ছাড় - সীমিত সময়ের অফার</p>
           </div>
 
           {/* Right: CTA Button */}

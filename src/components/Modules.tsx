@@ -14,10 +14,10 @@ export function Modules() {
       id: "01",
       title: "দ্য ইনার গেম",
       subtitle: "দিন ১-৭: প্যাশন এবং প্রোডাক্টিভিটি",
-      icon: <Brain className="text-blue-400" size={28} strokeWidth={1.5} />,
-      accentColor: "#3b82f6",
-      accentBg: "rgba(59,130,246,0.08)",
-      glowColor: "rgba(59,130,246,0.15)",
+      icon: <Brain className="text-red-400" size={28} strokeWidth={1.5} />,
+      accentColor: "#ff3b3b",
+      accentBg: "rgba(255,59,59,0.08)",
+      glowColor: "rgba(255,59,59,0.15)",
       points: [
         "ইকিগাই ফ্রেমওয়ার্ক ব্যবহার করে জীবনের আসল প্যাশন খুঁজে বের করা।",
         "অলসতা দূর করা এবং কার্যকরী অভ্যাস গড়ে তোলা।",
@@ -74,40 +74,32 @@ export function Modules() {
 
       cards.forEach((card, i) => {
         const isLast = i === cards.length - 1;
-        const stickyOffset = 300 + i * 20;
-
-        // Pin the card using GSAP ScrollTrigger
-        ScrollTrigger.create({
-          trigger: card,
-          start: `top ${stickyOffset}px`,
-          endTrigger: containerRef.current,
-          end: "bottom bottom",
-          pin: true,
-          pinSpacing: false,
-          id: `pin-${i}`,
-        });
+        const inner = card.querySelector(".module-card-inner");
 
         // Scale down + fade as subsequent cards stack on top
-        if (!isLast) {
-          gsap.to(card, {
-            scale: 0.94,
-            opacity: 0.4,
+        if (!isLast && inner) {
+          gsap.to(inner, {
+            scale: 0.9,
+            opacity: 0.3,
             ease: "none",
             scrollTrigger: {
               trigger: cards[i + 1],
-              start: `top ${140 + (i + 1) * 20 + 100}px`,
-              end: `top ${140 + (i + 1) * 20}px`,
+              start: "top 80%",
+              end: "top 20%",
               scrub: true,
             },
           });
         }
       });
+
+      // Refresh ScrollTrigger to ensure all markers are correct
+      ScrollTrigger.refresh();
     },
     { scope: containerRef }
   );
 
   return (
-    <section className="relative w-full max-w-[940px] mx-auto px-6 pt-48 pb-32">
+    <section className="relative w-full max-w-[940px] mx-auto px-6 pt-48 pb-32" id="product">
       {/* Section Header */}
       <div className="text-center mb-32">
         <p className="text-xs font-bold tracking-[0.2em] uppercase text-white/30 mb-4">
@@ -123,19 +115,20 @@ export function Modules() {
         </p>
       </div>
 
-      {/* Stacking Cards — GSAP handles the pinning and stacking */}
-      <div ref={containerRef} className="relative flex flex-col gap-10 pb-[60vh]">
+      {/* Stacking Cards — Using CSS Sticky for maximum robustness */}
+      <div ref={containerRef} className="relative flex flex-col gap-12 pb-[40vh]">
         {modules.map((mod, idx) => (
           <div
             key={mod.id}
-            className="module-card relative w-full will-change-transform"
+            className="module-card sticky w-full will-change-transform"
             style={{
+              top: `${80 + idx * 32}px`,
               zIndex: idx + 1,
               transformOrigin: "center top",
             }}
           >
             <div
-              className="relative overflow-hidden rounded-[28px] border border-white/[0.06] bg-[#0a0a0d] flex flex-col md:flex-row"
+              className="module-card-inner relative overflow-hidden rounded-[28px] border border-white/[0.06] bg-[#0a0a0d] flex flex-col md:flex-row transition-shadow duration-500 shadow-[0_30px_60px_rgba(0,0,0,0.6)]"
               style={{
                 boxShadow: `0 0 0 1px rgba(255,255,255,0.04), 0 30px 60px rgba(0,0,0,0.6), 0 0 80px ${mod.glowColor}`,
               }}

@@ -25,8 +25,21 @@ export function FAQ() {
   ];
 
   return (
-    <section className="relative w-full max-w-[1200px] mx-auto px-6 py-24">
-      <div className="text-center mb-16">
+    <section className="relative w-full max-w-[1200px] mx-auto px-6 py-32 overflow-hidden rounded-[40px]">
+      {/* Spline Background */}
+      <div className="spline-container absolute top-0 left-0 w-full h-full -z-10 opacity-60">
+        <iframe 
+          src="https://my.spline.design/glowingplanetparticles-nhVHji30IRoa5HBGe8yeDiTs" 
+          frameBorder="0" 
+          width="100%" 
+          height="100%" 
+          id="aura-spline"
+          className="pointer-events-none scale-110 lg:scale-100"
+          style={{ filter: 'hue-rotate(-240deg) brightness(1.2)' }}
+        ></iframe>
+      </div>
+
+      <div className="relative z-10 text-center mb-16">
         <h2 className="font-display font-normal text-5xl mb-4 leading-[1.2]">
           সচরাচর জিজ্ঞাসিত প্রশ্ন (FAQ)
         </h2>

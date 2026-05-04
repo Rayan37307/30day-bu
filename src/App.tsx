@@ -20,6 +20,9 @@ export default function App() {
   useEffect(() => {
     if (isLoading) return;
 
+    // Register ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+
     // Initialize Lenis only after loading
     const lenis = new Lenis({
       duration: 1.2,
@@ -40,9 +43,15 @@ export default function App() {
     // Disable GSAP's default lag smoothing to avoid sync issues
     gsap.ticker.lagSmoothing(0);
 
+    // Refresh ScrollTrigger after a short delay to account for layout shifts
+    const refreshTimeout = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 100);
+
     return () => {
       lenis.destroy();
       gsap.ticker.remove(tickerCallback);
+      clearTimeout(refreshTimeout);
     };
   }, [isLoading]);
 

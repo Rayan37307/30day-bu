@@ -38,7 +38,7 @@ export function Pricing() {
               {/* Tag Selection (Fake Toggle) */}
               <div className="inline-flex items-center gap-5 bg-white/5 border border-white/10 rounded-full px-4 py-2 w-max mb-10 shadow-sm relative z-10">
                 <div className="flex items-center gap-2 cursor-pointer">
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#00e5ff] shadow-[0_0_12px_#00e5ff]" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#ff3b3b] shadow-[0_0_12px_#ff3b3b]" />
                   <span className="text-sm font-medium text-white tracking-wide">One-Time</span>
                 </div>
                 <div className="text-sm font-medium text-slate-500 cursor-not-allowed">Monthly</div>
@@ -47,7 +47,7 @@ export function Pricing() {
               {/* Price */}
               <div className="mb-2 relative z-10">
                 <div className="flex items-end gap-3">
-                  <span className="font-display font-normal text-7xl lg:text-8xl text-[#88ddff] drop-shadow-[0_0_20px_rgba(136,221,255,0.3)] tracking-tighter">৳১০০০</span>
+                  <span className="font-display font-normal text-7xl lg:text-8xl text-[#ff8888] drop-shadow-[0_0_20px_rgba(255,136,136,0.3)] tracking-tighter">৳১০০০</span>
                 </div>
                 <div className="mt-1 flex items-center gap-2">
                    <span className="text-slate-500 line-through text-xl font-medium">৳৫০০০</span>
@@ -59,9 +59,9 @@ export function Pricing() {
               {/* CTA Button */}
               <div className="relative mt-10 md:mt-12 w-full max-w-[280px] group cursor-pointer z-10 mb-2 md:mb-0">
                 {/* Intense Outer Glow */}
-                <div className="absolute -inset-1 bg-[#1a75ff] blur-[25px] opacity-60 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none" />
+                <div className="absolute -inset-1 bg-[#ff1a1a] blur-[25px] opacity-60 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none" />
                 {/* Button Base */}
-                <button className="relative w-full py-4 rounded-xl font-bold text-lg text-white bg-gradient-to-b from-[#4d94ff] to-[#005ce6] border border-t-[#80b3ff] border-x-[#005ce6]/50 border-b-[#003d99] shadow-[inset_0_2px_15px_rgba(255,255,255,0.3),_0_5px_15px_rgba(0,0,0,0.5)] transition-transform transform group-hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center">
+                <button className="relative w-full py-4 rounded-xl font-bold text-lg text-white bg-gradient-to-b from-[#ff4d4d] to-[#e60000] border border-t-[#ff8080] border-x-[#e60000]/50 border-b-[#990000] shadow-[inset_0_2px_15px_rgba(255,255,255,0.3),_0_5px_15px_rgba(0,0,0,0.5)] transition-transform transform group-hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center">
                   এখনই জয়েন করুন
                 </button>
               </div>

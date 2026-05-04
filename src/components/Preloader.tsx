@@ -59,7 +59,7 @@ export function Preloader({ onComplete }: PreloaderProps) {
           ref={textRef}
           className="text-4xl md:text-7xl font-display font-bold text-white tracking-tight leading-tight"
           style={{
-            textShadow: '0 0 25px rgba(0, 102, 255, 0.4), 0 0 50px rgba(0, 102, 255, 0.2)',
+            textShadow: '0 0 25px rgba(255, 59, 59, 0.4), 0 0 50px rgba(255, 59, 59, 0.2)',
           }}
         >
           ৩০-দিনের জীবন <br />
