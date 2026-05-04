@@ -18,26 +18,24 @@ export function Preloader({ onComplete }: PreloaderProps) {
     });
 
     // Initial state
-    gsap.set(textRef.current, { y: 100, opacity: 0 });
+    gsap.set(textRef.current, { y: 60, opacity: 0 });
 
     tl.to(textRef.current, {
       y: 0,
       opacity: 1,
-      duration: 1.2,
-      ease: "power4.out",
+      duration: 1.4,
+      ease: "expo.out",
       delay: 0.5,
     })
-      .to(textRef.current, {
-        y: -50,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power4.in",
-        delay: 1.5,
-      })
-      .to(curtainRef.current, {
+      .to(containerRef.current, {
         yPercent: -100,
-        duration: 1.2,
-        ease: "power4.inOut",
+        duration: 1.8,
+        ease: "expo.inOut",
+        delay: 1,
+      })
+      .to(containerRef.current, {
+        pointerEvents: "none",
+        duration: 0.1,
       });
 
     return () => {
@@ -48,21 +46,20 @@ export function Preloader({ onComplete }: PreloaderProps) {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 z-[100] flex items-center justify-center overflow-hidden bg-black"
+      className="fixed inset-0 z-[100] flex items-center justify-center overflow-hidden"
     >
-      {/* Black Curtain */}
+      {/* The Black Panel that slides up */}
       <div
-        ref={curtainRef}
-        className="absolute inset-0 bg-black z-0 border-b border-white/10"
+        className="absolute inset-0 bg-black border-b border-white/10"
       />
 
-      {/* Text Content */}
+      {/* Text Content - now moves with the container */}
       <div className="relative z-10 px-6 text-center">
         <h1
           ref={textRef}
           className="text-4xl md:text-7xl font-display font-bold text-white tracking-tight leading-tight"
           style={{
-            textShadow: '0 0 20px rgba(0, 102, 255, 0.5), 0 0 40px rgba(0, 102, 255, 0.3)',
+            textShadow: '0 0 25px rgba(0, 102, 255, 0.4), 0 0 50px rgba(0, 102, 255, 0.2)',
           }}
         >
           ৩০-দিনের জীবন <br />
