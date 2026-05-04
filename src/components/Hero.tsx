@@ -54,8 +54,13 @@ export function Hero() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[60%] bg-electric-blue/10 blur-[120px] rounded-full pointer-events-none -z-10" />
       
       <div className="sm:pt-20 md:pt-24 lg:pt-32 max-w-[1200px] mx-auto pt-20 px-6 pb-24 text-center">
-        {/* Video Block Moved to Top */}
-        <div className="mx-auto mb-20 max-w-4xl animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.1s_both]">
+        {/* Video Block */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="mx-auto mb-20 max-w-4xl"
+        >
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-white/10 to-white/5 rounded-lg blur-xl opacity-50 group-hover:opacity-75 transition duration-1000"></div>
             
@@ -71,33 +76,73 @@ export function Hero() {
             </div>
             <div className="absolute inset-0 pointer-events-none rounded-lg ring-1 ring-inset ring-border-subtle"></div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Text Content Block */}
-        <div className="mx-auto max-w-4xl">
-          <div
-            className="mb-8 inline-flex items-center gap-3 rounded-full bg-white/10 px-3 py-2 ring-1 ring-border-subtle backdrop-blur animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.2s_both]">
+        <motion.div 
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.2
+              }
+            }
+          }}
+          className="mx-auto max-w-4xl"
+        >
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+            }}
+            className="mb-8 inline-flex items-center gap-3 rounded-full bg-white/10 px-3 py-2 ring-1 ring-border-subtle backdrop-blur"
+          >
             <span className="inline-flex items-center text-[10px] font-bold tracking-wider uppercase text-neutral-900 bg-white/90 rounded-full px-2.5 py-1">
               নতুন ব্যাচ
             </span>
             <span className="text-sm font-medium text-white/90">
               রেজিস্ট্রেশন চলছে — আজই এনরোল করুন
             </span>
-          </div>
-          <h1
-            className="sm:text-6xl text-white md:text-7xl lg:text-8xl leading-[1.1] text-5xl text-white tracking-tight font-display animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.3s_both]">
+          </motion.div>
+
+          <motion.h1
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+            }}
+            className="sm:text-6xl text-white md:text-7xl lg:text-8xl leading-[1.1] text-5xl text-white tracking-tight font-display"
+          >
             প্যাশন থেকে প্রফিট: 
             <br className="hidden sm:block" />
             এআই এবং ক্রিয়েটর ইকোনমি
-          </h1>
-          <p
-            className="sm:text-xl animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.4s_both] text-lg text-slate-300 max-w-2xl mt-8 mx-auto leading-relaxed">
+          </motion.h1>
+
+          <motion.p
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+            }}
+            className="sm:text-xl text-lg text-slate-300 max-w-2xl mt-8 mx-auto leading-relaxed"
+          >
             ৩০ দিনে শিখুন কীভাবে এআই ব্যবহার করে আপনার প্যাশনকে একটি সফল ক্যারিয়ারে রূপান্তর করবেন। আমরা আপনাকে শেখাবো কন্টেন্ট ক্রিয়েশন, প্রোডাক্টিভিটি এবং কোডিং-এর আধুনিক সব টেকনিক।
-          </p>
-          <div
-            className="flex flex-col sm:flex-row gap-4 mt-12 items-center justify-center animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.5s_both]">
-            <a href="#pricing"
-              className="inline-flex items-center gap-2 bg-white/10 ring-border-subtle ring-1 hover:bg-white/15 text-white text-[16px] font-bold rounded-full px-8 py-4 transition-all hover:scale-105 active:scale-95">
+          </motion.p>
+
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+            }}
+            className="flex flex-col sm:flex-row gap-4 mt-12 items-center justify-center"
+          >
+            <motion.a 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href="#pricing"
+              className="inline-flex items-center gap-2 bg-white/10 ring-border-subtle ring-1 hover:bg-white/15 text-white text-[16px] font-bold rounded-full px-8 py-4 transition-all"
+            >
               এনরোল করুন
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
@@ -105,9 +150,13 @@ export function Hero() {
                 <path d="M5 12h14"></path>
                 <path d="m12 5 7 7-7 7"></path>
               </svg>
-            </a>
-            <a href="#product"
-              className="inline-flex items-center gap-2 rounded-full bg-transparent px-8 py-4 text-[16px] font-bold text-white/90 hover:text-white transition-all">
+            </motion.a>
+            <motion.a 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href="#product"
+              className="inline-flex items-center gap-2 rounded-full bg-transparent px-8 py-4 text-[16px] font-bold text-white/90 hover:text-white transition-all"
+            >
               কারিকুলাম দেখুন
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -115,9 +164,9 @@ export function Hero() {
                 <path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z">
                 </path>
               </svg>
-            </a>
-          </div>
-        </div>
+            </motion.a>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
     </section>

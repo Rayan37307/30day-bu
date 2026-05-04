@@ -1,15 +1,48 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 export function Approach() {
+  const nodeVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { 
+      opacity: 1, 
+      scale: 1,
+      transition: { duration: 0.5, ease: "easeOut" }
+    }
+  };
+
   return (
-    <section 
-      className="animate-entry delay-200 [animation:animationIn_0.8s_ease-out_0.1s_both] animate-on-scroll lg:mx-auto bg-gradient-to-br from-white/10 via-white/0 to-white/10 max-w-[1200px] rounded-lg mt-24 mx-auto mb-24 px-6 py-20 relative border border-border-subtle"
+    <motion.section 
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="lg:mx-auto bg-gradient-to-br from-white/5 via-white/0 to-white/5 max-w-[1200px] rounded-lg mt-24 mx-auto mb-24 px-6 py-20 relative border border-border-subtle"
       style={{ position: 'relative' }}>
+      
       {/* Main Grid */}
       <div className="flex flex-col relative">
         {/* Header Section */}
-        <div className="flex flex-col gap-10 w-full">
-          <div className="flex items-center gap-6">
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: { staggerChildren: 0.2 }
+            }
+          }}
+          className="flex flex-col gap-10 w-full"
+        >
+          <motion.div 
+            variants={{
+              hidden: { opacity: 0, x: -20 },
+              visible: { opacity: 1, x: 0 }
+            }}
+            className="flex items-center gap-6"
+          >
             <span className="text-xs font-mono text-red-400 tracking-widest font-sans">
               02
             </span>
@@ -17,31 +50,51 @@ export function Approach() {
             <span className="uppercase text-xs tracking-widest text-gray-500 font-sans">
               আমাদের কাজের পদ্ধতি
             </span>
-          </div>
+          </motion.div>
 
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
             <div className="w-full flex flex-col gap-6">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-white font-display font-normal">
+              <motion.h2 
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0 }
+                }}
+                className="text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-white font-display font-normal"
+              >
                 গভীর মনোযোগের জন্য তৈরি।
                 <span className="block text-gray-500 font-display font-normal">
                   প্রকৃত উন্নতির জন্য ডিজাইন করা।
                 </span>
-              </h2>
+              </motion.h2>
 
-              <p className="text-lg text-gray-400 font-light w-full leading-relaxed font-sans">
+              <motion.p 
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0 }
+                }}
+                className="text-lg text-gray-400 font-light w-full leading-relaxed font-sans"
+              >
                 একটি শান্ত এবং সুশৃঙ্খল প্রোডাক্টিভিটি সিস্টেম যা আপনাকে ফোকাসড থাকতে, দ্রুত কাজ করতে এবং সময়ের সাথে অর্থপূর্ণ ফলাফল ট্র্যাক করতে সাহায্য করে।
-              </p>
+              </motion.p>
             </div>
 
-            <button className="group flex items-center gap-2 px-6 py-3 border border-white/15 text-white text-sm font-medium rounded-full hover:bg-white/5 transition font-sans whitespace-nowrap">
+            <motion.button 
+              variants={{
+                hidden: { opacity: 0, scale: 0.9 },
+                visible: { opacity: 1, scale: 1 }
+              }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="group flex items-center gap-2 px-6 py-3 border border-white/15 text-white text-sm font-medium rounded-full hover:bg-white/5 transition font-sans whitespace-nowrap"
+            >
               <span>ফিচারগুলো দেখুন</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 transition-transform group-hover:translate-x-1">
                 <path d="M5 12h14"></path>
                 <path d="m12 5 7 7-7 7"></path>
               </svg>
-            </button>
+            </motion.button>
           </div>
-        </div>
+        </motion.div>
 
         {/* Features Grid */}
         <div className="min-h-[560px] flex md:mt-0 w-full mt-16 mx-auto px-4 relative items-center justify-center">
@@ -104,11 +157,22 @@ export function Approach() {
           </svg>
 
           {/* Nodes Grid */}
-          <div className="relative z-10 grid h-full w-full grid-cols-1 gap-14 md:grid-cols-3 md:gap-0">
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: { staggerChildren: 0.15 }
+              }
+            }}
+            className="relative z-10 grid h-full w-full grid-cols-1 gap-14 md:grid-cols-3 md:gap-0"
+          >
             {/* Left Column */}
             <div className="flex h-full flex-row items-center justify-center gap-6 px-4 md:flex-col md:gap-14 md:px-12">
-              {/* Node 1 */}
-              <div className="group relative">
+              <motion.div variants={nodeVariants} className="group relative">
                 <div className="absolute inset-0 rounded-full blur-2xl opacity-0 transition-opacity group-hover:opacity-100 bg-[radial-gradient(circle,_rgba(249,115,22,0.25),_transparent_60%)]"></div>
                 <div className="relative flex h-[76px] w-[76px] items-center justify-center rounded-lg border border-border-subtle bg-white/[0.03] shadow-[0_20px_40px_-20px_rgba(0,0,0,0.8)] backdrop-blur-xl transition-transform duration-300 group-hover:scale-[1.06] md:h-[92px] md:w-[92px]">
                   <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_55%)]"></div>
@@ -117,10 +181,9 @@ export function Approach() {
                     <path d="m4.9 4.9 14.2 14.2"></path>
                   </svg>
                 </div>
-              </div>
+              </motion.div>
 
-              {/* Node 2 */}
-              <div className="group relative md:translate-x-16">
+              <motion.div variants={nodeVariants} className="group relative md:translate-x-16">
                 <div className="absolute inset-0 rounded-full blur-2xl opacity-0 transition-opacity group-hover:opacity-100 bg-[radial-gradient(circle,_rgba(234,88,12,0.25),_transparent_60%)]"></div>
                 <div className="relative flex h-[76px] w-[76px] items-center justify-center rounded-lg border border-border-subtle bg-white/[0.03] shadow-[0_20px_40px_-20px_rgba(0,0,0,0.8)] backdrop-blur-xl transition-transform duration-300 group-hover:scale-[1.06] md:h-[92px] md:w-[92px]">
                   <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_55%)]"></div>
@@ -130,10 +193,9 @@ export function Approach() {
                     <path d="m6.804 9 10.392 6"></path>
                   </svg>
                 </div>
-              </div>
+              </motion.div>
 
-              {/* Node 3 */}
-              <div className="group relative">
+              <motion.div variants={nodeVariants} className="group relative">
                 <div className="absolute inset-0 rounded-full blur-2xl opacity-0 transition-opacity group-hover:opacity-100 bg-[radial-gradient(circle,_rgba(239,68,68,0.25),_transparent_60%)]"></div>
                 <div className="relative flex h-[76px] w-[76px] items-center justify-center rounded-lg border border-border-subtle bg-white/[0.03] shadow-[0_20px_40px_-20px_rgba(0,0,0,0.8)] backdrop-blur-xl transition-transform duration-300 group-hover:scale-[1.06] md:h-[92px] md:w-[92px]">
                   <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_55%)]"></div>
@@ -144,12 +206,17 @@ export function Approach() {
                     <div className="h-2.5 w-2.5 rounded-[1px] bg-red-500"></div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
 
             {/* Center Hub */}
             <div className="flex items-center justify-center py-10 md:py-0">
-              <div className="relative">
+              <motion.div 
+                variants={nodeVariants}
+                animate={{ scale: [1, 1.05, 1] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="relative"
+              >
                 <div className="absolute -inset-10 rounded-full blur-3xl bg-[radial-gradient(circle,_rgba(239,68,68,0.3),_transparent_65%)]"></div>
                 <div className="absolute -inset-[20%] rounded-full opacity-40 animate-beam-spin pointer-events-none" style={{ background: 'conic-gradient(from 0deg at 50% 50%, transparent 0deg, transparent 240deg, rgba(251, 113, 133, 0.4) 360deg)', maskImage: 'radial-gradient(transparent 55%, black 60%)', WebkitMaskImage: 'radial-gradient(transparent 55%, black 60%)' }}></div>
                 <div className="absolute -inset-[15%] rounded-full opacity-20 animate-beam-spin pointer-events-none" style={{ background: 'conic-gradient(from 180deg at 50% 50%, transparent 0deg, transparent 240deg, rgba(239, 68, 68, 0.6) 360deg)', animationDirection: 'reverse', animationDuration: '12s', maskImage: 'radial-gradient(transparent 55%, black 60%)', WebkitMaskImage: 'radial-gradient(transparent 55%, black 60%)' }}></div>
@@ -161,12 +228,12 @@ export function Approach() {
                     <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
                   </svg>
                 </div>
-              </div>
+              </motion.div>
             </div>
 
             {/* Right Column */}
             <div className="flex h-full flex-row items-center justify-center gap-6 px-4 md:flex-col md:gap-14 md:px-12">
-              <div className="group relative">
+              <motion.div variants={nodeVariants} className="group relative">
                 <div className="absolute inset-0 rounded-full blur-2xl opacity-0 transition-opacity group-hover:opacity-100 bg-[radial-gradient(circle,_rgba(52,211,153,0.25),_transparent_60%)]"></div>
                 <div className="relative flex h-[76px] w-[76px] items-center justify-center rounded-full border border-white/[0.08] bg-white/[0.03] shadow-[0_20px_40px_-20px_rgba(0,0,0,0.8)] backdrop-blur-xl transition-transform duration-300 group-hover:scale-[1.06] md:h-[92px] md:w-[92px]">
                   <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_55%)]"></div>
@@ -174,9 +241,9 @@ export function Approach() {
                     <path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3"></path>
                   </svg>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="group relative md:-translate-x-16">
+              <motion.div variants={nodeVariants} className="group relative md:-translate-x-16">
                 <div className="absolute inset-0 rounded-full blur-2xl opacity-0 transition-opacity group-hover:opacity-100 bg-[radial-gradient(circle,_rgba(236,72,153,0.25),_transparent_60%)]"></div>
                 <div className="relative flex h-[76px] w-[76px] items-center justify-center rounded-full border border-white/[0.08] bg-white/[0.03] shadow-[0_20px_40px_-20px_rgba(0,0,0,0.8)] backdrop-blur-xl transition-transform duration-300 group-hover:scale-[1.06] md:h-[92px] md:w-[92px]">
                   <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_55%)]"></div>
@@ -186,9 +253,9 @@ export function Approach() {
                     <circle cx="12" cy="12" r="2" className="fill-current"></circle>
                   </svg>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="group relative">
+              <motion.div variants={nodeVariants} className="group relative">
                 <div className="absolute inset-0 rounded-full blur-2xl opacity-0 transition-opacity group-hover:opacity-100 bg-[radial-gradient(circle,_rgba(168,85,247,0.25),_transparent_60%)]"></div>
                 <div className="relative flex h-[76px] w-[76px] items-center justify-center rounded-full border border-white/[0.08] bg-white/[0.03] shadow-[0_20px_40px_-20px_rgba(0,0,0,0.8)] backdrop-blur-xl transition-transform duration-300 group-hover:scale-[1.06] md:h-[92px] md:w-[92px]">
                   <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_55%)]"></div>
@@ -205,11 +272,11 @@ export function Approach() {
                     <path d="M14.12 14.12 16 16"></path>
                   </svg>
                 </div>
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
