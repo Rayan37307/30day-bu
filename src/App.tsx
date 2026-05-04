@@ -58,7 +58,7 @@ export default function App() {
 
         {/* Main Content Hierarchy */}
         <div className="relative z-10 flex flex-col items-center w-full">
-          <Navbar />
+          {/* <Navbar /> */}
           <Hero />
           <CTABanner />
 

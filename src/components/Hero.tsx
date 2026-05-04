@@ -2,61 +2,120 @@ import { motion } from "framer-motion";
 
 export function Hero() {
   return (
-    <section className="relative w-full max-w-[1200px] mx-auto px-6 pt-32 pb-24 md:pt-40 md:pb-32 flex flex-col items-center gap-16">
-      {/* Top Video Container */}
-      <div className="w-full relative z-10">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="relative aspect-video w-full rounded-[32px] md:rounded-[48px] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.8)] border border-white/10"
-        >
-          <iframe 
-            width="100%" 
-            height="100%" 
-            src="https://www.youtube.com/embed/RG6fjpBbGpA?autoplay=1&loop=1&playlist=RG6fjpBbGpA&controls=0&start=0&end=130" 
-            title="AI এর যুগে টিকে থাকতে ৭টি সেরা স্কিল 🔥" 
-            frameBorder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerPolicy="strict-origin-when-cross-origin" 
-            allowFullScreen
-            className="absolute inset-0 w-full h-full"
-          ></iframe>
-
-
-        </motion.div>
+    <section className="w-full isolate min-h-screen overflow-hidden relative"
+  data-element-locator="html &gt; body:nth-of-type(1) &gt; section:nth-of-type(1)">
+  <img src="/modules/bg.jpg" alt="" className="w-full h-full object-cover absolute top-0 right-0 bottom-0 left-0"/>
+    <div className="pointer-events-none absolute inset-0 ring-1 ring-black/30"></div>
+    <header className="z-10 xl:top-4 relative">
+      <div className="mr-6 ml-6">
+        <div className="flex items-center justify-between">
+          <a href="#"
+            className="inline-flex items-center justify-center bg-center w-[100px] h-[40px] bg-[url(https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/febf2421-4a9a-42d6-871d-ff4f9518021c_1600w.png)] bg-cover rounded"></a>
+          <nav className="hidden md:flex items-center gap-2">
+            <div className="flex items-center gap-1 rounded-full bg-white/5 px-1 py-1 ring-1 ring-white/10 backdrop-blur">
+              <a href="#" className="px-3 py-2 text-sm font-medium text-white/90 hover:text-white font-sans">
+                Home
+              </a>
+              <a href="#" className="px-3 py-2 text-sm font-medium text-white/80 hover:text-white font-sans">
+                Missions
+              </a>
+              <a href="#" className="px-3 py-2 text-sm font-medium text-white/80 hover:text-white font-sans">
+                Destinations
+              </a>
+              <a href="#" className="px-3 py-2 text-sm font-medium text-white/80 hover:text-white font-sans">
+                Technology
+              </a>
+              <a href="#" className="px-3 py-2 text-sm font-medium text-white/80 hover:text-white font-sans">
+                Book Flight
+              </a>
+              <a href="#"
+                className="ml-1 inline-flex items-center gap-2 rounded-full bg-white px-3.5 py-2 text-sm font-medium text-neutral-900 hover:bg-white/90 font-sans">
+                Reserve Seat
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  data-lucide="arrow-up-right" className="lucide lucide-arrow-up-right h-4 w-4">
+                  <path d="M7 7h10v10" className=""></path>
+                  <path d="M7 17 17 7" className=""></path>
+                </svg>
+              </a>
+            </div>
+          </nav>
+          <button className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 ring-1 ring-white/15 backdrop-blur" id="mobile-menu-button" aria-expanded="false" aria-label="Toggle menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu" className="lucide lucide-menu h-5 w-5 text-white/90"><path d="M4 5h16" className=""></path><path d="M4 12h16" className=""></path><path d="M4 19h16" className=""></path></svg>
+          </button>
+        </div>
       </div>
-
-      {/* Bottom Text Content */}
-      <div className="w-full flex flex-col items-center text-center z-10 max-w-4xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-electric-blue/30 bg-electric-blue/10 text-electric-blue text-sm font-semibold tracking-wide uppercase mb-8"
-        >
-          <span className="w-2 h-2 rounded-full bg-electric-blue animate-pulse" />
-          30-দিনের লাইভ কোর্স
-        </motion.div>
-        
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="font-display font-normal text-6xl md:text-8xl lg:text-9xl leading-[1.1] mb-8"
-        >
-          অসীম <span className="text-electric-blue drop-shadow-[0_0_20px_rgba(0,123,255,0.5)]">সাফল্য</span>
-        </motion.h1>
-        
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-lg md:text-2xl text-slate-200 font-medium leading-relaxed max-w-2xl"
-        >
-          একটি ৩০ দিনের রূপান্তরমূলক জার্নি। প্রতিদিন শিখুন নতুন হাই-ইনকাম স্কিল: ডিসিপ্লিন, টাইম ম্যানেজমেন্ট, আসক্তি থেকে মুক্তি এবং বাস্তব জীবনের প্রয়োজনীয় স্কিল ডেভেলপমেন্ট।
-        </motion.p>
+    </header>
+    <div className="z-10 relative"
+      data-element-locator="html &gt; body:nth-of-type(1) &gt; section:nth-of-type(1) &gt; div:nth-of-type(2)">
+      <div className="sm:pt-28 md:pt-32 lg:pt-40 max-w-7xl mr-auto ml-auto pt-28 pr-6 pb-16 pl-6"
+        data-element-locator="html &gt; body:nth-of-type(1) &gt; section:nth-of-type(1) &gt; div:nth-of-type(2) &gt; div:nth-of-type(1)">
+        <div className="mx-auto max-w-3xl text-center">
+          <div
+            className="mb-6 inline-flex items-center gap-3 rounded-full bg-white/10 px-2.5 py-2 ring-1 ring-white/15 backdrop-blur animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.1s_both]">
+            <span className="inline-flex items-center text-xs font-medium text-neutral-900 bg-white/90 rounded-full pt-0.5 pr-2 pb-0.5 pl-2 font-sans">
+              New
+            </span>
+            <span className="text-sm font-medium text-white/90 font-sans">
+              First Commercial Flight to Mars 2026
+            </span>
+          </div>
+          <h1
+            className="sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-4xl text-white tracking-tight font-instrument-serif font-normal animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.2s_both]">
+            Journey Beyond Earth
+            <br className="hidden sm:block" />
+              Into the Cosmos
+          </h1>
+          <p
+            className="sm:text-lg animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.3s_both] text-base text-white/80 max-w-2xl mt-6 mr-auto ml-auto">
+            Experience the cosmos like never before. Our advanced spacecraft
+            and cutting-edge technology make interplanetary travel accessible,
+            safe, and unforgettable.
+          </p>
+          <div
+            className="flex flex-col sm:flex-row sm:gap-4 mt-10 gap-x-3 gap-y-3 items-center justify-center animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.4s_both]">
+            <a href="#"
+              className="inline-flex items-center gap-2 hover:bg-white/15 text-sm font-medium text-white bg-white/10 ring-white/15 ring-1 rounded-full pt-3 pr-5 pb-3 pl-5 font-sans">
+              Book Your Journey
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                data-lucide="arrow-right" className="lucide lucide-arrow-right h-4 w-4">
+                <path d="M5 12h14" className=""></path>
+                <path d="m12 5 7 7-7 7" className=""></path>
+              </svg>
+            </a>
+            <a href="#"
+              className="inline-flex items-center gap-2 rounded-full bg-transparent px-5 py-3 text-sm font-medium text-white/90 hover:text-white font-sans">
+              Watch Launch
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="play"
+                className="lucide lucide-play lucide-play-circle w-[16px] h-[16px]">
+                <path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" className="">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div className="mx-auto mt-20 max-w-5xl">
+          <p className="animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.1s_both] text-sm text-white/70 text-center">
+            Partnering with leading space agencies worldwide
+          </p>
+          <div
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.2s_both] text-white/70 mt-6 items-center">
+            <a href="#"
+              className="inline-flex items-center justify-center bg-center w-[120px] h-[36px] bg-[url(https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/f7466370-2832-4fdd-84c2-0932bb0dd850_800w.png)] bg-cover rounded-full"></a>
+            <a href="#"
+              className="inline-flex items-center justify-center bg-center w-[120px] h-[36px] bg-[url(https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/0a9a71ec-268b-4689-a510-56f57e9d4f13_1600w.png)] bg-cover rounded-full"></a>
+            <a href="#"
+              className="inline-flex items-center justify-center bg-center w-[120px] h-[36px] bg-[url(https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/a9ed4369-748a-49f8-9995-55d6c876bbff_1600w.png)] bg-cover rounded-full"></a>
+            <a href="#"
+              className="inline-flex items-center justify-center bg-center w-[120px] h-[36px] bg-[url(https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/0d8966a4-8525-4e11-9d5d-2d7390b2c798_1600w.png)] bg-cover rounded-full"></a>
+            <a href="#"
+              className="inline-flex items-center justify-center bg-center w-[120px] h-[36px] bg-[url(https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/2ed33c8b-b8b2-4176-967f-3d785fed07d8_1600w.png)] bg-cover rounded-full"></a>
+          </div>
+        </div>
       </div>
+    </div>
     </section>
   );
 }
