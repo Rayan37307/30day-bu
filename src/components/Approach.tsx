@@ -20,7 +20,7 @@ export function Approach() {
           </div>
 
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
-            <div className="max-w-3xl flex flex-col gap-6">
+            <div className="w-full flex flex-col gap-6">
               <h2 className="text-4xl md:text-5xl lg:text-6xl leading-[1.05] text-white font-display font-normal">
                 গভীর মনোযোগের জন্য তৈরি।
                 <span className="block text-gray-500 font-display font-normal">
@@ -28,7 +28,7 @@ export function Approach() {
                 </span>
               </h2>
 
-              <p className="text-lg text-gray-400 font-light max-w-xl leading-relaxed font-sans">
+              <p className="text-lg text-gray-400 font-light w-full leading-relaxed font-sans">
                 একটি শান্ত এবং সুশৃঙ্খল প্রোডাক্টিভিটি সিস্টেম যা আপনাকে ফোকাসড থাকতে, দ্রুত কাজ করতে এবং সময়ের সাথে অর্থপূর্ণ ফলাফল ট্র্যাক করতে সাহায্য করে।
               </p>
             </div>

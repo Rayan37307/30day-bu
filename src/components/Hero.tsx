@@ -53,10 +53,30 @@ export function Hero() {
       {/* Background Glow for Hero */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[60%] bg-electric-blue/10 blur-[120px] rounded-full pointer-events-none -z-10" />
       
-      <div className="sm:pt-28 md:pt-32 lg:pt-40 max-w-[1200px] mx-auto pt-28 px-6 pb-24 text-center">
+      <div className="sm:pt-20 md:pt-24 lg:pt-32 max-w-[1200px] mx-auto pt-20 px-6 pb-24 text-center">
+        {/* Video Block Moved to Top */}
+        <div className="mx-auto mb-20 max-w-4xl animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.1s_both]">
+          <div className="relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-white/10 to-white/5 rounded-lg blur-xl opacity-50 group-hover:opacity-75 transition duration-1000"></div>
+            
+            <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-border-subtle bg-black/40 shadow-2xl backdrop-blur-sm">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/RG6fjpBbGpA?start=0&end=20&autoplay=1&mute=1&loop=1&playlist=RG6fjpBbGpA&controls=0&modestbranding=1&rel=0"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="absolute inset-0 pointer-events-none rounded-lg ring-1 ring-inset ring-border-subtle"></div>
+          </div>
+        </div>
+
+        {/* Text Content Block */}
         <div className="mx-auto max-w-4xl">
           <div
-            className="mb-8 inline-flex items-center gap-3 rounded-full bg-white/10 px-3 py-2 ring-1 ring-border-subtle backdrop-blur animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.1s_both]">
+            className="mb-8 inline-flex items-center gap-3 rounded-full bg-white/10 px-3 py-2 ring-1 ring-border-subtle backdrop-blur animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.2s_both]">
             <span className="inline-flex items-center text-[10px] font-bold tracking-wider uppercase text-neutral-900 bg-white/90 rounded-full px-2.5 py-1">
               নতুন ব্যাচ
             </span>
@@ -65,17 +85,17 @@ export function Hero() {
             </span>
           </div>
           <h1
-            className="sm:text-6xl text-white md:text-7xl lg:text-8xl leading-[1.1] text-5xl text-white tracking-tight font-display animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.2s_both]">
+            className="sm:text-6xl text-white md:text-7xl lg:text-8xl leading-[1.1] text-5xl text-white tracking-tight font-display animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.3s_both]">
             প্যাশন থেকে প্রফিট: 
             <br className="hidden sm:block" />
             এআই এবং ক্রিয়েটর ইকোনমি
           </h1>
           <p
-            className="sm:text-xl animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.3s_both] text-lg text-slate-300 max-w-2xl mt-8 mx-auto leading-relaxed">
+            className="sm:text-xl animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.4s_both] text-lg text-slate-300 max-w-2xl mt-8 mx-auto leading-relaxed">
             ৩০ দিনে শিখুন কীভাবে এআই ব্যবহার করে আপনার প্যাশনকে একটি সফল ক্যারিয়ারে রূপান্তর করবেন। আমরা আপনাকে শেখাবো কন্টেন্ট ক্রিয়েশন, প্রোডাক্টিভিটি এবং কোডিং-এর আধুনিক সব টেকনিক।
           </p>
           <div
-            className="flex flex-col sm:flex-row gap-4 mt-12 items-center justify-center animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.4s_both]">
+            className="flex flex-col sm:flex-row gap-4 mt-12 items-center justify-center animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.5s_both]">
             <a href="#pricing"
               className="inline-flex items-center gap-2 bg-white/10 ring-border-subtle ring-1 hover:bg-white/15 text-white text-[16px] font-bold rounded-full px-8 py-4 transition-all hover:scale-105 active:scale-95">
               এনরোল করুন
@@ -96,26 +116,6 @@ export function Hero() {
                 </path>
               </svg>
             </a>
-          </div>
-        </div>
-        <div className="mx-auto mt-24 max-w-4xl animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.5s_both]">
-          <div className="relative group">
-            {/* Ambient Glow Background */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-white/10 to-white/5 rounded-lg blur-xl opacity-50 group-hover:opacity-75 transition duration-1000"></div>
-            
-            <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-border-subtle bg-black/40 shadow-2xl backdrop-blur-sm">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/RG6fjpBbGpA?start=0&end=20&autoplay=1&mute=1&loop=1&playlist=RG6fjpBbGpA&controls=0&modestbranding=1&rel=0"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
-            </div>
-            
-            {/* Optional Overlay for Polish */}
-            <div className="absolute inset-0 pointer-events-none rounded-lg ring-1 ring-inset ring-border-subtle"></div>
           </div>
         </div>
       </div>

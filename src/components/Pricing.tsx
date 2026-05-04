@@ -14,7 +14,7 @@ export function Pricing() {
       <div className="flex flex-col gap-x-16 gap-y-16 rounded-lg border border-border-subtle bg-surface mt-20 mb-20 px-6 py-20 relative overflow-hidden">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 w-full relative z-10">
-          <div className="flex flex-col gap-6 max-w-3xl">
+          <div className="flex flex-col gap-6 w-full">
             <div className="flex gap-3 items-center">
               <span className="flex items-center justify-center text-[11px] font-mono font-medium text-red-400 bg-red-500/10 w-7 h-7 border-border-subtle border rounded-lg shadow-[0_0_10px_rgba(239,68,68,0.2)]">
                 04
@@ -26,7 +26,7 @@ export function Pricing() {
             <h2 className="md:text-5xl lg:text-6xl leading-[1.1] text-4xl text-white font-display font-normal tracking-tight">
               সবার জন্য সহজ <span className="text-text-secondary">প্রাইসিং।</span>
             </h2>
-            <p className="text-lg text-gray-400 font-light max-w-xl leading-relaxed font-sans">
+            <p className="text-lg text-gray-400 font-light w-full leading-relaxed font-sans">
               কোনো মাসিক ফি নেই। একবার পেমেন্ট করুন এবং আজীবনের জন্য কোর্সের সকল রিসোর্স এবং ফিউচার আপডেট পেয়ে যান।
             </p>
           </div>
