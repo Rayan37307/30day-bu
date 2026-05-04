@@ -31,7 +31,7 @@ export function CTABanner() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="relative flex flex-col md:flex-row items-center justify-between rounded-[24px] overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.6)] border border-electric-blue/30 w-full"
+        className="relative flex flex-col md:flex-row items-center justify-between rounded-lg overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.6)] border border-border-subtle w-full"
       >
         {/* Background Gradients & Shapes to match the reference */}
         <div className="absolute inset-0 bg-black" /> {/* Base Dark */}
@@ -43,7 +43,7 @@ export function CTABanner() {
         />
 
         {/* Content Wrapper */}
-        <div className="relative w-full flex flex-col md:flex-row items-center justify-between px-8 py-10 md:px-6 lg:px-10 lg:py-8 z-10 gap-8 md:gap-4 lg:gap-8">
+        <div className="relative w-full flex flex-col md:flex-row items-center justify-between px-6 py-10 lg:py-8 z-10 gap-8 md:gap-4 lg:gap-8">
           
           {/* Left: Timer */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
@@ -67,7 +67,7 @@ export function CTABanner() {
 
           {/* Right: CTA Button */}
           <div className="flex flex-col items-center md:items-end w-full md:w-auto lg:shrink-0">
-            <button className="w-full bg-[#c2f0c2] hover:bg-[#aae6aa] text-black font-bold text-xl md:text-base lg:text-xl py-4 md:py-3 lg:py-4 px-6 md:px-4 lg:px-6 rounded-[12px] lg:rounded-[16px] transition-all duration-300 flex items-center justify-center gap-2 lg:gap-3 group shadow-[0_10px_20px_rgba(0,0,0,0.3)] whitespace-nowrap">
+            <button className="w-full bg-[#c2f0c2] hover:bg-[#aae6aa] text-black font-bold text-xl md:text-base lg:text-xl py-4 md:py-3 lg:py-4 px-6 md:px-4 lg:px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 lg:gap-3 group shadow-[0_10px_20px_rgba(0,0,0,0.3)] whitespace-nowrap">
               এখনই জয়েন করুন
               <ArrowRight size={20} className="transform transition-transform group-hover:translate-x-1" />
             </button>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Galada&family=Inter:wght@400;500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&family=Oswald:wght@200;300;400;500;600;700&family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Hind+Siliguri:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Anton&display=swap');
 @import "tailwindcss";
 
 
@@ -6,12 +6,15 @@
 @theme {
   --color-electric-blue: #ff3b3b;
   --color-electric-blue-hover: #d32f2f;
-  --color-navy-deep: #000000;
-  --color-navy-card: #0a0a0a;
+  --color-navy-deep: #050505;
+  --color-navy-card: #18181B;
+  --color-surface: #18181B;
+  --color-border-subtle: #27272A;
+  --color-text-secondary: #A1A1AA;
   
-  --font-sans: "Inter", "Hind Siliguri", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Hind Siliguri", "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Atma", system-ui;
-  --font-oswald: "Oswald", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
   --font-anton: "Anton", sans-serif;
 }
 

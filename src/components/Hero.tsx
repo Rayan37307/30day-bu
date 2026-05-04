@@ -7,18 +7,18 @@ export function Hero() {
   <img src="/modules/bg.jpg" alt="" className="w-full h-full object-cover absolute top-0 right-0 bottom-0 left-0"/>
     <div className="pointer-events-none absolute inset-0 ring-1 ring-black/30"></div>
     <header className="z-10 xl:top-6 relative">
-      <div className="mr-6 ml-6">
-        <div className="flex items-center justify-between max-w-[1200px] mx-auto">
+      <div className="w-full max-w-[1200px] mx-auto px-6">
+        <div className="flex items-center justify-between">
           <a href="#" className="flex items-center">
             <img 
               src="https://yt3.ggpht.com/7umIhrv3vy-yRasCnhA2ps10Av3jEzLHEbhb67eUYfwP_3y25_KrKWACDjDC7GBbvxqIh1KkT7k=s176-c-k-c0x00ffffff-no-rj-mo" 
               alt="Logo" 
-              className="w-[46px] h-[46px] rounded-[14px] object-cover shadow-lg" 
+              className="w-[46px] h-[46px] rounded-lg object-cover shadow-lg" 
               referrerPolicy="no-referrer"
             />
           </a>
           <nav className="hidden md:flex items-center gap-2">
-            <div className="flex items-center gap-1 rounded-full bg-white/5 px-1 py-1 ring-1 ring-white/10 backdrop-blur">
+            <div className="flex items-center gap-1 rounded-full bg-white/5 px-1 py-1 ring-1 ring-border-subtle backdrop-blur">
               <a href="#overview" className="px-4 py-2 text-[15px] font-medium text-white/80 hover:text-white transition-colors">
                 ওভারভিউ
               </a>
@@ -53,7 +53,7 @@ export function Hero() {
       <div className="sm:pt-28 md:pt-32 lg:pt-40 max-w-[1200px] mx-auto pt-28 px-6 pb-24 text-center">
         <div className="mx-auto max-w-4xl">
           <div
-            className="mb-8 inline-flex items-center gap-3 rounded-full bg-white/10 px-3 py-2 ring-1 ring-white/15 backdrop-blur animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.1s_both]">
+            className="mb-8 inline-flex items-center gap-3 rounded-full bg-white/10 px-3 py-2 ring-1 ring-border-subtle backdrop-blur animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.1s_both]">
             <span className="inline-flex items-center text-[10px] font-bold tracking-wider uppercase text-neutral-900 bg-white/90 rounded-full px-2.5 py-1">
               নতুন ব্যাচ
             </span>
@@ -74,7 +74,7 @@ export function Hero() {
           <div
             className="flex flex-col sm:flex-row gap-4 mt-12 items-center justify-center animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.4s_both]">
             <a href="#pricing"
-              className="inline-flex items-center gap-2 bg-white/10 ring-white/15 ring-1 hover:bg-white/15 text-white text-[16px] font-bold rounded-full px-8 py-4 transition-all hover:scale-105 active:scale-95">
+              className="inline-flex items-center gap-2 bg-white/10 ring-border-subtle ring-1 hover:bg-white/15 text-white text-[16px] font-bold rounded-full px-8 py-4 transition-all hover:scale-105 active:scale-95">
               এনরোল করুন
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
@@ -98,9 +98,9 @@ export function Hero() {
         <div className="mx-auto mt-24 max-w-4xl animate-on-scroll [animation:fadeSlideIn_1s_ease-out_0.5s_both]">
           <div className="relative group">
             {/* Ambient Glow Background */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-white/10 to-white/5 rounded-[2rem] blur-xl opacity-50 group-hover:opacity-75 transition duration-1000"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-white/10 to-white/5 rounded-lg blur-xl opacity-50 group-hover:opacity-75 transition duration-1000"></div>
             
-            <div className="relative aspect-video w-full overflow-hidden rounded-[1.5rem] border border-white/10 bg-black/40 shadow-2xl backdrop-blur-sm">
+            <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-border-subtle bg-black/40 shadow-2xl backdrop-blur-sm">
               <iframe
                 className="w-full h-full"
                 src="https://www.youtube.com/embed/RG6fjpBbGpA?start=0&end=20&autoplay=1&mute=1&loop=1&playlist=RG6fjpBbGpA&controls=0&modestbranding=1&rel=0"
@@ -112,7 +112,7 @@ export function Hero() {
             </div>
             
             {/* Optional Overlay for Polish */}
-            <div className="absolute inset-0 pointer-events-none rounded-[1.5rem] ring-1 ring-inset ring-white/10"></div>
+            <div className="absolute inset-0 pointer-events-none rounded-lg ring-1 ring-inset ring-border-subtle"></div>
           </div>
         </div>
       </div>

@@ -2,10 +2,10 @@ import React from 'react';
 
 export function Footer() {
   return (
-    <footer className="overflow-hidden text-white bg-[#050505] border-neutral-800 border-t pt-16">
+    <footer className="overflow-hidden text-white bg-navy-deep border-border-subtle border-t py-20">
       {/* Giant Brand Text */}
       <div 
-        className="text-center w-full mb-20 px-4"
+        className="text-center w-full mb-20 px-6"
         style={{ 
           maskImage: 'linear-gradient(180deg, transparent, black 0%, black 55%, transparent)', 
           WebkitMaskImage: 'linear-gradient(180deg, transparent, black 0%, black 55%, transparent)' 
@@ -17,9 +17,9 @@ export function Footer() {
       </div>
 
       {/* Links Grid */}
-      <div className="border-t border-neutral-900 grid grid-cols-1 lg:grid-cols-2">
+      <div className="border-t border-border-subtle grid grid-cols-1 lg:grid-cols-2">
         {/* Left Side: Navigation Links */}
-        <div className="p-8 md:p-16 grid grid-cols-2 gap-12 border-r border-neutral-900">
+        <div className="px-6 py-20 grid grid-cols-2 gap-12 border-r border-border-subtle">
           <div className="flex flex-col gap-6">
             <a href="#" className="text-xs font-medium text-neutral-500 uppercase tracking-widest hover:text-white transition-colors">আমাদের সম্পর্কে</a>
             <a href="#" className="text-xs font-medium text-neutral-500 uppercase tracking-widest hover:text-white transition-colors">কোর্স</a>
@@ -34,7 +34,7 @@ export function Footer() {
         </div>
 
         {/* Right Side: Wireframe Illustration */}
-        <div className="lg:h-auto lg:border-t-0 flex overflow-hidden aether-bottles w-full h-48 border-neutral-900 border-t relative items-center justify-center">
+        <div className="lg:h-auto lg:border-t-0 flex overflow-hidden aether-bottles w-full h-48 border-border-subtle border-t relative items-center justify-center">
           <svg viewBox="0 0 400 120" className="opacity-20 max-h-[160px] w-full h-full" preserveAspectRatio="xMidYMid meet" strokeWidth="2">
             {/* Tube 1 (Outline) */}
             <path d="M40 100 L50 30 L90 30 L100 100" stroke="white" strokeWidth="1" fill="none"></path>
@@ -72,7 +72,7 @@ export function Footer() {
         </div>
 
         {/* Copyright Row */}
-        <div className="border-t border-neutral-900 px-8 md:px-16 py-8 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] text-neutral-600 font-medium tracking-wide lg:col-span-2">
+        <div className="border-t border-border-subtle px-6 py-20 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] text-text-secondary font-medium tracking-wide lg:col-span-2">
           <div>
             {new Date().getFullYear()} © সর্বস্বত্ব সংরক্ষিত - ব্যাকবেঞ্চার্স ইউনিভার্সিটি
           </div>

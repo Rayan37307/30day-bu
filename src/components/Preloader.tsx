@@ -50,7 +50,7 @@ export function Preloader({ onComplete }: PreloaderProps) {
     >
       {/* The Black Panel that slides up */}
       <div
-        className="absolute inset-0 bg-black border-b border-white/10"
+        className="absolute inset-0 bg-navy-deep border-b border-border-subtle"
       />
 
       {/* Text Content - now moves with the container */}

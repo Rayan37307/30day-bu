@@ -117,20 +117,22 @@ export function Modules() {
   return (
     <div className="bg-transparent">
       {/* Header Section (Scrolls normally) */}
-      <section className="pt-40 pb-20 px-6 text-center">
-        <p className="text-xs font-bold tracking-[0.2em] uppercase text-white/30 mb-4">
-          কোর্স কারিকুলাম
-        </p>
-        <h2 className="font-display font-medium text-4xl md:text-5xl mb-4 text-white">
-          ৩০-দিনের <span className="text-red-500 font-bold">রোডম্যাপ</span>
-        </h2>
-        <p className="text-slate-400 max-w-xl mx-auto text-lg pt-2 leading-relaxed">
-          প্রতিদিন নতুন কিছু শিখুন। নিচে কোর্সের ৪টি ধাপের ব্রেকডাউন দেওয়া হলো।
-        </p>
+      <section className="py-20 text-center">
+        <div className="w-full max-w-[1200px] mx-auto px-6">
+          <p className="text-xs font-mono font-bold tracking-[0.2em] uppercase text-text-secondary mb-4">
+            কোর্স কারিকুলাম
+          </p>
+          <h2 className="font-display font-medium text-4xl md:text-5xl mb-4 text-white">
+            ৩০-দিনের <span className="text-red-500 font-bold">রোডম্যাপ</span>
+          </h2>
+          <p className="text-slate-400 max-w-xl mx-auto text-lg pt-2 leading-relaxed">
+            প্রতিদিন নতুন কিছু শিখুন। নিচে কোর্সের ৪টি ধাপের ব্রেকডাউন দেওয়া হলো।
+          </p>
+        </div>
       </section>
 
       {/* Pinned Stacking Cards Section */}
-      <section ref={containerRef} className="relative flex items-center justify-center h-screen w-full overflow-hidden px-4 md:px-6">
+      <section ref={containerRef} className="relative flex items-center justify-center h-screen w-full overflow-hidden px-6">
         {modules.map((mod, i) => (
           <div
             key={mod.id}
@@ -142,7 +144,7 @@ export function Modules() {
               top: calc... Creates the visual "stacked edges" offset effect
             */}
             <div
-              className="card-inner relative w-full max-w-[1200px] origin-top flex flex-col md:flex-row overflow-hidden rounded-[28px] border border-white/[0.06] bg-[#0a0a0d] shadow-[0_30px_60px_rgba(0,0,0,0.6)] will-change-transform"
+              className="card-inner relative w-full max-w-[1200px] origin-top flex flex-col md:flex-row overflow-hidden rounded-lg border border-border-subtle bg-surface shadow-[0_30px_60px_rgba(0,0,0,0.6)] will-change-transform"
               style={{
                 top: `calc(-5vh + ${i * 30}px)`, 
                 boxShadow: `0 0 0 1px rgba(255,255,255,0.04), 0 30px 60px rgba(0,0,0,0.6), 0 0 80px ${mod.glowColor}`,
@@ -158,7 +160,7 @@ export function Modules() {
 
               {/* Left panel */}
               <div
-                className="relative flex w-full flex-col justify-between border-b border-white/[0.05] p-8 md:w-[42%] md:border-b-0 md:border-r md:p-12"
+                className="relative flex w-full flex-col justify-between border-b border-border-subtle p-6 md:w-[42%] md:border-b-0 md:border-r md:p-6"
                 style={{ background: mod.accentBg }}
               >
                 <div className="mb-10 flex items-center justify-between">
@@ -173,7 +175,7 @@ export function Modules() {
                     Module {mod.id}
                   </span>
                   <div
-                    className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10"
+                    className="flex h-11 w-11 items-center justify-center rounded-lg border border-border-subtle"
                     style={{ background: `${mod.accentColor}15` }}
                   >
                     {mod.icon}
@@ -196,13 +198,13 @@ export function Modules() {
               </div>
 
               {/* Right panel — steps */}
-              <div className="flex w-full items-center p-8 md:w-[58%] md:p-12 bg-[#0e0e12]">
+              <div className="flex w-full items-center p-6 md:w-[58%] md:p-6 bg-surface">
                 <ul className="relative w-full space-y-7">
                   <div className="absolute bottom-5 left-[18px] top-5 w-px bg-white/[0.06]" />
                   {mod.points.map((point, pIdx) => (
                     <li key={pIdx} className="relative flex items-start gap-5">
                       <div
-                        className="relative z-10 mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-white/[0.07] bg-[#0e0e12]"
+                        className="relative z-10 mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-border-subtle bg-surface"
                         style={{
                           boxShadow: `0 0 0 3px ${mod.accentColor}12, inset 0 1px 2px rgba(255,255,255,0.06)`,
                         }}

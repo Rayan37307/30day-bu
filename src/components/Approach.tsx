@@ -3,9 +3,8 @@ import React from 'react';
 export function Approach() {
   return (
     <section 
-      className="animate-entry delay-200 [animation:animationIn_0.8s_ease-out_0.1s_both] animate-on-scroll lg:mx-auto bg-gradient-to-br from-white/10 via-white/0 to-white/10 max-w-[1200px] rounded-3xl mt-24 mx-auto mb-24 p-10 relative border border-white/10"
-      style={{ position: 'relative' }}
-    >
+      className="animate-entry delay-200 [animation:animationIn_0.8s_ease-out_0.1s_both] animate-on-scroll lg:mx-auto bg-gradient-to-br from-white/10 via-white/0 to-white/10 max-w-[1200px] rounded-lg mt-24 mx-auto mb-24 px-6 py-20 relative border border-border-subtle"
+      style={{ position: 'relative' }}>
       {/* Main Grid */}
       <div className="flex flex-col relative">
         {/* Header Section */}
@@ -45,7 +44,7 @@ export function Approach() {
         </div>
 
         {/* Features Grid */}
-        <div className="min-h-[560px] flex md:mt-0 w-full max-w-[1200px] mt-16 mx-auto px-4 relative items-center justify-center">
+        <div className="min-h-[560px] flex md:mt-0 w-full mt-16 mx-auto px-4 relative items-center justify-center">
           {/* SVG Connections with Noodles */}
           <svg className="absolute inset-0 hidden h-full w-full pointer-events-none md:block" viewBox="0 0 1000 560" preserveAspectRatio="xMidYMid meet">
             <defs>
@@ -111,7 +110,7 @@ export function Approach() {
               {/* Node 1 */}
               <div className="group relative">
                 <div className="absolute inset-0 rounded-full blur-2xl opacity-0 transition-opacity group-hover:opacity-100 bg-[radial-gradient(circle,_rgba(249,115,22,0.25),_transparent_60%)]"></div>
-                <div className="relative flex h-[76px] w-[76px] items-center justify-center rounded-full border border-white/[0.08] bg-white/[0.03] shadow-[0_20px_40px_-20px_rgba(0,0,0,0.8)] backdrop-blur-xl transition-transform duration-300 group-hover:scale-[1.06] md:h-[92px] md:w-[92px]">
+                <div className="relative flex h-[76px] w-[76px] items-center justify-center rounded-lg border border-border-subtle bg-white/[0.03] shadow-[0_20px_40px_-20px_rgba(0,0,0,0.8)] backdrop-blur-xl transition-transform duration-300 group-hover:scale-[1.06] md:h-[92px] md:w-[92px]">
                   <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_55%)]"></div>
                   <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-orange-400 drop-shadow-[0_0_12px_rgba(249,115,22,0.4)]">
                     <circle cx="12" cy="12" r="10"></circle>
@@ -123,7 +122,7 @@ export function Approach() {
               {/* Node 2 */}
               <div className="group relative md:translate-x-16">
                 <div className="absolute inset-0 rounded-full blur-2xl opacity-0 transition-opacity group-hover:opacity-100 bg-[radial-gradient(circle,_rgba(234,88,12,0.25),_transparent_60%)]"></div>
-                <div className="relative flex h-[76px] w-[76px] items-center justify-center rounded-full border border-white/[0.08] bg-white/[0.03] shadow-[0_20px_40px_-20px_rgba(0,0,0,0.8)] backdrop-blur-xl transition-transform duration-300 group-hover:scale-[1.06] md:h-[92px] md:w-[92px]">
+                <div className="relative flex h-[76px] w-[76px] items-center justify-center rounded-lg border border-border-subtle bg-white/[0.03] shadow-[0_20px_40px_-20px_rgba(0,0,0,0.8)] backdrop-blur-xl transition-transform duration-300 group-hover:scale-[1.06] md:h-[92px] md:w-[92px]">
                   <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_55%)]"></div>
                   <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-orange-500 drop-shadow-[0_0_12px_rgba(234,88,12,0.4)]">
                     <path d="M12 6v12"></path>
@@ -136,7 +135,7 @@ export function Approach() {
               {/* Node 3 */}
               <div className="group relative">
                 <div className="absolute inset-0 rounded-full blur-2xl opacity-0 transition-opacity group-hover:opacity-100 bg-[radial-gradient(circle,_rgba(239,68,68,0.25),_transparent_60%)]"></div>
-                <div className="relative flex h-[76px] w-[76px] items-center justify-center rounded-full border border-white/[0.08] bg-white/[0.03] shadow-[0_20px_40px_-20px_rgba(0,0,0,0.8)] backdrop-blur-xl transition-transform duration-300 group-hover:scale-[1.06] md:h-[92px] md:w-[92px]">
+                <div className="relative flex h-[76px] w-[76px] items-center justify-center rounded-lg border border-border-subtle bg-white/[0.03] shadow-[0_20px_40px_-20px_rgba(0,0,0,0.8)] backdrop-blur-xl transition-transform duration-300 group-hover:scale-[1.06] md:h-[92px] md:w-[92px]">
                   <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_55%)]"></div>
                   <div className="grid grid-cols-2 gap-1.5 rotate-45">
                     <div className="h-2.5 w-2.5 rounded-[1px] bg-red-500"></div>
@@ -155,7 +154,7 @@ export function Approach() {
                 <div className="absolute -inset-[20%] rounded-full opacity-40 animate-beam-spin pointer-events-none" style={{ background: 'conic-gradient(from 0deg at 50% 50%, transparent 0deg, transparent 240deg, rgba(251, 113, 133, 0.4) 360deg)', maskImage: 'radial-gradient(transparent 55%, black 60%)', WebkitMaskImage: 'radial-gradient(transparent 55%, black 60%)' }}></div>
                 <div className="absolute -inset-[15%] rounded-full opacity-20 animate-beam-spin pointer-events-none" style={{ background: 'conic-gradient(from 180deg at 50% 50%, transparent 0deg, transparent 240deg, rgba(239, 68, 68, 0.6) 360deg)', animationDirection: 'reverse', animationDuration: '12s', maskImage: 'radial-gradient(transparent 55%, black 60%)', WebkitMaskImage: 'radial-gradient(transparent 55%, black 60%)' }}></div>
 
-                <div className="relative flex h-[110px] w-[110px] items-center justify-center rounded-full border border-white/[0.10] bg-white/[0.04] backdrop-blur-2xl shadow-[0_40px_100px_-40px_rgba(239,68,68,0.7)] md:h-[132px] md:w-[132px]">
+                <div className="relative flex h-[110px] w-[110px] items-center justify-center rounded-full border border-border-subtle bg-white/[0.04] backdrop-blur-2xl shadow-[0_40px_100px_-40px_rgba(239,68,68,0.7)] md:h-[132px] md:w-[132px]">
                   <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.12),_transparent_55%)]"></div>
                   <div className="absolute inset-[10px] rounded-full border border-white/[0.10]"></div>
                   <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-red-400 drop-shadow-[0_0_24px_rgba(239,68,68,0.6)]">

@@ -107,7 +107,7 @@ export function SocialProof() {
   ];
 
   const CommentCard = ({ review }: { review: any }) => (
-    <div className="bg-navy-card rounded-xl p-5 w-[380px] md:w-[450px] shrink-0 border border-white/5 hover:border-white/10 transition-colors flex flex-col gap-3">
+    <div className="bg-surface rounded-lg p-6 w-[380px] md:w-[450px] shrink-0 border border-border-subtle hover:border-white/10 transition-colors flex flex-col gap-3">
       <div className="flex gap-4">
         <div className="w-10 h-10 rounded-full bg-electric-blue/20 flex items-center justify-center text-electric-blue font-bold shrink-0 text-sm">
           {review.initials}
@@ -136,8 +136,8 @@ export function SocialProof() {
   );
 
   return (
-    <section className="relative w-full max-w-[1200px] mx-auto overflow-hidden py-24">
-      <div className="text-center mb-16 px-6 relative z-10 w-full max-w-[1200px] mx-auto">
+    <section className="relative w-full max-w-[1200px] mx-auto overflow-hidden py-20 px-6">
+      <div className="text-center mb-16 relative z-10 w-full">
         <h2 className="font-display font-normal text-5xl md:text-6xl mb-4 leading-[1.2]">
           ১০,০০০+ <span className="text-electric-blue">Backbenchers</span>-দের ভরসা
         </h2>

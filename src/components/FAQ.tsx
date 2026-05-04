@@ -25,7 +25,7 @@ export function FAQ() {
   ];
 
   return (
-    <section className="relative w-full max-w-[1200px] mx-auto px-6 py-32 overflow-hidden rounded-[40px]">
+    <section className="relative w-full max-w-[1200px] mx-auto px-6 py-20 overflow-hidden rounded-lg">
       {/* Spline Background */}
       <div className="spline-container absolute top-0 left-0 w-full h-full -z-10 opacity-60">
         <iframe 
@@ -56,8 +56,8 @@ export function FAQ() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: idx * 0.1 }}
-              className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
-                isOpen ? "bg-white/5 border-electric-blue/40" : "bg-transparent border-white/10 hover:bg-white/[0.02]"
+              className={`rounded-lg border transition-all duration-300 overflow-hidden ${
+                isOpen ? "bg-surface border-electric-blue/40" : "bg-transparent border-border-subtle hover:bg-white/[0.02]"
               }`}
             >
               <button

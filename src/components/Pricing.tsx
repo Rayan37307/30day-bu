@@ -11,12 +11,12 @@ export function Pricing() {
 
   return (
     <div className="mx-auto max-w-[1200px] px-6" id="pricing">
-      <div className="flex flex-col gap-x-16 gap-y-16 rounded-3xl border border-white/10 bg-[#0A0A0C] mt-24 mb-24 px-8 pt-8 pb-16 relative overflow-hidden">
+      <div className="flex flex-col gap-x-16 gap-y-16 rounded-lg border border-border-subtle bg-surface mt-20 mb-20 px-6 py-20 relative overflow-hidden">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 w-full relative z-10">
           <div className="flex flex-col gap-6 max-w-3xl">
             <div className="flex gap-3 items-center">
-              <span className="flex items-center justify-center text-[11px] font-medium text-red-400 font-mono bg-red-500/10 w-7 h-7 border-red-500/20 border rounded-lg shadow-[0_0_10px_rgba(239,68,68,0.2)]">
+              <span className="flex items-center justify-center text-[11px] font-mono font-medium text-red-400 bg-red-500/10 w-7 h-7 border-border-subtle border rounded-lg shadow-[0_0_10px_rgba(239,68,68,0.2)]">
                 04
               </span>
               <span className="uppercase text-sm font-medium text-gray-500 tracking-widest font-sans">
@@ -24,7 +24,7 @@ export function Pricing() {
               </span>
             </div>
             <h2 className="md:text-5xl lg:text-6xl leading-[1.1] text-4xl text-white font-display font-normal tracking-tight">
-              সবার জন্য সহজ <span className="text-gray-600">প্রাইসিং।</span>
+              সবার জন্য সহজ <span className="text-text-secondary">প্রাইসিং।</span>
             </h2>
             <p className="text-lg text-gray-400 font-light max-w-xl leading-relaxed font-sans">
               কোনো মাসিক ফি নেই। একবার পেমেন্ট করুন এবং আজীবনের জন্য কোর্সের সকল রিসোর্স এবং ফিউচার আপডেট পেয়ে যান।
@@ -51,9 +51,9 @@ export function Pricing() {
           </div>
 
           {/* Pricing Card */}
-          <div className="overflow-hidden z-10 group bg-[#0A0A0C] w-full max-w-[1200px] border-white/10 border rounded-[3rem] relative shadow-2xl">
+          <div className="overflow-hidden z-10 group bg-surface w-full max-w-[1200px] border-border-subtle border rounded-lg relative shadow-2xl">
             {/* Card Background */}
-            <div className="pointer-events-none bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#2e1a1a] via-[#0A0A0C] to-[#0A0A0C] absolute inset-0"></div>
+            <div className="pointer-events-none bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#2e1a1a] via-surface to-surface absolute inset-0"></div>
             {/* Stars Effect */}
             <div 
               className="absolute inset-0 opacity-20"
@@ -65,7 +65,7 @@ export function Pricing() {
               }}
             ></div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 p-10 md:p-16 min-h-[450px] relative gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 p-6 min-h-[450px] relative gap-12">
               {/* Left Column */}
               <div className="flex flex-col gap-8 h-full items-start justify-between">
                 {/* Icon & Title */}
@@ -111,7 +111,7 @@ export function Pricing() {
 
                 {/* CTA Button */}
                 <div className="flex justify-start md:justify-end mt-auto pt-4">
-                  <button className="w-full sm:w-auto hover:bg-red-500/10 hover:border-red-400 hover:shadow-[0_0_35px_rgba(239,68,68,0.6),inset_0_0_20px_rgba(239,68,68,0.4)] hover:scale-[1.02] transition-all duration-300 flex group text-base font-medium text-white bg-black/60 border-red-500 border rounded-full px-12 py-4 shadow-[0_0_20px_rgba(239,68,68,0.5),inset_0_0_10px_rgba(239,68,68,0.2)] gap-2 items-center justify-center">
+                  <button className="w-full sm:w-auto hover:bg-red-500/10 hover:border-red-400 hover:shadow-[0_0_35px_rgba(239,68,68,0.6),inset_0_0_20px_rgba(239,68,68,0.4)] hover:scale-[1.02] transition-all duration-300 flex group text-base font-medium text-white bg-black/60 border-red-500 border rounded-lg px-12 py-4 shadow-[0_0_20px_rgba(239,68,68,0.5),inset_0_0_10px_rgba(239,68,68,0.2)] gap-2 items-center justify-center">
                     এখনই জয়েন করুন
                   </button>
                 </div>
