@@ -18,7 +18,7 @@ export function Pricing() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="flex flex-col gap-x-16 gap-y-16 rounded-lg border border-border-subtle bg-surface mt-20 mb-20 px-6 py-20 relative overflow-hidden">
+        className="flex flex-col gap-x-16 gap-y-16 mt-20 mb-20 px-6 py-20 relative overflow-hidden">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 w-full relative z-10">
           <div className="flex flex-col gap-6 w-full">
@@ -60,7 +60,7 @@ export function Pricing() {
           {/* Pricing Card */}
           <motion.div 
             whileHover={{ y: -5, scale: 1.005 }}
-            className="overflow-hidden z-10 group bg-surface w-full max-w-[1200px] border-border-subtle border rounded-lg relative shadow-2xl transition-all duration-500">
+            className="overflow-hidden z-10 group bg-white/5 backdrop-blur-md w-full max-w-[1200px] border-white/10 hover:bg-white/10 hover:border-white/20 border rounded-lg relative shadow-[0_0_15px_rgba(239,68,68,0.15)] hover:shadow-[0_0_25px_rgba(239,68,68,0.3)] transition-all duration-500">
             
             {/* Floating Pulse Badge */}
             <div className="absolute top-6 right-6 z-20">
@@ -76,7 +76,7 @@ export function Pricing() {
               </span>
             </div>
             {/* Card Background */}
-            <div className="pointer-events-none bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#2e1a1a] via-surface to-surface absolute inset-0"></div>
+            <div className="pointer-events-none bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-red-500/10 via-transparent to-transparent absolute inset-0"></div>
             {/* Stars Effect */}
             <div 
               className="absolute inset-0 opacity-20"

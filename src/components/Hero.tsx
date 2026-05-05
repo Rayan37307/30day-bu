@@ -6,49 +6,7 @@ export function Hero() {
   data-element-locator="html &gt; body:nth-of-type(1) &gt; section:nth-of-type(1)">
   <img src="/modules/bg.jpg" alt="" className="w-full h-full object-cover absolute top-0 right-0 bottom-0 left-0"/>
     <div className="pointer-events-none absolute inset-0 ring-1 ring-black/30"></div>
-    <header className="z-10 xl:top-6 relative">
-      <div className="w-full max-w-[1200px] mx-auto px-6">
-        <div className="flex items-center justify-between">
-          <a href="#" className="flex items-center">
-            <img 
-              src="https://yt3.ggpht.com/7umIhrv3vy-yRasCnhA2ps10Av3jEzLHEbhb67eUYfwP_3y25_KrKWACDjDC7GBbvxqIh1KkT7k=s176-c-k-c0x00ffffff-no-rj-mo" 
-              alt="Logo" 
-              className="w-[46px] h-[46px] rounded-lg object-cover shadow-lg" 
-              referrerPolicy="no-referrer"
-            />
-          </a>
-          <nav className="hidden md:flex items-center gap-2">
-            <div className="flex items-center gap-1 rounded-full bg-white/5 px-1 py-1 ring-1 ring-border-subtle backdrop-blur">
-              <a href="#overview" className="px-4 py-2 text-[15px] font-medium text-white/80 hover:text-white transition-colors">
-                ওভারভিউ
-              </a>
-              <a href="#product" className="px-4 py-2 text-[15px] font-medium text-white/80 hover:text-white transition-colors">
-                কোর্স
-              </a>
-              <a href="#pricing" className="px-4 py-2 text-[15px] font-medium text-white/80 hover:text-white transition-colors">
-                প্রাইসিং
-              </a>
-              <a href="#contacts" className="px-4 py-2 text-[15px] font-medium text-white/80 hover:text-white transition-colors">
-                যোগাযোগ
-              </a>
-              <a href="#pricing"
-                className="ml-2 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2 text-[15px] font-semibold text-neutral-900 hover:bg-white/90 transition-all">
-                এনরোল করুন
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                  className="h-4 w-4">
-                  <path d="M7 7h10v10"></path>
-                  <path d="M7 17 17 7"></path>
-                </svg>
-              </a>
-            </div>
-          </nav>
-          <button className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 ring-1 ring-white/15 backdrop-blur" id="mobile-menu-button" aria-expanded="false" aria-label="Toggle menu">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="h-5 w-5 text-white/90"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
-          </button>
-        </div>
-      </div>
-    </header>
+    
     <div className="z-10 relative">
       {/* Background Glow for Hero */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[60%] bg-electric-blue/10 blur-[120px] rounded-full pointer-events-none -z-10" />

@@ -55,7 +55,7 @@ export function Features() {
           {/* Card A */}
           <motion.section
             variants={itemVariants}
-            className="relative overflow-hidden rounded-lg border border-border-subtle bg-surface p-6 md:p-8 lg:col-span-2 hover:border-red-500/30 hover:bg-surface/80 transition group"
+            className="relative overflow-hidden rounded-lg border border-white/10 bg-white/[0.02] backdrop-blur-sm p-6 md:p-8 lg:col-span-2 hover:border-red-500/30 hover:from-red-500/20 hover:to-red-900/50 transition duration-300 group"
           >
             <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
               <svg className="h-full w-full" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -87,7 +87,7 @@ export function Features() {
           {/* Card B (Large) */}
           <motion.section
             variants={itemVariants}
-            className="relative overflow-hidden rounded-lg border border-border-subtle bg-surface p-6 md:p-8 lg:col-span-4 hover:border-red-500/30 hover:bg-surface/80 transition group"
+            className="relative overflow-hidden rounded-lg border border-white/10 bg-white/[0.02] backdrop-blur-sm p-6 md:p-8 lg:col-span-4 hover:border-red-500/30 transition duration-300 group"
           >
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
               <svg className="h-full w-full" viewBox="0 0 800 300" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -115,7 +115,7 @@ export function Features() {
                   { icon: Wallet, text: "লোকাল পেমেন্ট" },
                   { icon: BadgeCheck, text: "সার্টিফাইড মেন্টর" }
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 rounded-lg border border-border-subtle bg-white/5 p-3 hover:border-red-500/30 transition group/item">
+                  <div key={i} className="flex items-center gap-3 rounded-lg border border-border-subtle bg-white/[0.02] p-3 hover:border-red-500/30 transition group/item">
                     <item.icon className="h-4 w-4 text-red-500 stroke-[1.5]" />
                     <p className="text-[12px] text-slate-300 font-sans">{item.text}</p>
                   </div>
@@ -127,7 +127,7 @@ export function Features() {
           {/* Card C */}
           <motion.section
             variants={itemVariants}
-            className="relative overflow-hidden rounded-lg border border-border-subtle bg-surface p-6 md:p-8 lg:col-span-2 hover:border-red-500/30 hover:bg-surface/80 transition group"
+            className="relative overflow-hidden rounded-lg border border-white/10 bg-white/[0.02] backdrop-blur-sm p-6 md:p-8 lg:col-span-2 hover:border-red-500/30 hover:from-red-500/20 hover:to-red-900/50 transition duration-300 group"
           >
             <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
               <svg className="h-full w-full" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -158,7 +158,7 @@ export function Features() {
           {/* Card D */}
           <motion.section
             variants={itemVariants}
-            className="relative overflow-hidden rounded-lg border border-border-subtle bg-surface p-6 md:p-8 lg:col-span-2 hover:border-red-500/30 hover:bg-surface/80 transition group"
+            className="relative overflow-hidden rounded-lg border border-white/10 bg-white/[0.02] backdrop-blur-sm p-6 md:p-8 lg:col-span-2 hover:border-red-500/30 hover:from-red-500/20 hover:to-red-900/50 transition duration-300 group"
           >
             <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
               <svg className="h-full w-full" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -188,7 +188,7 @@ export function Features() {
           {/* Card E */}
           <motion.section
             variants={itemVariants}
-            className="relative overflow-hidden rounded-lg border border-border-subtle bg-surface p-6 md:p-8 lg:col-span-2 hover:border-red-500/30 hover:bg-surface/80 transition group"
+            className="relative overflow-hidden rounded-lg border border-white/10 bg-white/[0.02] backdrop-blur-sm p-6 md:p-8 lg:col-span-2 hover:border-red-500/30 hover:from-red-500/20 hover:to-red-900/50 transition duration-300 group"
           >
             <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
               <svg className="h-full w-full" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
