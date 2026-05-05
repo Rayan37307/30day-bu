@@ -123,7 +123,7 @@ export function Modules() {
             কোর্স কারিকুলাম
           </p>
           <h2 className="font-display font-medium text-4xl md:text-5xl mb-4 text-white">
-            ৩০-দিনের <span className="text-red-500 font-bold">রোডম্যাপ</span>
+            ৩০-দিনের <span className="text-red-500 font-bold font-display">রোডম্যাপ</span>
           </h2>
           <p className="text-slate-400 max-w-xl mx-auto text-lg pt-2 leading-relaxed">
             প্রতিদিন নতুন কিছু শিখুন। নিচে কোর্সের ৪টি ধাপের ব্রেকডাউন দেওয়া হলো।
@@ -132,7 +132,7 @@ export function Modules() {
       </section>
 
       {/* Pinned Stacking Cards Section */}
-      <section ref={containerRef} className="relative flex items-center justify-center h-screen w-full overflow-hidden px-6">
+      <section ref={containerRef} className="relative flex items-center justify-center h-screen w-full max-w-[1200px] mx-auto overflow-hidden px-6">
         {modules.map((mod, i) => (
           <div
             key={mod.id}
@@ -144,7 +144,7 @@ export function Modules() {
               top: calc... Creates the visual "stacked edges" offset effect
             */}
             <div
-              className="card-inner relative w-full max-w-[1200px] origin-top flex flex-col md:flex-row overflow-hidden rounded-lg border border-border-subtle bg-surface shadow-[0_30px_60px_rgba(0,0,0,0.6)] will-change-transform"
+              className="card-inner relative w-[98%] origin-top flex flex-col md:flex-row overflow-hidden rounded-lg border border-border-subtle bg-surface shadow-[0_30px_60px_rgba(0,0,0,0.6)] will-change-transform"
               style={{
                 top: `calc(-5vh + ${i * 30}px)`, 
                 boxShadow: `0 0 0 1px rgba(255,255,255,0.04), 0 30px 60px rgba(0,0,0,0.6), 0 0 80px ${mod.glowColor}`,

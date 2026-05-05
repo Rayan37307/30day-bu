@@ -78,7 +78,7 @@ export default function App() {
           {/* <Navbar /> */}
           <Hero />
           <CTABanner />
-          <Approach />
+          {/* <Approach /> */}
           <Features />
           <Modules />
           {/* <Mentor /> */}

@@ -41,7 +41,7 @@ export function Features() {
             transition={{ delay: 0.1 }}
             className="font-display text-4xl md:text-5xl text-white mb-6"
           >
-            আপনার সফলতার জন্য <span className="text-red-500">সবকিছু</span> এক জায়গায়
+            আপনার সফলতার জন্য <span className="text-red-500 font-display">সবকিছু</span> এক জায়গায়
           </motion.h2>
         </div>
 
@@ -76,7 +76,7 @@ export function Features() {
                 <Globe2 className="h-5 w-5 text-red-500 stroke-[1.5]" />
               </div>
               <h3 className="text-xl md:text-2xl tracking-tight font-display text-white">
-                একটি প্ল্যাটফর্ম।<br /><span className="text-red-500">গ্লোবাল অপারেশন।</span>
+                একটি প্ল্যাটফর্ম।<br /><span className="text-red-500 font-display">গ্লোবাল অপারেশন।</span>
               </h3>
               <p className="mt-3 text-sm md:text-base text-slate-400 font-sans">
                 আপনার সকল লার্নিং ম্যাটেরিয়াল এবং সাপোর্ট এক জায়গায় পান। যা আপনার লক্ষ্য অর্জনে সাহায্য করবে।
@@ -103,7 +103,7 @@ export function Features() {
                 <Package className="h-5 w-5 text-red-500 stroke-[1.5]" />
               </div>
               <h3 className="text-xl md:text-2xl tracking-tight font-display text-white">
-                সীমানাহীন সম্ভাবনা।<br /><span className="text-red-500">আপনার লক্ষ্য এবার হাতের মুঠোয়।</span>
+                সীমানাহীন সম্ভাবনা।<br /><span className="text-red-500 font-display">আপনার লক্ষ্য এবার হাতের মুঠোয়।</span>
               </h3>
               <p className="mt-3 text-sm md:text-base text-slate-400 max-w-2xl font-sans">
                 আমরা আপনার লার্নিং জার্নি থেকে সব ধরনের বাধা দূর করি, যাতে আপনি ফোকাস করতে পারেন আপনার ব্যক্তিগত প্রবৃদ্ধিতে।
@@ -147,7 +147,7 @@ export function Features() {
                 <Sparkles className="h-5 w-5 text-red-500 stroke-[1.5]" />
               </div>
               <h3 className="text-xl md:text-2xl tracking-tight font-display text-white">
-                স্মার্ট লার্নিং।<br /><span className="text-red-500">সহজ সমাধান।</span>
+                স্মার্ট লার্নিং।<br /><span className="text-red-500 font-display">সহজ সমাধান।</span>
               </h3>
               <p className="mt-3 text-sm md:text-base text-slate-400 font-sans">
                 অত্যাধুনিক এআই টুলস এবং টেকনিক শিখুন যা আপনার কাজের গতিকে বহুগুণ বাড়িয়ে দিবে।
@@ -177,7 +177,7 @@ export function Features() {
                 <ShieldCheck className="h-5 w-5 text-red-500 stroke-[1.5]" />
               </div>
               <h3 className="text-xl md:text-2xl tracking-tight font-display text-white">
-                বিশ্বস্ত মেন্টরশিপ।<br /><span className="text-red-500">সফল ক্যারিয়ার।</span>
+                বিশ্বস্ত মেন্টরশিপ।<br /><span className="text-red-500 font-display">সফল ক্যারিয়ার।</span>
               </h3>
               <p className="mt-3 text-sm md:text-base text-slate-400 font-sans">
                 সরাসরি ইন্ডাস্ট্রির মেন্টরদের থেকে শিখুন এবং আপনার ক্যারিয়ারের জন্য সঠিক দিকনির্দেশনা পান।
@@ -206,7 +206,7 @@ export function Features() {
                 <RotateCcw className="h-5 w-5 text-red-500 stroke-[1.5]" />
               </div>
               <h3 className="text-xl md:text-2xl tracking-tight font-display text-white">
-                লাইফটাইম অ্যাক্সেস।<br /><span className="text-red-500">কোনো রিস্ক নেই।</span>
+                লাইফটাইম অ্যাক্সেস।<br /><span className="text-red-500 font-display">কোনো রিস্ক নেই।</span>
               </h3>
               <p className="mt-3 text-sm md:text-base text-slate-400 font-sans">
                 একবার এনরোল করুন এবং আজীবন কোর্সের সকল রিসোর্স এবং ফিউচার আপডেট উপভোগ করুন।
