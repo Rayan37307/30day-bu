@@ -107,14 +107,14 @@ export function Pricing() {
                 {/* Price */}
                 <div>
                   <div className="flex items-baseline gap-3 mb-2">
-                    <span className="text-8xl lg:text-9xl font-normal text-white tracking-tight font-display">
+                    <span className="text-5xl md:text-7xl lg:text-8xl font-normal text-white tracking-tight font-display">
                       ৳১০০০
                     </span>
-                    <span className="text-2xl lg:text-3xl font-normal text-white tracking-tight font-display opacity-90 line-through decoration-red-500/50">
+                    <span className="text-lg md:text-xl lg:text-2xl font-normal text-white tracking-tight font-display opacity-90 line-through decoration-red-500/50">
                       ৳৫০০০
                     </span>
                   </div>
-                  <p className="text-gray-400 text-lg font-light font-sans">
+                  <p className="text-gray-400 text-base md:text-lg font-light font-sans">
                     আজীবন অ্যাক্সেস। কোনো লুকানো খরচ নেই।
                   </p>
                 </div>
