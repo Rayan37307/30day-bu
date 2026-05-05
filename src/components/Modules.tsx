@@ -123,7 +123,7 @@ export function Modules() {
             কোর্স কারিকুলাম
           </p>
           <h2 className="font-display font-medium text-4xl md:text-5xl mb-4 text-white">
-            ৩০-দিনের <span className="text-red-500 font-bold font-display">রোডম্যাপ</span>
+            ৩০-দিনের <span className="text-red-500 font-bold font-display curly-underline">রোডম্যাপ</span>
           </h2>
           <p className="text-slate-400 max-w-xl mx-auto text-lg pt-2 leading-relaxed">
             প্রতিদিন নতুন কিছু শিখুন। নিচে কোর্সের ৪টি ধাপের ব্রেকডাউন দেওয়া হলো।

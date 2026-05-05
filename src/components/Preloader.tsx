@@ -69,7 +69,7 @@ export function Preloader({ onComplete }: PreloaderProps) {
           }}
         >
           ৩০-দিনের জীবন <br />
-          <span className="text-electric-blue">পরিবর্তনের</span> প্রোগ্রাম
+          <span className="text-electric-blue curly-underline">পরিবর্তনের</span> প্রোগ্রাম
         </h1>
       </div>
     </div>
