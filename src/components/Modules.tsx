@@ -144,7 +144,7 @@ export function Modules() {
               top: calc... Creates the visual "stacked edges" offset effect
             */}
             <div
-              className="card-inner relative w-full max-w-[1400px] origin-top flex flex-col md:flex-row overflow-hidden rounded-lg border border-border-subtle bg-surface shadow-[0_30px_60px_rgba(0,0,0,0.6)] will-change-transform"
+              className="card-inner relative w-full max-w-[1400px] origin-top flex flex-col md:flex-row overflow-hidden rounded-2xl border border-border-subtle bg-surface shadow-[0_30px_60px_rgba(0,0,0,0.6)] will-change-transform min-h-[550px] md:min-h-[600px]"
               style={{
                 top: `calc(-5vh + ${i * 30}px)`, 
                 boxShadow: `0 0 0 1px rgba(255,255,255,0.04), 0 30px 60px rgba(0,0,0,0.6), 0 0 80px ${mod.glowColor}`,
@@ -160,12 +160,12 @@ export function Modules() {
 
               {/* Left panel */}
               <div
-                className="relative flex w-full flex-col justify-between border-b border-border-subtle p-6 md:w-[42%] md:border-b-0 md:border-r md:p-6"
+                className="relative flex w-full flex-col justify-between border-b border-border-subtle p-8 md:w-[40%] md:border-b-0 md:border-r md:p-12 lg:p-16"
                 style={{ background: mod.accentBg }}
               >
-                <div className="mb-10 flex items-center justify-between">
+                <div className="mb-12 flex items-center justify-between">
                   <span
-                    className="rounded-full border px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em]"
+                    className="rounded-full border px-4 py-2 text-[12px] font-bold uppercase tracking-[0.2em]"
                     style={{
                       color: mod.accentColor,
                       borderColor: `${mod.accentColor}30`,
@@ -175,7 +175,7 @@ export function Modules() {
                     Module {mod.id}
                   </span>
                   <div
-                    className="flex h-11 w-11 items-center justify-center rounded-lg border border-border-subtle"
+                    className="flex h-14 w-14 items-center justify-center rounded-xl border border-border-subtle"
                     style={{ background: `${mod.accentColor}15` }}
                   >
                     {mod.icon}
@@ -183,40 +183,40 @@ export function Modules() {
                 </div>
 
                 <div>
-                  <h3 className="mb-3 font-display text-2xl font-semibold leading-tight text-white md:text-[1.65rem]">
+                  <h3 className="mb-4 font-display text-3xl font-bold leading-tight text-white md:text-[2.2rem] lg:text-[2.8rem]">
                     {mod.title}
                   </h3>
-                  <p className="text-[14px] leading-relaxed text-slate-400">
+                  <p className="text-lg md:text-xl font-medium leading-relaxed text-slate-300 opacity-90">
                     {mod.subtitle}
                   </p>
                 </div>
 
                 <div
-                  className="pointer-events-none absolute -bottom-10 -left-10 h-40 w-40 rounded-full blur-3xl opacity-20"
+                  className="pointer-events-none absolute -bottom-20 -left-20 h-64 w-64 rounded-full blur-[100px] opacity-20"
                   style={{ background: mod.accentColor }}
                 />
               </div>
 
               {/* Right panel — steps */}
-              <div className="flex w-full items-center p-6 md:w-[58%] md:p-6 bg-surface">
-                <ul className="relative w-full space-y-7">
-                  <div className="absolute bottom-5 left-[18px] top-5 w-px bg-white/[0.06]" />
+              <div className="flex w-full items-center p-8 md:w-[60%] md:p-12 lg:p-16 bg-surface">
+                <ul className="relative w-full space-y-10">
+                  <div className="absolute bottom-5 left-[22px] top-5 w-px bg-white/[0.08]" />
                   {mod.points.map((point, pIdx) => (
-                    <li key={pIdx} className="relative flex items-start gap-5">
+                    <li key={pIdx} className="relative flex items-start gap-7">
                       <div
-                        className="relative z-10 mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-border-subtle bg-surface"
+                        className="relative z-10 mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-border-subtle bg-surface shadow-xl"
                         style={{
-                          boxShadow: `0 0 0 3px ${mod.accentColor}12, inset 0 1px 2px rgba(255,255,255,0.06)`,
+                          boxShadow: `0 0 0 4px ${mod.accentColor}15, inset 0 1px 2px rgba(255,255,255,0.06)`,
                         }}
                       >
                         <span
-                          className="text-sm font-semibold"
+                          className="text-lg font-bold"
                           style={{ color: mod.accentColor }}
                         >
                           {pIdx + 1}
                         </span>
                       </div>
-                      <span className="pt-1.5 text-[14.5px] leading-relaxed text-slate-300">
+                      <span className="pt-2 text-[17px] md:text-[19px] leading-relaxed text-slate-200 font-medium tracking-wide">
                         {point}
                       </span>
                     </li>
@@ -224,6 +224,7 @@ export function Modules() {
                 </ul>
               </div>
             </div>
+
           </div>
         ))}
       </section>
