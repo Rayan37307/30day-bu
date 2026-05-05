@@ -115,9 +115,9 @@ export function Modules() {
   );
 
   return (
-    <div className="bg-transparent">
+    <div className="bg-transparent w-full">
       {/* Header Section (Scrolls normally) */}
-      <section className="py-20 text-center">
+      <section className="py-20 text-center w-full">
         <div className="w-full max-w-[1200px] mx-auto px-6">
           <p className="text-xs font-mono font-bold tracking-[0.2em] uppercase text-text-secondary mb-4">
             কোর্স কারিকুলাম
@@ -126,13 +126,13 @@ export function Modules() {
             ৩০-দিনের <span className="text-red-500 font-bold font-display curly-underline">রোডম্যাপ</span>
           </h2>
           <p className="text-slate-400 max-w-xl mx-auto text-lg pt-2 leading-relaxed">
-            প্রতিদিন নতুন কিছু শিখুন। নিচে কোর্সের ৪টি ধাপের ব্রেকডাউন দেওয়া হলো।
+            প্রতিদিন নিজেকে নতুন করে গড়ুন। নিচে কোর্সের ৪টি ধাপের মাস্টার ব্রেকডাউন দেওয়া হলো।
           </p>
         </div>
       </section>
 
       {/* Pinned Stacking Cards Section */}
-      <section ref={containerRef} className="relative flex items-center justify-center h-screen w-full max-w-[1200px] mx-auto overflow-hidden px-6">
+      <section ref={containerRef} className="relative flex items-center justify-center h-screen w-full max-w-[1400px] mx-auto overflow-hidden px-6">
         {modules.map((mod, i) => (
           <div
             key={mod.id}
@@ -144,7 +144,7 @@ export function Modules() {
               top: calc... Creates the visual "stacked edges" offset effect
             */}
             <div
-              className="card-inner relative w-[98%] origin-top flex flex-col md:flex-row overflow-hidden rounded-lg border border-border-subtle bg-surface shadow-[0_30px_60px_rgba(0,0,0,0.6)] will-change-transform"
+              className="card-inner relative w-full max-w-[1400px] origin-top flex flex-col md:flex-row overflow-hidden rounded-lg border border-border-subtle bg-surface shadow-[0_30px_60px_rgba(0,0,0,0.6)] will-change-transform"
               style={{
                 top: `calc(-5vh + ${i * 30}px)`, 
                 boxShadow: `0 0 0 1px rgba(255,255,255,0.04), 0 30px 60px rgba(0,0,0,0.6), 0 0 80px ${mod.glowColor}`,

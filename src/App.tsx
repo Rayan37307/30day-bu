@@ -77,7 +77,7 @@ export default function App() {
         <div className="relative z-10 flex flex-col items-center w-full">
           {/* <Navbar /> */}
           <Hero />
-          <CTABanner />
+          {/* <CTABanner />` */}
           {/* <Approach /> */}
           <Features />
           <Modules />
