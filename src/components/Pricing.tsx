@@ -60,7 +60,7 @@ export function Pricing() {
           {/* Pricing Card */}
           <motion.div 
             whileHover={{ y: -5, scale: 1.005 }}
-            className="overflow-hidden z-10 group bg-white/5 backdrop-blur-md w-full max-w-[1200px] border-white/10 hover:bg-white/10 hover:border-white/20 border rounded-lg relative shadow-[0_0_15px_rgba(239,68,68,0.15)] hover:shadow-[0_0_25px_rgba(239,68,68,0.3)] transition-all duration-500">
+            className="overflow-hidden z-10 group bg-white/[0.02] backdrop-blur-sm w-full max-w-[1200px] border-white/10 hover:bg-white/[0.03] hover:border-white/20 border rounded-lg relative shadow-[0_0_15px_rgba(239,68,68,0.15)] hover:shadow-[0_0_25px_rgba(239,68,68,0.3)] transition-all duration-500">
             
             {/* Floating Pulse Badge */}
             <div className="absolute top-6 right-6 z-20">
