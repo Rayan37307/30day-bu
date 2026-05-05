@@ -8,10 +8,10 @@ export function Footer() {
           {/* Credits Section */}
           <div className="flex flex-col gap-2 text-center md:text-left">
             <p className="text-sm font-medium text-slate-200">
-              {new Date().getFullYear()} © ব্যাকবেঞ্চার্স ইউনিভার্সিটি
+              2026 © Backbenchers University
             </p>
             <p className="text-[12px] text-text-secondary tracking-wide">
-              প্যাশন থেকে প্রফিট: এআই এবং ক্রিয়েটর ইকোনমি
+              মাস্টার ইউর মাইন্ড: অ্যাডিকশন থেকে সেলফ-মাস্টারি
             </p>
           </div>
 
