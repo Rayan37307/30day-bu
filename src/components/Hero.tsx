@@ -18,7 +18,7 @@ export function Hero() {
           transition={{ duration: 0.6 }}
           className="mb-8 inline-flex items-center rounded-md bg-white/5 border border-white/10 px-4 py-1.5 backdrop-blur-sm"
         >
-          <span className="text-xs font-bold tracking-[0.2em] uppercase text-slate-300">
+          <span className="text-sm font-semibold text-slate-300">
             নতুন ব্যাচ <span className="mx-2 text-white/20">•</span> রেজিস্ট্রেশন চলছে
           </span>
         </motion.div>
