@@ -1,82 +1,198 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown } from "lucide-react";
 import { useState } from "react";
+import { ChevronRight } from "lucide-react";
 
 export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [hoveredIndex, setHoveredIndex] = useState<number>(0);
 
   const faqs = [
     {
+      id: "faq-0",
+      category: "ফাউন্ডেশন",
       q: "এই কোর্সটি কি আসক্তি থেকে বের হতে সত্যি সাহায্য করবে?",
-      a: "হ্যাঁ। এখানে শুধু হাওয়ায় ভাসা মোটিভেশন নয়, নিউরোসায়েন্স এবং সাইকোলজির উপর ভিত্তি করে প্র্যাকটিক্যাল ফ্রেমওয়ার্ক শেয়ার করা হয়েছে যা বাজে অভ্যাস (যেমন: পর্ন বা সোশ্যাল মিডিয়া অ্যাডিকশন) ভাঙতে ধাপে ধাপে সাহায্য করে।"
+      a: "হ্যাঁ। এখানে শুধু হাওয়ায় ভাসা মোটিভেশন নয়, নিউরোসায়েন্স এবং সাইকোলজির উপর ভিত্তি করে প্র্যাকটিক্যাল ফ্রেমওয়ার্ক শেয়ার করা হয়েছে যা বাজে অভ্যাস (যেমন: পর্ন বা সোশ্যাল মিডিয়া অ্যাডিকশন) ভাঙতে ধাপে ধাপে সাহায্য করে।",
+      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop"
     },
     {
+      id: "faq-1",
+      category: "প্রাইভেসি",
       q: "আমার প্রাইভেসি কি গোপন থাকবে?",
-      a: "১০০% গোপন থাকবে। আমরা বুঝি এই জার্নিটা সেনসিটিভ। আমাদের কমিউনিটি ও সাপোর্ট সিস্টেম সম্পূর্ণ জাজমেন্ট-ফ্রি এবং প্রাইভেসি মেইনটেইন করে তৈরি করা।"
+      a: "১০০% গোপন থাকবে। আমরা বুঝি এই জার্নিটা সেনসিটিভ। আমাদের কমিউনিটি ও সাপোর্ট সিস্টেম সম্পূর্ণ জাজমেন্ট-ফ্রি এবং প্রাইভেসি মেইনটেইন করে তৈরি করা।",
+      image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1600&auto=format&fit=crop"
     },
     {
+      id: "faq-2",
+      category: "অ্যাক্সেস",
       q: "আমি যদি লাইভ ক্লাস মিস করি তবে কি রেকর্ডিং দেওয়া হবে?",
-      a: "হ্যাঁ, প্রতিটি ক্লাসের লাইফটাইম রেকর্ডিং আপনার ড্যাশবোর্ডে সেভ থাকবে। আপনি যেকোনো সময়, যেকোনো জায়গা থেকে দেখতে পারবেন।"
+      a: "হ্যাঁ, প্রতিটি ক্লাসের লাইফটাইম রেকর্ডিং আপনার ড্যাশবোর্ডে সেভ থাকবে। আপনি যেকোনো সময়, যেকোনো জায়গা থেকে দেখতে পারবেন।",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=1600&auto=format&fit=crop"
     },
     {
+      id: "faq-3",
+      category: "স্কিলস",
       q: "কোর্স শেষে কি কোনো নির্দিষ্ট স্কিল শেখানো হবে?",
-      a: "এই কোর্সে আপনাকে সরাসরি কোনো নির্দিষ্ট স্কিল (যেমন ওয়েব ডেভেলপমেন্ট বা গ্রাফিক্স ডিজাইন) শেখানো হবে না, বরং 'কীভাবে দ্রুত এবং ফোকাসড ওয়েতে যেকোনো স্কিল শিখতে হয়' তার ফাউন্ডেশন এবং টাইম ম্যানেজমেন্ট ফ্রেমওয়ার্ক শেখানো হবে, যা আপনাকে যেকোনো ফিল্ডে সাকসেসফুল হতে সাহায্য করবে।"
+      a: "এই কোর্সে আপনাকে সরাসরি কোনো নির্দিষ্ট স্কিল (যেমন ওয়েব ডেভেলপমেন্ট বা গ্রাফিক্স ডিজাইন) শেখানো হবে না, বরং 'কীভাবে দ্রুত এবং ফোকাসড ওয়েতে যেকোনো স্কিল শিখতে হয়' তার ফাউন্ডেশন এবং টাইম ম্যানেজমেন্ট ফ্রেমওয়ার্ক শেখানো হবে।",
+      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600&auto=format&fit=crop"
     }
   ];
 
+  const currentImage = faqs[hoveredIndex]?.image || faqs[0].image;
+
   return (
-    <section className="relative w-full max-w-[1200px] mx-auto px-6 py-20 overflow-hidden rounded-lg">
-      <div className="relative z-10 text-center mb-16">
-        <h2 className="font-display font-normal text-5xl mb-4 leading-[1.2]">
-          সচরাচর জিজ্ঞাসিত প্রশ্ন (FAQ)
-        </h2>
-      </div>
-
-      <div className="flex flex-col gap-4">
-        {faqs.map((faq, idx) => {
-          const isOpen = openIndex === idx;
-
-          return (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: idx * 0.1 }}
-              className={`rounded-lg border transition-all duration-300 overflow-hidden ${
-                isOpen ? "bg-white/[0.03] backdrop-blur-md border-electric-blue/40" : "bg-transparent border-border-subtle hover:bg-white/[0.02]"
-              }`}
-            >
-              <button
-                onClick={() => setOpenIndex(isOpen ? null : idx)}
-                className="w-full flex items-center justify-between p-6 text-left focus:outline-none focus-visible:ring-1 focus-visible:ring-electric-blue"
+    <section className="lg:py-32 pt-24 pb-24" id="faq">
+      <div className="lg:px-8 max-w-[1200px] mx-auto pr-6 pl-6 relative">
+        {/* Header */}
+        <section className="relative">
+          <div className="md:mb-16 grid md:grid-cols-12 mb-16 gap-x-6 gap-y-6 items-end">
+            <div className="md:col-span-8 space-y-4">
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="inline-flex text-[13px] font-medium gap-x-2 gap-y-2 items-center"
               >
-                <span className={`font-semibold text-lg transition-colors duration-300 ${isOpen ? "text-electric-blue" : "text-slate-200"}`}>
-                  {faq.q}
-                </span>
-                <ChevronDown 
-                  className={`text-slate-400 transition-transform duration-300 flex-shrink-0 ${isOpen ? "rotate-180 text-electric-blue" : ""}`} 
-                  size={20} 
-                />
-              </button>
-              
-              <AnimatePresence>
-                {isOpen && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease: "easeInOut" }}
-                  >
-                    <div className="p-6 pt-0 text-slate-200 leading-relaxed font-medium">
-                      {faq.a}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                <span className="tabular-nums text-[20px] leading-none text-red-500/80 font-display">03</span>
+                <span className="text-red-500/40">/</span>
+                <span className="uppercase text-[11px] tracking-[0.2em] text-red-400 font-bold">FAQ</span>
+              </motion.div>
+
+              <motion.h2
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="sm:text-5xl lg:text-6xl text-4xl font-display text-white tracking-tight leading-[1.1]"
+              >
+                সচরাচর জিজ্ঞাসিত <span className="text-red-500 curly-underline">প্রশ্ন</span>
+              </motion.h2>
+
+              <motion.p
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="sm:text-base text-sm text-slate-400 max-w-2xl font-medium"
+              >
+                কোর্স সম্পর্কে আপনার মনে থাকা সমস্ত প্রশ্নের উত্তর এখানে দেওয়া হলো।
+              </motion.p>
+            </div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="md:col-span-4 flex md:justify-end"
+            >
+              <div className="hidden sm:flex items-center gap-3">
+                <a href="#support" className="inline-flex items-center text-[15px] hover:bg-white/5 font-medium text-white h-11 rounded-full ring-white/15 ring-1 px-5 transition-all">
+                  সাপোর্টে যোগাযোগ করুন
+                </a>
+              </div>
             </motion.div>
-          );
-        })}
+          </div>
+        </section>
+
+        {/* FAQ Layout */}
+        <div className="grid md:grid-cols-12 gap-x-6 gap-y-6 items-stretch relative">
+          
+          {/* Left: FAQ list */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4 }}
+            className="md:col-span-7 relative z-10"
+          >
+            <div className="divide-y divide-white/10">
+              {faqs.map((faq, idx) => {
+                const isOpen = openIndex === idx;
+
+                return (
+                  <div 
+                    key={faq.id} 
+                    className="pt-6 pb-6"
+                    onMouseEnter={() => setHoveredIndex(idx)}
+                    onFocus={() => setHoveredIndex(idx)}
+                  >
+                    <div className="text-[11px] uppercase font-bold text-slate-500 tracking-wider font-mono mb-2">
+                      {faq.category}
+                    </div>
+                    <button 
+                      onClick={() => setOpenIndex(isOpen ? null : idx)}
+                      className="group flex items-center justify-between w-full text-left outline-none"
+                    >
+                      <h3 className={`text-2xl sm:text-3xl font-display tracking-tight transition-colors duration-300 ${isOpen ? "text-white" : "text-slate-300"}`}>
+                        {faq.q}
+                      </h3>
+                      <span className={`ml-4 shrink-0 inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 p-2 transition-all duration-300 ${isOpen ? "bg-red-500/20 border-red-500/40 text-red-500 rotate-90 shadow-[0_0_15px_rgba(239,68,68,0.2)]" : "group-hover:bg-white/10 text-slate-400 group-hover:text-white"}`}>
+                        <ChevronRight size={20} className="stroke-[2.5]" />
+                      </span>
+                    </button>
+                    
+                    <AnimatePresence>
+                      {isOpen && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3, ease: "easeInOut" }}
+                          className="overflow-hidden"
+                        >
+                          <div className="pt-4 pb-2 px-6 mt-4 bg-white/[0.03] rounded-xl backdrop-blur-md border border-white/10">
+                            <p className="text-slate-300 text-sm md:text-base leading-relaxed font-sans font-medium">
+                              {faq.a}
+                            </p>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                );
+              })}
+            </div>
+          </motion.div>
+
+          {/* Right: Visual preview */}
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.5 }}
+            className="md:col-span-5 h-[300px] md:h-[600px] mt-8 md:mt-0 relative"
+          >
+            <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] ring-1 ring-white/10 h-full w-full md:sticky md:top-32 md:h-[500px]">
+              <div 
+                className="absolute inset-0 z-20 pointer-events-none" 
+                style={{
+                  background: `
+                    radial-gradient(90% 80% at 100% 0%, rgba(239,68,68,0.15) 0%, rgba(0,0,0,0) 60%),
+                    linear-gradient(120deg, rgba(239,68,68,0.08) 0%, rgba(0,0,0,0) 40%)
+                  `,
+                  mixBlendMode: "screen"
+                }}
+              />
+              <div className="relative z-10 h-full w-full">
+                <AnimatePresence mode="wait">
+                  <motion.img 
+                    key={currentImage}
+                    initial={{ opacity: 0, scale: 1.05 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.4, ease: "easeOut" }}
+                    src={currentImage} 
+                    alt="FAQ preview" 
+                    className="w-full h-full object-cover" 
+                    style={{ filter: "saturate(0.9) contrast(1.05)" }}
+                  />
+                </AnimatePresence>
+              </div>
+              <div className="pointer-events-none absolute inset-0 rounded-[2rem] ring-1 ring-inset ring-white/10 z-30"></div>
+            </div>
+          </motion.div>
+
+        </div>
       </div>
     </section>
   );
