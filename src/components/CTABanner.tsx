@@ -1,84 +1,31 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Clock } from "lucide-react";
-import { useState, useEffect } from "react";
+import { ChevronRight } from "lucide-react";
 
 export function CTABanner() {
-  const [timeLeft, setTimeLeft] = useState({ h: 2, m: 45, s: 12 });
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => {
-        let { h, m, s } = prev;
-        if (s > 0) s--;
-        else {
-          s = 59;
-          if (m > 0) m--;
-          else {
-            m = 59;
-            if (h > 0) h--;
-          }
-        }
-        return { h, m, s };
-      });
-    }, 1000);
-    return () => clearInterval(timer);
-  }, []);
-
   return (
-    <div className="w-full max-w-[1200px] mx-auto max-md:px-6 mt-4 md:mt-8 relative z-20 mb-20">
+    <section className="w-full max-w-[1000px] mx-auto px-6 mb-32 mt-12 relative z-20">
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="relative flex flex-col md:flex-row items-center justify-between rounded-lg overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.6)] border border-border-subtle w-full"
+        className="w-full bg-[#070707] rounded-3xl border border-white/5 py-24 px-8 md:px-16 flex flex-col items-center justify-center text-center shadow-2xl relative overflow-hidden"
       >
-        {/* Background Gradients & Shapes to match the reference */}
-        <div className="absolute inset-0 bg-black" /> {/* Base Dark */}
+        {/* Subtle top glow */}
+        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+        <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-display text-white tracking-tight leading-[1.4] max-w-2xl mb-10">
+          প্রস্তুত নিজেকে <span className="text-[#E50914]">আসক্তি থেকে মুক্ত</span> করে<br className="hidden sm:block" />
+          জীবনের কন্ট্রোল নিতে <span className="text-[#E50914]">৩০ দিনে?</span>
+        </h2>
         
-        {/* Diagonal Accent Shape (Left) */}
-        <div 
-          className="absolute inset-y-0 left-0 w-[120%] md:w-[65%] bg-[#7a0000]" 
-          style={{ clipPath: 'polygon(0 0, 100% 0, 85% 100%, 0 100%)' }} 
-        />
-
-        {/* Content Wrapper */}
-        <div className="relative w-full flex flex-col md:flex-row items-center justify-between px-6 py-10 lg:py-8 z-10 gap-8 md:gap-4 lg:gap-8">
-          
-          {/* Left: Timer */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <div className="flex items-center gap-2 text-white font-normal text-xl md:text-base lg:text-xl mb-1 lg:mb-2 tracking-wide font-display">
-              <div className="bg-white text-[#7a0000] px-2 py-0.5 rounded text-xs font-black uppercase tracking-widest relative -top-0.5 font-sans">Live</div>
-              শুরু হতে বাকি:
-            </div>
-            <div className="font-mono font-black text-5xl md:text-4xl lg:text-5xl text-white drop-shadow-md tracking-tighter">
-              {String(timeLeft.h).padStart(2, '0')}:{String(timeLeft.m).padStart(2, '0')}:{String(timeLeft.s).padStart(2, '0')}
-            </div>
-          </div>
-
-          {/* Center: Image/Pricing */}
-          <div className="flex flex-col items-center justify-center rounded-xl w-full md:w-auto">
-             <div className="flex items-end gap-2 lg:gap-3 justify-center text-center">
-               <span className="font-display font-normal text-5xl md:text-4xl lg:text-5xl text-white drop-shadow-sm">৳১০০০</span>
-               <span className="text-slate-400 line-through text-2xl md:text-lg lg:text-xl mb-1 lg:mb-1.5 font-medium">৳৫০০০</span>
-             </div>
-             <p className="text-[#ff6666] text-base md:text-xs lg:text-base font-bold mt-1 lg:mt-2 tracking-wide drop-shadow-sm w-full text-center">৮০% ছাড় - সীমিত সময়ের অফার</p>
-          </div>
-
-          {/* Right: CTA Button */}
-          <div className="flex flex-col items-center md:items-end w-full md:w-auto lg:shrink-0">
-            <button className="w-full bg-[#c2f0c2] hover:bg-[#aae6aa] text-black font-bold text-xl md:text-base lg:text-xl py-4 md:py-3 lg:py-4 px-6 md:px-4 lg:px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 lg:gap-3 group shadow-[0_10px_20px_rgba(0,0,0,0.3)] whitespace-nowrap">
-              এখনই জয়েন করুন
-              <ArrowRight size={20} className="transform transition-transform group-hover:translate-x-1" />
-            </button>
-            <p className="text-slate-400 text-sm md:text-xs lg:text-sm mt-3 md:mt-2 lg:mt-3 flex items-center gap-1.5 font-medium whitespace-nowrap">
-              <Clock size={14} className="text-[#aae6aa]" />
-              *আজীবন রেকর্ডিং সুযোগ
-            </p>
-          </div>
-
-        </div>
+        <a 
+          href="#pricing"
+          className="inline-flex items-center justify-center bg-[#E50914] hover:bg-[#f00a16] text-white text-[15px] font-bold rounded-lg px-10 py-3.5 transition-all shadow-[0_0_20px_rgba(229,9,20,0.25)] hover:shadow-[0_0_30px_rgba(229,9,20,0.4)] hover:-translate-y-0.5 border border-red-500/50"
+        >
+          হ্যাঁ, আমি প্রস্তুত <ChevronRight size={16} className="ml-1" strokeWidth={2.5} />
+        </a>
       </motion.div>
-    </div>
+    </section>
   );
 }
