@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Globe2, Package, ShieldCheck, Wallet, BadgeCheck, Ship, Sparkles, RotateCcw } from 'lucide-react';
+import { Globe2, Package, ShieldCheck, Wallet, BadgeCheck, Ship, Sparkles, RotateCcw, BrainCircuit, Zap } from 'lucide-react';
 
 export function Features() {
   const containerVariants = {
@@ -15,8 +15,8 @@ export function Features() {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: { duration: 0.6, ease: "easeOut" }
     }
@@ -26,7 +26,7 @@ export function Features() {
     <section className="w-full py-24 bg-transparent relative overflow-hidden" id="features">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="text-center mb-16">
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -34,7 +34,7 @@ export function Features() {
           >
             কেন আমাদের বেছে নিবেন?
           </motion.p>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -45,7 +45,7 @@ export function Features() {
           </motion.h2>
         </div>
 
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -55,9 +55,9 @@ export function Features() {
           {/* Card 1: Privacy/Judgment-Free */}
           <motion.section
             variants={itemVariants}
-            className="relative overflow-hidden rounded-lg border border-white/10 bg-white/[0.02] backdrop-blur-sm p-6 md:p-8 hover:border-red-500/30 transition duration-300 group"
+            className="relative overflow-hidden rounded-lg border border-white/10 bg-white/[0.02] backdrop-blur-sm p-6 md:p-8 hover:bg-white/[0.04] hover:border-red-500/30 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(239,68,68,0.08)] transition-all duration-300 group"
           >
-            <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
+            <div className="absolute inset-0 opacity-[0.05] group-hover:opacity-[0.15] transition-opacity duration-500 pointer-events-none">
               <svg className="h-full w-full" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <pattern id="grid1" width="24" height="24" patternUnits="userSpaceOnUse">
@@ -68,8 +68,8 @@ export function Features() {
               </svg>
             </div>
             <div className="relative z-10">
-              <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-red-500/10 ring-1 ring-red-500/30 group-hover:scale-110 transition-transform">
-                <ShieldCheck className="h-5 w-5 text-red-500 stroke-[1.5]" />
+              <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-red-500/10 ring-1 ring-red-500/30 group-hover:scale-110 group-hover:bg-red-500/20 group-hover:ring-red-500/50 group-hover:shadow-[0_0_15px_rgba(239,68,68,0.2)] transition-all duration-300">
+                <ShieldCheck className="h-5 w-5 text-red-500 stroke-[1.5] group-hover:drop-shadow-[0_0_8px_rgba(239,68,68,0.6)] transition-all duration-300" />
               </div>
               <h3 className="text-xl md:text-2xl tracking-tight font-display text-white">
                 জাজমেন্ট-ফ্রি জোন।<br /><span className="text-red-500 font-display curly-underline">নিরাপদ রিকভারি।</span>
@@ -83,17 +83,17 @@ export function Features() {
           {/* Card 2: Neuroscience/Psychology */}
           <motion.section
             variants={itemVariants}
-            className="relative overflow-hidden rounded-lg border border-white/10 bg-white/[0.02] backdrop-blur-sm p-6 md:p-8 hover:border-red-500/30 transition duration-300 group"
+            className="relative overflow-hidden rounded-lg border border-white/10 bg-white/[0.02] backdrop-blur-sm p-6 md:p-8 hover:bg-white/[0.04] hover:border-red-500/30 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(239,68,68,0.08)] transition-all duration-300 group"
           >
-             <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
+            <div className="absolute inset-0 opacity-[0.05] group-hover:opacity-[0.15] transition-opacity duration-500 pointer-events-none">
               <svg className="h-full w-full" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="200" cy="150" r="70" stroke="#ef4444" strokeOpacity="0.35" strokeWidth="1.2" fill="none" />
                 <circle cx="200" cy="150" r="36" stroke="#ef4444" strokeOpacity="0.45" strokeWidth="1.2" fill="none" />
               </svg>
             </div>
             <div className="relative z-10">
-              <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-red-500/10 ring-1 ring-red-500/30 group-hover:scale-110 transition-transform">
-                <Sparkles className="h-5 w-5 text-red-500 stroke-[1.5]" />
+              <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-blue-500/10 ring-1 ring-blue-500/30 group-hover:scale-110 group-hover:bg-blue-500/20 group-hover:ring-blue-500/50 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.2)] transition-all duration-300">
+                <BrainCircuit className="h-5 w-5 text-blue-500 stroke-[1.5] group-hover:drop-shadow-[0_0_8px_rgba(59,130,246,0.6)] transition-all duration-300" />
               </div>
               <h3 className="text-xl md:text-2xl tracking-tight font-display text-white">
                 সাইকোলজি-বেসড সল্যুশন।<br /><span className="text-red-500 font-display curly-underline">ব্রেইন রিবুট।</span>
@@ -107,16 +107,16 @@ export function Features() {
           {/* Card 3: Productivity/GTD */}
           <motion.section
             variants={itemVariants}
-            className="relative overflow-hidden rounded-lg border border-white/10 bg-white/[0.02] backdrop-blur-sm p-6 md:p-8 hover:border-red-500/30 transition duration-300 group"
+            className="relative overflow-hidden rounded-lg border border-white/10 bg-white/[0.02] backdrop-blur-sm p-6 md:p-8 hover:bg-white/[0.04] hover:border-red-500/30 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(239,68,68,0.08)] transition-all duration-300 group"
           >
-            <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
+            <div className="absolute inset-0 opacity-[0.05] group-hover:opacity-[0.15] transition-opacity duration-500 pointer-events-none">
               <svg className="h-full w-full" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M50 210C100 160 170 170 220 130C270 90 320 100 350 70" stroke="#ef4444" strokeOpacity="0.35" strokeWidth="1.2" fill="none" />
               </svg>
             </div>
             <div className="relative z-10">
-              <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-red-500/10 ring-1 ring-red-500/30 group-hover:scale-110 transition-transform">
-                <Globe2 className="h-5 w-5 text-red-500 stroke-[1.5]" />
+              <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-white/5 ring-1 ring-white/20 group-hover:scale-110 group-hover:bg-white/10 group-hover:ring-white/40 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.1)] transition-all duration-300">
+                <Zap className="h-5 w-5 text-white stroke-[1.5] group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)] transition-all duration-300" />
               </div>
               <h3 className="text-xl md:text-2xl tracking-tight font-display text-white">
                 স্মার্ট প্রোডাক্টিভিটি।<br /><span className="text-red-500 font-display curly-underline">সহজ সমাধান।</span>
@@ -130,16 +130,16 @@ export function Features() {
           {/* Card 4: Lifetime Access */}
           <motion.section
             variants={itemVariants}
-            className="relative overflow-hidden rounded-lg border border-white/10 bg-white/[0.02] backdrop-blur-sm p-6 md:p-8 hover:border-red-500/30 transition duration-300 group"
+            className="relative overflow-hidden rounded-lg border border-white/10 bg-white/[0.02] backdrop-blur-sm p-6 md:p-8 hover:bg-white/[0.04] hover:border-red-500/30 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(239,68,68,0.08)] transition-all duration-300 group"
           >
-            <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
+            <div className="absolute inset-0 opacity-[0.05] group-hover:opacity-[0.15] transition-opacity duration-500 pointer-events-none">
               <svg className="h-full w-full" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20 180C60 120 120 180 160 160C200 140 230 150 260 120" stroke="#ef4444" strokeOpacity="0.45" strokeWidth="1.6" fill="none" />
               </svg>
             </div>
             <div className="relative z-10">
-              <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-red-500/10 ring-1 ring-red-500/30 group-hover:scale-110 transition-transform">
-                <RotateCcw className="h-5 w-5 text-red-500 stroke-[1.5]" />
+              <div className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-red-500/10 ring-1 ring-red-500/30 group-hover:scale-110 group-hover:bg-red-500/20 group-hover:ring-red-500/50 group-hover:shadow-[0_0_15px_rgba(239,68,68,0.2)] transition-all duration-300">
+                <RotateCcw className="h-5 w-5 text-red-500 stroke-[1.5] group-hover:drop-shadow-[0_0_8px_rgba(239,68,68,0.6)] transition-all duration-300" />
               </div>
               <h3 className="text-xl md:text-2xl tracking-tight font-display text-white">
                 লাইফটাইম অ্যাক্সেস।<br /><span className="text-red-500 font-display curly-underline">কোনো রিস্ক নেই।</span>

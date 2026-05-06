@@ -44,7 +44,7 @@ export function FAQ() {
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: idx * 0.1 }}
               className={`rounded-lg border transition-all duration-300 overflow-hidden ${
-                isOpen ? "bg-surface border-electric-blue/40" : "bg-transparent border-border-subtle hover:bg-white/[0.02]"
+                isOpen ? "bg-white/[0.03] backdrop-blur-md border-electric-blue/40" : "bg-transparent border-border-subtle hover:bg-white/[0.02]"
               }`}
             >
               <button
