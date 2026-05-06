@@ -23,15 +23,15 @@ export function Preloader({ onComplete }: PreloaderProps) {
     tl.to(textRef.current, {
       y: 0,
       opacity: 1,
-      duration: 1.4,
+      duration: 0.4,
       ease: "expo.out",
-      delay: 0.5,
+      delay: 0,
     })
       .to(containerRef.current, {
         yPercent: -100,
-        duration: 1.8,
+        duration: 0.6,
         ease: "expo.inOut",
-        delay: 1,
+        delay: 0,
       })
       .to(containerRef.current, {
         pointerEvents: "none",

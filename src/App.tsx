@@ -81,7 +81,7 @@ export default function App() {
           {/* <Approach /> */}
           <Features />
           <Modules />
-          {/* <Mentor /> */}
+          <Mentor />
           <SocialProof />
           <Pricing />
           <FAQ />

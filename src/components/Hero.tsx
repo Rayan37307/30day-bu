@@ -73,9 +73,9 @@ export function Hero() {
             }}
             className="sm:text-6xl text-white md:text-7xl lg:text-8xl leading-[1.1] text-5xl text-white tracking-tight font-display"
           >
-            মাস্টার ইউর মাইন্ড: 
+            মাস্টার ইউর <span className="text-red-500 curly-underline">মাইন্ড:</span>
             <br className="hidden sm:block" />
-            অ্যাডিকশন থেকে সেলফ-মাস্টারি
+            অ্যাডিকশন থেকে <span className="text-red-500 curly-underline">সেলফ-মাস্টারি</span>
           </motion.h1>
 
           <motion.p
@@ -114,7 +114,7 @@ export function Hero() {
                 <span className="text-4xl font-display font-bold text-white">৳১০০০</span>
                 <span className="text-lg text-slate-500 line-through decoration-red-500/50">৳৫০০০</span>
               </div>
-              <div className="text-xs font-bold text-red-400 bg-red-500/10 px-2 py-1 rounded border border-red-500/20">
+              <div className="text-xs font-bold text-red-400 bg-red-500/10 px-2 py-1 rounded border border-red-500/20 curly-underline">
                 ৮০% ছাড় - সীমিত সময়ের অফার
               </div>
               <p className="text-[10px] text-slate-400 mt-2 italic">*আজীবন রেকর্ডিং সুযোগ</p>
