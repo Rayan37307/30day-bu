@@ -86,7 +86,7 @@ export function FAQ() {
               className="md:col-span-4 flex md:justify-end"
             >
               <div className="hidden sm:flex items-center gap-3">
-                <a href="#support" className="inline-flex items-center text-[15px] hover:bg-white/5 font-medium text-white h-11 rounded-full ring-white/15 ring-1 px-5 transition-all">
+                <a href="#support" className="inline-flex items-center text-[15px] hover:bg-white/5 font-medium text-white h-11 rounded-lg ring-white/15 ring-1 px-5 transition-all">
                   সাপোর্টে যোগাযোগ করুন
                 </a>
               </div>

@@ -38,12 +38,12 @@ export function Features() {
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 mt-10 items-center justify-center">
-          <a href="#pricing" className="inline-flex items-center gap-2 rounded-full bg-white text-neutral-900 px-8 py-3.5 text-sm font-bold shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] hover:-translate-y-0.5 transition-all">
+          <a href="#pricing" className="inline-flex items-center gap-2 rounded-lg bg-white text-neutral-900 px-8 py-3.5 text-sm font-bold shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] hover:-translate-y-0.5 transition-all">
             এনরোল করুন
           </a>
           
           <div className="inline-block group relative">
-            <a href="#product" className="inline-flex gap-2 border border-white/10 hover:border-white/20 hover:text-white transition-all hover:-translate-y-0.5 text-sm font-bold text-white/80 bg-white/5 rounded-full px-8 py-3.5 backdrop-blur-xl items-center">
+            <a href="#product" className="inline-flex gap-2 border border-white/10 hover:border-white/20 hover:text-white transition-all hover:-translate-y-0.5 text-sm font-bold text-white/80 bg-white/5 rounded-lg px-8 py-3.5 backdrop-blur-xl items-center">
               <PlayCircle size={18} className="text-red-500 opacity-80" />
               কারিকুলাম দেখুন
             </a>
