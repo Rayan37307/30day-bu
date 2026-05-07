@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShieldCheck, BrainCircuit, Zap, Code, PlayCircle, TrendingUp } from 'lucide-react';
+import { ShieldCheck, BrainCircuit, Zap, Code, PlayCircle, TrendingUp, Infinity } from 'lucide-react';
 
 export function Features() {
   return (
@@ -96,23 +96,15 @@ export function Features() {
           className="overflow-hidden border border-white/10 rounded-3xl relative md:col-span-3 lg:col-span-4 md:row-span-2 bg-gradient-to-br from-white/[0.03] to-transparent backdrop-blur-sm hover:border-white/20 transition-all duration-500 hover:-translate-y-1"
         >
           <div className="h-full p-6 relative flex flex-col">
-            <div className="relative mx-auto h-full w-full flex items-center justify-center flex-1">
-              <div className="scale-[0.85] w-full transform group-hover:scale-[0.9] transition-transform duration-500">
-                <div className="backdrop-blur-md bg-black/40 border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
-                  <div className="px-4 py-3 border-b border-white/10 flex items-center gap-2 bg-white/[0.02]">
-                    <Code size={14} className="text-red-500" />
-                    <span className="text-[11px] font-mono text-white/80">access.ts</span>
-                  </div>
-                  <pre className="text-[12px] leading-[1.8] font-mono text-slate-300 p-5 overflow-x-auto">
-                    <span className="text-pink-500">const</span> student = {'{'}
-                    <br/>  status: <span className="text-green-400">"enrolled"</span>,
-                    <br/>  access: <span className="text-green-400">"lifetime"</span>,
-                    <br/>  risk: <span className="text-orange-400">0</span>,
-                    <br/>  updates: <span className="text-purple-400">true</span>
-                    <br/>{'}'};
-                    <br/><br/>
-                    <span className="text-blue-400">grantAccess</span>(student);
-                  </pre>
+            <div className="relative mx-auto h-full w-full flex items-center justify-center flex-1 overflow-hidden">
+              <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                <div className="absolute left-1/2 top-1/2 h-[180px] w-[180px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-green-500/20 animate-pulse" style={{ animationDelay: "0s" }}></div>
+                <div className="absolute left-1/2 top-1/2 h-[140px] w-[140px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-green-500/20 animate-pulse" style={{ animationDelay: "0.5s" }}></div>
+                <div className="absolute left-1/2 top-1/2 h-[220px] w-[220px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-green-500/10 animate-pulse" style={{ animationDelay: "1s" }}></div>
+              </div>
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+                <div className="relative flex h-24 w-24 items-center justify-center rounded-full border border-green-500/30 bg-green-500/10 backdrop-blur-md transition-transform duration-500 group-hover:scale-110 group-hover:rotate-180 shadow-[0_0_30px_rgba(34,197,94,0.3)]">
+                  <Infinity className="h-10 w-10 text-green-400" />
                 </div>
               </div>
             </div>
