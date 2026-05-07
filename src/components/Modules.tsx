@@ -144,7 +144,7 @@ export function Modules() {
               top: calc... Creates the visual "stacked edges" offset effect
             */}
             <div
-              className="card-inner relative w-full max-w-[1400px] origin-top flex flex-col md:flex-row overflow-hidden rounded-2xl border border-border-subtle bg-surface shadow-[0_30px_60px_rgba(0,0,0,0.6)] will-change-transform min-h-[550px] md:min-h-[600px]"
+              className="card-inner relative w-full max-w-[1400px] origin-top flex flex-col md:flex-row overflow-hidden rounded-sm border border-border-subtle bg-surface shadow-[0_30px_60px_rgba(0,0,0,0.6)] will-change-transform min-h-[550px] md:min-h-[600px]"
               style={{
                 top: `calc(-5vh + ${i * 30}px)`, 
                 boxShadow: `0 0 0 1px rgba(255,255,255,0.04), 0 30px 60px rgba(0,0,0,0.6), 0 0 80px ${mod.glowColor}`,
@@ -152,7 +152,7 @@ export function Modules() {
             >
               {/* Accent top-edge line */}
               <div
-                className="absolute top-0 left-[10%] right-[10%] h-[1px] rounded-full"
+                className="absolute top-0 left-[10%] right-[10%] h-[1px] rounded-sm"
                 style={{
                   background: `linear-gradient(90deg, transparent, ${mod.accentColor}55, transparent)`,
                 }}
@@ -165,7 +165,7 @@ export function Modules() {
               >
                 <div className="mb-12 flex items-center justify-between">
                   <span
-                    className="rounded-full border px-4 py-2 text-[12px] font-bold uppercase tracking-[0.2em]"
+                    className="rounded-sm border px-4 py-2 text-[12px] font-bold uppercase tracking-[0.2em]"
                     style={{
                       color: mod.accentColor,
                       borderColor: `${mod.accentColor}30`,
@@ -175,7 +175,7 @@ export function Modules() {
                     Module {mod.id}
                   </span>
                   <div
-                    className="flex h-14 w-14 items-center justify-center rounded-xl border border-border-subtle"
+                    className="flex h-14 w-14 items-center justify-center rounded-md border border-border-subtle"
                     style={{ background: `${mod.accentColor}15` }}
                   >
                     {mod.icon}
@@ -204,7 +204,7 @@ export function Modules() {
                   {mod.points.map((point, pIdx) => (
                     <li key={pIdx} className="relative flex items-start gap-7">
                       <div
-                        className="relative z-10 mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-border-subtle bg-surface shadow-xl"
+                        className="relative z-10 mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-border-subtle bg-surface shadow-xl"
                         style={{
                           boxShadow: `0 0 0 4px ${mod.accentColor}15, inset 0 1px 2px rgba(255,255,255,0.06)`,
                         }}

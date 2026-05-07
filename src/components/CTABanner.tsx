@@ -10,7 +10,7 @@ export function CTABanner() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="w-full bg-[#070707] rounded-3xl border border-white/5 py-24 px-8 md:px-16 flex flex-col items-center justify-center text-center shadow-2xl relative overflow-hidden"
+        className="w-full bg-[#070707] rounded-sm border border-white/5 py-24 px-8 md:px-16 flex flex-col items-center justify-center text-center shadow-2xl relative overflow-hidden"
       >
         {/* Subtle top glow */}
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />

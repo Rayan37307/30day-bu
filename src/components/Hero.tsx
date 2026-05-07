@@ -17,9 +17,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-8 inline-flex items-center rounded-md bg-white/5 border border-white/10 px-4 py-1.5 backdrop-blur-sm"
+          className="mb-8 inline-flex items-center rounded-sm bg-white/5 border border-white/10 px-4 py-1.5 backdrop-blur-sm"
         >
-          <span className="text-sm font-semibold text-slate-300">
+          <span className="text-sm font-bold tracking-widest uppercase text-slate-300">
             নতুন ব্যাচ <span className="mx-2 text-white/20">•</span> রেজিস্ট্রেশন চলছে
           </span>
         </motion.div>
@@ -44,9 +44,9 @@ export function Hero() {
           className="w-full max-w-[1000px] mx-auto mb-16 relative group"
         >
           {/* Edge Glow */}
-          <div className="absolute -inset-0.5 bg-gradient-to-b from-white/10 to-transparent rounded-2xl opacity-50 group-hover:opacity-100 transition duration-700 pointer-events-none z-20"></div>
+          <div className="absolute -inset-0.5 bg-gradient-to-b from-white/10 to-transparent rounded-sm opacity-50 group-hover:opacity-100 transition duration-700 pointer-events-none z-20"></div>
           
-          <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-black shadow-[0_20px_60px_-15px_rgba(0,0,0,0.8)] border border-white/5">
+          <div className="relative aspect-video w-full overflow-hidden rounded-sm bg-black shadow-[0_20px_60px_-15px_rgba(0,0,0,0.8)] border border-white/5">
             <iframe
               className="w-full h-full"
               src="https://www.youtube.com/embed/RG6fjpBbGpA?start=0&end=20&autoplay=1&mute=1&loop=1&playlist=RG6fjpBbGpA&controls=0&modestbranding=1&rel=0"

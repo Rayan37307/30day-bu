@@ -14,8 +14,8 @@ export function Features() {
         viewport={{ once: true }}
         className="mx-auto w-fit mb-6"
       >
-        <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-neutral-300 backdrop-blur-sm">
-          <span className="inline-flex items-center justify-center rounded-full bg-red-500/20 text-red-500 px-2 py-0.5 font-bold">
+        <div className="inline-flex items-center gap-2 rounded-sm border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-neutral-300 backdrop-blur-sm">
+          <span className="inline-flex items-center justify-center rounded-sm bg-red-500/20 text-red-500 px-2 py-0.5 font-bold tracking-widest uppercase">
             নতুন ব্যাচ
           </span>
           <span className="font-medium tracking-widest uppercase text-[10px]">কেন আমাদের বেছে নিবেন?</span>
@@ -62,7 +62,7 @@ export function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="group relative overflow-hidden border border-white/10 rounded-3xl md:col-span-3 lg:col-span-4 md:row-span-2 bg-gradient-to-bl from-white/[0.03] to-transparent backdrop-blur-sm hover:border-white/20 transition-all duration-500 hover:-translate-y-1"
+          className="group relative overflow-hidden border border-white/10 rounded-sm md:col-span-3 lg:col-span-4 md:row-span-2 bg-gradient-to-bl from-white/[0.03] to-transparent backdrop-blur-sm hover:border-white/20 transition-all duration-500 hover:-translate-y-1"
         >
           <div className="relative h-full overflow-hidden flex flex-col">
             <div className="flex-1 relative overflow-hidden">
@@ -72,7 +72,7 @@ export function Features() {
                 <div className="absolute left-1/2 top-1/2 h-[240px] w-[240px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-blue-500/10 animate-pulse" style={{ animationDelay: "1.2s" }}></div>
               </div>
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-                <div className="relative flex h-24 w-24 items-center justify-center rounded-full border border-blue-500/30 bg-blue-500/10 backdrop-blur-md transition-transform duration-300 group-hover:scale-110 shadow-[0_0_30px_rgba(59,130,246,0.3)]">
+                <div className="relative flex h-24 w-24 items-center justify-center rounded-md border border-blue-500/30 bg-blue-500/10 backdrop-blur-md transition-transform duration-300 group-hover:scale-110 shadow-[0_0_30px_rgba(59,130,246,0.3)]">
                   <BrainCircuit className="h-10 w-10 text-electric-blue" />
                 </div>
               </div>
@@ -94,7 +94,7 @@ export function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className="overflow-hidden border border-white/10 rounded-3xl relative md:col-span-3 lg:col-span-4 md:row-span-2 bg-gradient-to-br from-white/[0.03] to-transparent backdrop-blur-sm hover:border-white/20 transition-all duration-500 hover:-translate-y-1"
+          className="overflow-hidden border border-white/10 rounded-sm relative md:col-span-3 lg:col-span-4 md:row-span-2 bg-gradient-to-br from-white/[0.03] to-transparent backdrop-blur-sm hover:border-white/20 transition-all duration-500 hover:-translate-y-1"
         >
           <div className="h-full p-6 relative flex flex-col">
             <div className="relative mx-auto h-full w-full flex items-center justify-center flex-1 overflow-hidden">
@@ -104,7 +104,7 @@ export function Features() {
                 <div className="absolute left-1/2 top-1/2 h-[220px] w-[220px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-green-500/10 animate-pulse" style={{ animationDelay: "1s" }}></div>
               </div>
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-                <div className="relative flex h-24 w-24 items-center justify-center rounded-full border border-green-500/30 bg-green-500/10 backdrop-blur-md transition-transform duration-500 group-hover:scale-110 group-hover:rotate-180 shadow-[0_0_30px_rgba(34,197,94,0.3)]">
+                <div className="relative flex h-24 w-24 items-center justify-center rounded-md border border-green-500/30 bg-green-500/10 backdrop-blur-md transition-transform duration-500 group-hover:scale-110 group-hover:rotate-180 shadow-[0_0_30px_rgba(34,197,94,0.3)]">
                   <Infinity className="h-10 w-10 text-green-400" />
                 </div>
               </div>
@@ -122,7 +122,7 @@ export function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="rounded-3xl border border-white/10 p-6 md:col-span-6 lg:col-span-4 md:row-span-1 bg-white/[0.02] backdrop-blur-sm hover:bg-white/[0.04] transition-all duration-500 flex flex-col justify-center relative overflow-hidden group hover:-translate-y-1 hover:border-white/20"
+          className="rounded-sm border border-white/10 p-6 md:col-span-6 lg:col-span-4 md:row-span-1 bg-white/[0.02] backdrop-blur-sm hover:bg-white/[0.04] transition-all duration-500 flex flex-col justify-center relative overflow-hidden group hover:-translate-y-1 hover:border-white/20"
         >
           <div className="absolute right-0 top-0 w-40 h-40 bg-white/5 blur-3xl rounded-full -z-10 group-hover:bg-white/10 transition-colors duration-500"></div>
           <div className="flex justify-between items-start">
@@ -130,13 +130,13 @@ export function Features() {
               <p className="text-5xl font-display tracking-tighter text-white drop-shadow-md">10x</p>
               <p className="mt-2 text-sm text-slate-300 font-medium">স্মার্ট প্রোডাক্টিভিটি</p>
             </div>
-            <div className="h-12 w-12 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform group-hover:shadow-[0_0_15px_rgba(255,255,255,0.1)]">
+            <div className="h-12 w-12 rounded-md bg-white/5 flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform group-hover:shadow-[0_0_15px_rgba(255,255,255,0.1)]">
               <Zap className="h-6 w-6 text-white" />
             </div>
           </div>
-          <div className="mt-4 flex items-center gap-2 text-red-400 bg-red-500/10 w-fit px-3 py-1.5 rounded-full border border-red-500/20">
+          <div className="mt-4 flex items-center gap-2 text-red-400 bg-red-500/10 w-fit px-3 py-1.5 rounded-sm border border-red-500/20">
             <TrendingUp size={14} />
-            <span className="text-xs font-bold tracking-wider">GTD Framework</span>
+            <span className="text-xs font-bold tracking-wider uppercase">GTD Framework</span>
           </div>
         </motion.div>
 
@@ -146,11 +146,11 @@ export function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
-          className="flex flex-col justify-between rounded-3xl border border-white/10 p-6 backdrop-blur-sm md:col-span-6 lg:col-span-4 md:row-span-1 bg-gradient-to-tr from-white/[0.02] to-white/[0.05] hover:border-white/20 transition-all duration-500 group hover:-translate-y-1"
+          className="flex flex-col justify-between rounded-sm border border-white/10 p-6 backdrop-blur-sm md:col-span-6 lg:col-span-4 md:row-span-1 bg-gradient-to-tr from-white/[0.02] to-white/[0.05] hover:border-white/20 transition-all duration-500 group hover:-translate-y-1"
         >
           <div className="mb-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-full bg-red-500/10 border border-red-500/30 flex items-center justify-center group-hover:shadow-[0_0_15px_rgba(239,68,68,0.3)] transition-all">
+              <div className="h-10 w-10 rounded-md bg-red-500/10 border border-red-500/30 flex items-center justify-center group-hover:shadow-[0_0_15px_rgba(239,68,68,0.3)] transition-all">
                 <ShieldCheck className="h-5 w-5 text-red-500" />
               </div>
               <div>

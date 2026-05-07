@@ -107,9 +107,9 @@ export function SocialProof() {
   ];
 
   const CommentCard = ({ review }: { review: any }) => (
-    <div className="bg-white/[0.02] backdrop-blur-sm rounded-lg p-6 w-[380px] md:w-[450px] shrink-0 border border-white/10 hover:bg-white/[0.03] hover:border-white/20 transition-all duration-300 flex flex-col gap-3 shadow-[0_0_15px_rgba(239,68,68,0.15)] hover:shadow-[0_0_25px_rgba(239,68,68,0.3)]">
+    <div className="bg-white/[0.02] backdrop-blur-sm rounded-sm p-6 w-[380px] md:w-[450px] shrink-0 border border-white/10 hover:bg-white/[0.03] hover:border-white/20 transition-all duration-300 flex flex-col gap-3 shadow-[0_0_15px_rgba(239,68,68,0.15)] hover:shadow-[0_0_25px_rgba(239,68,68,0.3)]">
       <div className="flex gap-4">
-        <div className="w-10 h-10 rounded-full bg-electric-blue/20 flex items-center justify-center text-electric-blue font-bold shrink-0 text-sm">
+        <div className="w-10 h-10 rounded-md bg-electric-blue/20 flex items-center justify-center text-electric-blue font-bold shrink-0 text-sm">
           {review.initials}
         </div>
         <div className="flex flex-col w-full">

@@ -40,8 +40,8 @@ export function Pricing() {
           </div>
 
           <div className="z-10 flex flex-col items-center md:items-end relative">
-            <div className="flex bg-[#111111] border-white/10 border rounded-full p-1.5 backdrop-blur-sm items-center">
-              <div className="text-sm font-semibold text-black bg-white rounded-full px-8 py-2.5 shadow-[0_0_15px_rgba(239,68,68,0.3)]">
+            <div className="flex bg-[#111111] border-white/10 border rounded-sm p-1.5 backdrop-blur-sm items-center">
+              <div className="text-sm font-bold text-black uppercase tracking-widest bg-white rounded-sm px-8 py-2.5 shadow-[0_0_15px_rgba(239,68,68,0.3)]">
                 এককালীন পেমেন্ট
               </div>
             </div>
@@ -66,8 +66,8 @@ export function Pricing() {
             {/* Floating Pulse Badge */}
             <div className="absolute top-6 right-6 z-20">
               <span className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-sm bg-red-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-sm h-3 w-3 bg-red-500"></span>
               </span>
             </div>
             
@@ -133,7 +133,7 @@ export function Pricing() {
                       key={idx} 
                       className="flex items-center gap-4 text-white text-xl font-light font-sans group/item"
                     >
-                      <span className="w-6 h-6 rounded-full bg-red-500/10 flex items-center justify-center shrink-0 border border-red-500/20 group-hover/item:bg-red-500/20 transition-colors">
+                      <span className="w-6 h-6 rounded-md bg-red-500/10 flex items-center justify-center shrink-0 border border-red-500/20 group-hover/item:bg-red-500/20 transition-colors">
                         <Check size={14} className="text-red-400" />
                       </span>
                       {feature}

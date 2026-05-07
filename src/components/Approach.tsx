@@ -85,7 +85,7 @@ export function Approach() {
               }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="group flex items-center gap-2 px-6 py-3 border border-white/15 text-white text-sm font-medium rounded-full hover:bg-white/5 transition font-sans whitespace-nowrap"
+              className="group flex items-center gap-2 px-6 py-3 border border-white/15 text-white text-sm font-medium rounded-sm uppercase tracking-wider hover:bg-white/5 transition font-sans whitespace-nowrap"
             >
               <span>ফিচারগুলো দেখুন</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 transition-transform group-hover:translate-x-1">
@@ -174,8 +174,8 @@ export function Approach() {
             <div className="flex h-full flex-row items-center justify-center gap-6 px-4 md:flex-col md:gap-14 md:px-12">
               <motion.div variants={nodeVariants} className="group relative">
                 <div className="absolute inset-0 rounded-full blur-2xl opacity-0 transition-opacity group-hover:opacity-100 bg-[radial-gradient(circle,_rgba(249,115,22,0.25),_transparent_60%)]"></div>
-                <div className="relative flex h-[76px] w-[76px] items-center justify-center rounded-lg border border-border-subtle bg-white/[0.03] shadow-[0_20px_40px_-20px_rgba(0,0,0,0.8)] backdrop-blur-xl transition-transform duration-300 group-hover:scale-[1.06] md:h-[92px] md:w-[92px]">
-                  <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_55%)]"></div>
+                <div className="relative flex h-[76px] w-[76px] items-center justify-center rounded-md border border-border-subtle bg-white/[0.03] shadow-[0_20px_40px_-20px_rgba(0,0,0,0.8)] backdrop-blur-xl transition-transform duration-300 group-hover:scale-[1.06] md:h-[92px] md:w-[92px]">
+                  <div className="absolute inset-0 rounded-md bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_55%)]"></div>
                   <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-orange-400 drop-shadow-[0_0_12px_rgba(249,115,22,0.4)]">
                     <circle cx="12" cy="12" r="10"></circle>
                     <path d="m4.9 4.9 14.2 14.2"></path>
@@ -185,8 +185,8 @@ export function Approach() {
 
               <motion.div variants={nodeVariants} className="group relative">
                 <div className="absolute inset-0 rounded-full blur-2xl opacity-0 transition-opacity group-hover:opacity-100 bg-[radial-gradient(circle,_rgba(239,68,68,0.25),_transparent_60%)]"></div>
-                <div className="relative flex h-[76px] w-[76px] items-center justify-center rounded-lg border border-border-subtle bg-white/[0.03] shadow-[0_20px_40px_-20px_rgba(0,0,0,0.8)] backdrop-blur-xl transition-transform duration-300 group-hover:scale-[1.06] md:h-[92px] md:w-[92px]">
-                  <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_55%)]"></div>
+                <div className="relative flex h-[76px] w-[76px] items-center justify-center rounded-md border border-border-subtle bg-white/[0.03] shadow-[0_20px_40px_-20px_rgba(0,0,0,0.8)] backdrop-blur-xl transition-transform duration-300 group-hover:scale-[1.06] md:h-[92px] md:w-[92px]">
+                  <div className="absolute inset-0 rounded-md bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_55%)]"></div>
                   <div className="grid grid-cols-2 gap-1.5 rotate-45">
                     <div className="h-2.5 w-2.5 rounded-[1px] bg-red-500"></div>
                     <div className="h-2.5 w-2.5 rounded-[1px] bg-red-500/50"></div>
@@ -223,8 +223,8 @@ export function Approach() {
             <div className="flex h-full flex-row items-center justify-center gap-6 px-4 md:flex-col md:gap-14 md:px-12">
               <motion.div variants={nodeVariants} className="group relative">
                 <div className="absolute inset-0 rounded-full blur-2xl opacity-0 transition-opacity group-hover:opacity-100 bg-[radial-gradient(circle,_rgba(52,211,153,0.25),_transparent_60%)]"></div>
-                <div className="relative flex h-[76px] w-[76px] items-center justify-center rounded-full border border-white/[0.08] bg-white/[0.03] shadow-[0_20px_40px_-20px_rgba(0,0,0,0.8)] backdrop-blur-xl transition-transform duration-300 group-hover:scale-[1.06] md:h-[92px] md:w-[92px]">
-                  <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_55%)]"></div>
+                <div className="relative flex h-[76px] w-[76px] items-center justify-center rounded-md border border-white/[0.08] bg-white/[0.03] shadow-[0_20px_40px_-20px_rgba(0,0,0,0.8)] backdrop-blur-xl transition-transform duration-300 group-hover:scale-[1.06] md:h-[92px] md:w-[92px]">
+                  <div className="absolute inset-0 rounded-md bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_55%)]"></div>
                   <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-emerald-400 drop-shadow-[0_0_12px_rgba(52,211,153,0.4)]">
                     <path d="M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3"></path>
                   </svg>
@@ -233,8 +233,8 @@ export function Approach() {
 
               <motion.div variants={nodeVariants} className="group relative">
                 <div className="absolute inset-0 rounded-full blur-2xl opacity-0 transition-opacity group-hover:opacity-100 bg-[radial-gradient(circle,_rgba(168,85,247,0.25),_transparent_60%)]"></div>
-                <div className="relative flex h-[76px] w-[76px] items-center justify-center rounded-full border border-white/[0.08] bg-white/[0.03] shadow-[0_20px_40px_-20px_rgba(0,0,0,0.8)] backdrop-blur-xl transition-transform duration-300 group-hover:scale-[1.06] md:h-[92px] md:w-[92px]">
-                  <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_55%)]"></div>
+                <div className="relative flex h-[76px] w-[76px] items-center justify-center rounded-md border border-white/[0.08] bg-white/[0.03] shadow-[0_20px_40px_-20px_rgba(0,0,0,0.8)] backdrop-blur-xl transition-transform duration-300 group-hover:scale-[1.06] md:h-[92px] md:w-[92px]">
+                  <div className="absolute inset-0 rounded-md bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_55%)]"></div>
                   <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-purple-400 drop-shadow-[0_0_12px_rgba(168,85,247,0.4)]">
                     <circle cx="12" cy="12" r="3"></circle>
                     <path d="M12 16.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5 4.5 4.5 0 1 1-4.5 4.5z"></path>
