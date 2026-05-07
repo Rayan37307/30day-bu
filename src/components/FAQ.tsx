@@ -57,7 +57,7 @@ export function FAQ() {
                 transition={{ delay: 0.1 }}
                 className="sm:text-5xl lg:text-6xl text-4xl font-display text-white tracking-tight leading-[1.1]"
               >
-                সচরাচর জিজ্ঞাসিত <span className="text-red-500 underline decoration-2 underline-offset-4">প্রশ্ন</span>
+                সচরাচর জিজ্ঞাসিত <span className="text-gradient-red underline decoration-2 underline-offset-4">প্রশ্ন</span>
               </motion.h2>
 
               <motion.p
@@ -78,6 +78,7 @@ export function FAQ() {
               transition={{ delay: 0.3 }}
               className="md:col-span-4 flex md:justify-end"
             >
+              <div className="hidden sm:flex items-center gap-3">
                 <a href="#support" className="inline-flex items-center text-[13px] tracking-wider uppercase hover:bg-white/5 font-bold text-white h-11 rounded-sm ring-white/15 ring-1 px-5 transition-all">
                   সাপোর্টে যোগাযোগ করুন
                 </a>
@@ -115,7 +116,8 @@ export function FAQ() {
                     >
                       <h3 className={`text-2xl sm:text-3xl font-display tracking-tight transition-colors duration-300 ${isOpen ? "text-white" : "text-slate-300"}`}>
                         {faq.q}
-                      <span className={`ml-4 shrink-0 inline-flex items-center justify-center rounded-sm border border-white/10 bg-white/5 p-2 transition-all duration-300 ${isOpen ? "bg-red-500/20 border-red-500/40 text-red-500 rotate-90 shadow-[0_0_15px_rgba(239,68,68,0.2)]" : "group-hover:bg-white/10 text-slate-400 group-hover:text-white"}`}>
+                      </h3>
+                      <span className={`ml-4 shrink-0 inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 p-2 transition-all duration-300 ${isOpen ? "bg-red-500/20 border-red-500/40 text-red-500 rotate-90 shadow-[0_0_15px_rgba(239,68,68,0.2)]" : "group-hover:bg-white/10 text-slate-400 group-hover:text-white"}`}>
                         <ChevronRight size={20} className="stroke-[2.5]" />
                       </span>
                     </button>
@@ -128,7 +130,8 @@ export function FAQ() {
                           exit={{ height: 0, opacity: 0 }}
                           transition={{ duration: 0.3, ease: "easeInOut" }}
                           className="overflow-hidden"
-                          <div className="pt-4 pb-2 px-6 mt-4 bg-white/[0.03] rounded-sm backdrop-blur-md border border-white/10">
+                        >
+                          <div className="pt-4 pb-2 px-6 mt-4 glass-light rounded-xl">
                             <p className="text-slate-300 text-sm md:text-base leading-relaxed font-sans font-medium">
                               {faq.a}
                             </p>

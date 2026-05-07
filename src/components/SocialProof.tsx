@@ -107,9 +107,9 @@ export function SocialProof() {
   ];
 
   const CommentCard = ({ review }: { review: any }) => (
-    <div className="bg-white/[0.02] backdrop-blur-sm rounded-sm p-6 w-[380px] md:w-[450px] shrink-0 border border-white/10 hover:bg-white/[0.03] hover:border-white/20 transition-all duration-300 flex flex-col gap-3 shadow-[0_0_15px_rgba(239,68,68,0.15)] hover:shadow-[0_0_25px_rgba(239,68,68,0.3)]">
+    <div className="glass-heavy rounded-2xl p-6 w-[380px] md:w-[450px] shrink-0 hover:bg-white/[0.05] hover:border-white/20 transition-all duration-300 flex flex-col gap-3 shadow-[0_0_15px_rgba(239,68,68,0.15)] hover:shadow-[0_0_25px_rgba(239,68,68,0.3)]">
       <div className="flex gap-4">
-        <div className="w-10 h-10 rounded-md bg-electric-blue/20 flex items-center justify-center text-electric-blue font-bold shrink-0 text-sm">
+        <div className="w-10 h-10 rounded-full bg-electric-blue/20 flex items-center justify-center text-electric-blue font-bold shrink-0 text-sm">
           {review.initials}
         </div>
         <div className="flex flex-col w-full">
@@ -137,9 +137,12 @@ export function SocialProof() {
 
   return (
     <section className="relative w-full max-w-[1200px] mx-auto overflow-hidden py-20 px-6">
+      {/* Background Orb for Glassmorphism */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-red-600/10 blur-[150px] rounded-full pointer-events-none -z-10" />
+
       <div className="text-center mb-16 relative z-10 w-full">
         <h2 className="font-display font-normal text-5xl md:text-6xl mb-4 leading-[1.2]">
-          ১০,০০০+ <span className="text-electric-blue">Backbenchers</span>-দের ভরসা
+          ১০,০০০+ <span className="text-gradient-red">Backbenchers</span>-দের ভরসা
         </h2>
         <p className="text-slate-400 max-w-2xl mx-auto text-lg">
           শুধু আমাদের কথায় বিশ্বাস করবেন না। যারা এই জার্নিতে অংশ নিয়েছে তাদের অভিজ্ঞতা শুনুন।

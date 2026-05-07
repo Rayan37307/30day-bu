@@ -20,6 +20,10 @@ export function Pricing() {
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="flex flex-col gap-x-16 gap-y-16 mt-20 mb-20 px-6 py-20 relative overflow-hidden">
+        
+        {/* Background Orb for Glassmorphism */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-red-600/10 blur-[150px] rounded-full pointer-events-none -z-10" />
+
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 w-full relative z-10">
           <div className="flex flex-col gap-6 w-full">
@@ -32,7 +36,7 @@ export function Pricing() {
               </span>
             </div>
             <h2 className="md:text-5xl lg:text-6xl leading-[1.1] text-4xl text-white font-display font-normal tracking-tight">
-              সবার জন্য সহজ <span className="text-text-secondary">প্রাইসিং।</span>
+              সবার জন্য সহজ <span className="text-gradient-red">প্রাইসিং।</span>
             </h2>
             <p className="text-lg text-gray-400 font-light w-full leading-relaxed font-sans">
               কোনো মাসিক ফি নেই। একবার পেমেন্ট করুন এবং আজীবনের জন্য সেলফ-মাস্টারির সকল রিসোর্স পেয়ে যান।
@@ -40,8 +44,8 @@ export function Pricing() {
           </div>
 
           <div className="z-10 flex flex-col items-center md:items-end relative">
-            <div className="flex bg-[#111111] border-white/10 border rounded-sm p-1.5 backdrop-blur-sm items-center">
-              <div className="text-sm font-bold text-black uppercase tracking-widest bg-white rounded-sm px-8 py-2.5 shadow-[0_0_15px_rgba(239,68,68,0.3)]">
+            <div className="flex glass-light rounded-full p-1.5 items-center">
+              <div className="text-sm font-bold text-black uppercase tracking-widest bg-white rounded-full px-8 py-2.5 shadow-[0_0_15px_rgba(239,68,68,0.3)]">
                 এককালীন পেমেন্ট
               </div>
             </div>
@@ -61,13 +65,13 @@ export function Pricing() {
           {/* Pricing Card */}
           <motion.div 
             whileHover={{ y: -5, scale: 1.005 }}
-            className="overflow-hidden z-10 group bg-white/[0.02] backdrop-blur-sm w-full max-w-[1200px] border-white/10 hover:bg-white/[0.03] hover:border-white/20 border rounded-lg relative shadow-[0_0_15px_rgba(239,68,68,0.15)] hover:shadow-[0_0_25px_rgba(239,68,68,0.3)] transition-all duration-500">
+            className="overflow-hidden z-10 group glass-heavy rounded-3xl w-full max-w-[1200px] relative transition-all duration-500 hover:shadow-[0_0_40px_rgba(239,68,68,0.3)]">
             
             {/* Floating Pulse Badge */}
             <div className="absolute top-6 right-6 z-20">
               <span className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-sm bg-red-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-sm h-3 w-3 bg-red-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
               </span>
             </div>
             
@@ -133,7 +137,7 @@ export function Pricing() {
                       key={idx} 
                       className="flex items-center gap-4 text-white text-xl font-light font-sans group/item"
                     >
-                      <span className="w-6 h-6 rounded-md bg-red-500/10 flex items-center justify-center shrink-0 border border-red-500/20 group-hover/item:bg-red-500/20 transition-colors">
+                      <span className="w-6 h-6 rounded-full glass-light flex items-center justify-center shrink-0 border-red-500/20 group-hover/item:bg-red-500/20 transition-colors">
                         <Check size={14} className="text-red-400" />
                       </span>
                       {feature}

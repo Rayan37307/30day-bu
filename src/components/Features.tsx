@@ -7,6 +7,10 @@ export function Features() {
   return (
     <section className="sm:px-6 lg:px-8 md:pb-24 lg:pt-24 max-w-[1200px] mx-auto pt-8 pr-4 pb-16 pl-4 relative z-10" id="features">
       
+      {/* Background Orbs for Glassmorphism effect */}
+      <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-red-600/10 blur-[120px] rounded-full pointer-events-none -z-10 translate-y-[-50%] -translate-x-1/2" />
+      <div className="absolute top-1/3 right-0 w-[600px] h-[600px] bg-purple-600/10 blur-[150px] rounded-full pointer-events-none -z-10 translate-x-1/3" />
+      
       {/* Pill */}
       <motion.div 
         initial={{ opacity: 0, y: 10 }}
@@ -14,8 +18,8 @@ export function Features() {
         viewport={{ once: true }}
         className="mx-auto w-fit mb-6"
       >
-        <div className="inline-flex items-center gap-2 rounded-sm border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-neutral-300 backdrop-blur-sm">
-          <span className="inline-flex items-center justify-center rounded-sm bg-red-500/20 text-red-500 px-2 py-0.5 font-bold tracking-widest uppercase">
+        <div className="inline-flex items-center gap-2 rounded-full glass-light px-3 py-1.5 text-xs text-neutral-300">
+          <span className="inline-flex items-center justify-center rounded-full bg-red-500/20 text-red-500 px-2 py-0.5 font-bold tracking-widest uppercase">
             নতুন ব্যাচ
           </span>
           <span className="font-medium tracking-widest uppercase text-[10px]">কেন আমাদের বেছে নিবেন?</span>
@@ -31,7 +35,7 @@ export function Features() {
         className="text-center"
       >
         <h2 className="mx-auto max-w-4xl font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tighter text-white leading-[1.1]">
-          আপনার সফলতার জন্য <span className="text-red-500 underline decoration-2 underline-offset-4">সবকিছু</span> এক জায়গায়
+          আপনার সফলতার জন্য <span className="text-gradient-red">সবকিছু</span> এক জায়গায়
         </h2>
         <p className="mx-auto mt-6 max-w-2xl text-base sm:text-lg text-slate-400 font-medium leading-relaxed">
           শুধুমাত্র হাওয়ায় ভাসা মোটিভেশন নয়, বরং নিউরোসায়েন্স এবং প্রুভেন সিস্টেমের মাধ্যমে নিজেকে নতুন করে আবিষ্কার করুন।
@@ -44,7 +48,7 @@ export function Features() {
           </Button>
           
           <div className="inline-block group relative">
-            <a href="#product" className="inline-flex gap-2 border border-white/10 hover:border-white/20 hover:text-white transition-all hover:-translate-y-0.5 text-sm font-bold text-white/80 bg-white/5 rounded-lg px-8 py-3.5 backdrop-blur-xl items-center">
+            <a href="#product" className="inline-flex gap-2 text-sm font-bold text-white/80 glass-light rounded-full px-8 py-3.5 items-center hover:bg-white/10 transition-all">
               <PlayCircle size={18} className="text-red-500 opacity-80" />
               কারিকুলাম দেখুন
             </a>
@@ -62,7 +66,7 @@ export function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="group relative overflow-hidden border border-white/10 rounded-sm md:col-span-3 lg:col-span-4 md:row-span-2 bg-gradient-to-bl from-white/[0.03] to-transparent backdrop-blur-sm hover:border-white/20 transition-all duration-500 hover:-translate-y-1"
+          className="group relative overflow-hidden rounded-2xl glass-heavy md:col-span-3 lg:col-span-4 md:row-span-2 transition-all duration-500 hover:-translate-y-1 hover:shadow-red-500/10"
         >
           <div className="relative h-full overflow-hidden flex flex-col">
             <div className="flex-1 relative overflow-hidden">
@@ -77,7 +81,7 @@ export function Features() {
                 </div>
               </div>
             </div>
-            <div className="relative border-t border-white/5 bg-black/20">
+            <div className="relative border-t border-white/10 bg-white/[0.02]">
               <div className="p-6">
                 <h3 className="text-xl tracking-tight font-display text-white">সাইকোলজি-বেসড সল্যুশন</h3>
                 <p className="leading-relaxed text-slate-400 mt-2 text-sm font-sans">
@@ -94,7 +98,7 @@ export function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className="overflow-hidden border border-white/10 rounded-sm relative md:col-span-3 lg:col-span-4 md:row-span-2 bg-gradient-to-br from-white/[0.03] to-transparent backdrop-blur-sm hover:border-white/20 transition-all duration-500 hover:-translate-y-1"
+          className="overflow-hidden rounded-2xl glass-heavy relative md:col-span-3 lg:col-span-4 md:row-span-2 transition-all duration-500 hover:-translate-y-1 hover:shadow-green-500/10"
         >
           <div className="h-full p-6 relative flex flex-col">
             <div className="relative mx-auto h-full w-full flex items-center justify-center flex-1 overflow-hidden">
@@ -122,7 +126,7 @@ export function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="rounded-sm border border-white/10 p-6 md:col-span-6 lg:col-span-4 md:row-span-1 bg-white/[0.02] backdrop-blur-sm hover:bg-white/[0.04] transition-all duration-500 flex flex-col justify-center relative overflow-hidden group hover:-translate-y-1 hover:border-white/20"
+          className="rounded-2xl glass-heavy p-6 md:col-span-6 lg:col-span-4 md:row-span-1 transition-all duration-500 flex flex-col justify-center relative overflow-hidden group hover:-translate-y-1 hover:shadow-purple-500/10"
         >
           <div className="absolute right-0 top-0 w-40 h-40 bg-white/5 blur-3xl rounded-full -z-10 group-hover:bg-white/10 transition-colors duration-500"></div>
           <div className="flex justify-between items-start">
@@ -146,7 +150,7 @@ export function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
-          className="flex flex-col justify-between rounded-sm border border-white/10 p-6 backdrop-blur-sm md:col-span-6 lg:col-span-4 md:row-span-1 bg-gradient-to-tr from-white/[0.02] to-white/[0.05] hover:border-white/20 transition-all duration-500 group hover:-translate-y-1"
+          className="flex flex-col justify-between rounded-2xl glass-heavy p-6 md:col-span-6 lg:col-span-4 md:row-span-1 transition-all duration-500 group hover:-translate-y-1 hover:shadow-red-500/10"
         >
           <div className="mb-4 flex items-center justify-between">
             <div className="flex items-center gap-3">

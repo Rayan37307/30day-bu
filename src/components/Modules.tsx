@@ -123,7 +123,7 @@ export function Modules() {
             কোর্স কারিকুলাম
           </p>
           <h2 className="font-display font-medium text-4xl md:text-5xl mb-4 text-white">
-            ৩০-দিনের <span className="text-red-500 font-bold font-display underline decoration-2 underline-offset-4">রোডম্যাপ</span>
+            ৩০-দিনের <span className="text-gradient-red font-bold font-display underline decoration-2 underline-offset-4">রোডম্যাপ</span>
           </h2>
           <p className="text-slate-400 max-w-xl mx-auto text-lg pt-2 leading-relaxed">
             প্রতিদিন নিজেকে নতুন করে গড়ুন। নিচে কোর্সের ৪টি ধাপের মাস্টার ব্রেকডাউন দেওয়া হলো।
@@ -144,7 +144,7 @@ export function Modules() {
               top: calc... Creates the visual "stacked edges" offset effect
             */}
             <div
-              className="card-inner relative w-full max-w-[1400px] origin-top flex flex-col md:flex-row overflow-hidden rounded-sm border border-border-subtle bg-surface shadow-[0_30px_60px_rgba(0,0,0,0.6)] will-change-transform min-h-[550px] md:min-h-[600px]"
+              className="card-inner relative w-full max-w-[1400px] origin-top flex flex-col md:flex-row overflow-hidden glass-heavy rounded-2xl will-change-transform min-h-[550px] md:min-h-[600px]"
               style={{
                 top: `calc(-5vh + ${i * 30}px)`, 
                 boxShadow: `0 0 0 1px rgba(255,255,255,0.04), 0 30px 60px rgba(0,0,0,0.6), 0 0 80px ${mod.glowColor}`,
@@ -175,7 +175,7 @@ export function Modules() {
                     Module {mod.id}
                   </span>
                   <div
-                    className="flex h-14 w-14 items-center justify-center rounded-md border border-border-subtle"
+                    className="flex h-14 w-14 items-center justify-center rounded-xl border border-border-subtle"
                     style={{ background: `${mod.accentColor}15` }}
                   >
                     {mod.icon}
@@ -198,13 +198,13 @@ export function Modules() {
               </div>
 
               {/* Right panel — steps */}
-              <div className="flex w-full items-center p-8 md:w-[60%] md:p-12 lg:p-16 bg-surface">
+              <div className="flex w-full items-center p-8 md:w-[60%] md:p-12 lg:p-16 bg-white/[0.01]">
                 <ul className="relative w-full space-y-10">
                   <div className="absolute bottom-5 left-[22px] top-5 w-px bg-white/[0.08]" />
                   {mod.points.map((point, pIdx) => (
                     <li key={pIdx} className="relative flex items-start gap-7">
                       <div
-                        className="relative z-10 mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-border-subtle bg-surface shadow-xl"
+                        className="relative z-10 mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl glass-light shadow-xl"
                         style={{
                           boxShadow: `0 0 0 4px ${mod.accentColor}15, inset 0 1px 2px rgba(255,255,255,0.06)`,
                         }}

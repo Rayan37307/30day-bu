@@ -61,7 +61,23 @@ h6 {
 }
 
 .glass-panel {
-  @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  @apply bg-white/5 backdrop-blur-md border border-white/10;
+}
+
+.glass-heavy {
+  @apply bg-white/10 backdrop-blur-2xl border border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)];
+}
+
+.glass-light {
+  @apply bg-white/[0.03] backdrop-blur-sm border border-white/5;
+}
+
+.text-gradient-red {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-orange-400;
+}
+
+.text-gradient-purple {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500;
 }
 
 .section-container {
