@@ -21,7 +21,7 @@ export function Approach() {
       style={{ position: 'relative' }}>
       
       {/* Background Orb for Glassmorphism */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-600/10 blur-[150px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-600/5 blur-[150px] rounded-full pointer-events-none -z-10" />
       
       {/* Main Grid */}
       <div className="flex flex-col relative">

@@ -22,7 +22,7 @@ export function Pricing() {
         className="flex flex-col gap-x-16 gap-y-16 mt-20 mb-20 px-6 py-20 relative overflow-hidden">
         
         {/* Background Orb for Glassmorphism */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-red-600/10 blur-[150px] rounded-full pointer-events-none -z-10" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-red-600/5 blur-[150px] rounded-full pointer-events-none -z-10" />
 
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 w-full relative z-10">

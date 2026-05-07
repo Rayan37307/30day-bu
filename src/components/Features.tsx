@@ -8,8 +8,8 @@ export function Features() {
     <section className="sm:px-6 lg:px-8 md:pb-24 lg:pt-24 max-w-[1200px] mx-auto pt-8 pr-4 pb-16 pl-4 relative z-10" id="features">
       
       {/* Background Orbs for Glassmorphism effect */}
-      <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-red-600/10 blur-[120px] rounded-full pointer-events-none -z-10 translate-y-[-50%] -translate-x-1/2" />
-      <div className="absolute top-1/3 right-0 w-[600px] h-[600px] bg-purple-600/10 blur-[150px] rounded-full pointer-events-none -z-10 translate-x-1/3" />
+      <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-red-600/5 blur-[120px] rounded-full pointer-events-none -z-10 translate-y-[-50%] -translate-x-1/2" />
+      <div className="absolute top-1/3 right-0 w-[600px] h-[600px] bg-red-600/5 blur-[150px] rounded-full pointer-events-none -z-10 translate-x-1/3" />
       
       {/* Pill */}
       <motion.div 

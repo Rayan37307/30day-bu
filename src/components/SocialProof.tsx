@@ -138,7 +138,7 @@ export function SocialProof() {
   return (
     <section className="relative w-full max-w-[1200px] mx-auto overflow-hidden py-20 px-6">
       {/* Background Orb for Glassmorphism */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-red-600/10 blur-[150px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-red-600/5 blur-[150px] rounded-full pointer-events-none -z-10" />
 
       <div className="text-center mb-16 relative z-10 w-full">
         <h2 className="font-display font-normal text-5xl md:text-6xl mb-4 leading-[1.2]">

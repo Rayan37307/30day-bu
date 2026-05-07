@@ -7,9 +7,8 @@ export function Hero() {
     <section className="w-full isolate min-h-screen overflow-hidden relative bg-black flex flex-col items-center justify-center pt-32 pb-20">
       
       {/* Red/Purple Gradient Background Glows for Glassmorphism */}
-      <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-red-900/40 via-purple-900/10 to-transparent pointer-events-none -z-10" />
-      <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-red-600/20 blur-[120px] rounded-full pointer-events-none -z-10" />
-      <div className="absolute top-2/3 right-1/4 translate-x-1/4 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/15 blur-[150px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-red-900/10 via-transparent to-transparent pointer-events-none -z-10" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-red-600/10 blur-[120px] rounded-full pointer-events-none -z-10" />
 
       <div className="z-10 relative w-full max-w-[1200px] mx-auto px-6 text-center flex flex-col items-center">
         
