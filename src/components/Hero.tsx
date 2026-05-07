@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
+import { Button } from "./Button";
 
 export function Hero() {
   return (
@@ -63,12 +64,9 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <a 
-            href="#pricing"
-            className="inline-flex items-center justify-center bg-[#E50914] hover:bg-[#f00a16] text-white text-[17px] font-bold rounded-lg px-12 py-4 transition-all shadow-[0_0_30px_rgba(229,9,20,0.25)] hover:shadow-[0_0_40px_rgba(229,9,20,0.4)] hover:-translate-y-0.5 border border-red-500/50"
-          >
-            এনরোল করুন <ChevronRight size={18} className="ml-1" strokeWidth={2.5} />
-          </a>
+          <Button as="a" href="#pricing">
+            এনরোল করুন
+          </Button>
         </motion.div>
 
       </div>

@@ -57,7 +57,7 @@ export function FAQ() {
                 transition={{ delay: 0.1 }}
                 className="sm:text-5xl lg:text-6xl text-4xl font-display text-white tracking-tight leading-[1.1]"
               >
-                সচরাচর জিজ্ঞাসিত <span className="text-red-500 curly-underline">প্রশ্ন</span>
+                সচরাচর জিজ্ঞাসিত <span className="text-red-500 underline decoration-2 underline-offset-4">প্রশ্ন</span>
               </motion.h2>
 
               <motion.p

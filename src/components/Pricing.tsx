@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, Rocket } from 'lucide-react';
+import { Button } from "./Button";
 
 export function Pricing() {
   const features = [
@@ -142,9 +143,9 @@ export function Pricing() {
 
                 {/* CTA Button */}
                 <div className="flex justify-start md:justify-end mt-auto pt-4">
-                  <button className="w-full sm:w-auto hover:bg-red-500/10 hover:border-red-400 hover:shadow-[0_0_35px_rgba(239,68,68,0.6),inset_0_0_20px_rgba(239,68,68,0.4)] hover:scale-[1.02] transition-all duration-300 flex group text-base font-medium text-white bg-black/60 border-red-500 border rounded-lg px-12 py-4 shadow-[0_0_20px_rgba(239,68,68,0.5),inset_0_0_10px_rgba(239,68,68,0.2)] gap-2 items-center justify-center">
+                  <Button className="w-full sm:w-auto">
                     এখনই জয়েন করুন
-                  </button>
+                  </Button>
                 </div>
               </div>
             </div>

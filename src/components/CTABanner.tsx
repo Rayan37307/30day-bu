@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ChevronRight } from "lucide-react";
+import { Button } from "./Button";
 
 export function CTABanner() {
   return (
@@ -19,12 +20,9 @@ export function CTABanner() {
           জীবনের কন্ট্রোল নিতে <span className="text-[#E50914]">৩০ দিনে?</span>
         </h2>
         
-        <a 
-          href="#pricing"
-          className="inline-flex items-center justify-center bg-[#E50914] hover:bg-[#f00a16] text-white text-[15px] font-bold rounded-lg px-10 py-3.5 transition-all shadow-[0_0_20px_rgba(229,9,20,0.25)] hover:shadow-[0_0_30px_rgba(229,9,20,0.4)] hover:-translate-y-0.5 border border-red-500/50"
-        >
-          হ্যাঁ, আমি প্রস্তুত <ChevronRight size={16} className="ml-1" strokeWidth={2.5} />
-        </a>
+        <Button as="a" href="#pricing">
+          হ্যাঁ, আমি প্রস্তুত
+        </Button>
       </motion.div>
     </section>
   );

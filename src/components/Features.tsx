@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ShieldCheck, BrainCircuit, Zap, Code, PlayCircle, TrendingUp, Infinity } from 'lucide-react';
+import { Button } from "./Button";
 
 export function Features() {
   return (
@@ -30,7 +31,7 @@ export function Features() {
         className="text-center"
       >
         <h2 className="mx-auto max-w-4xl font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tighter text-white leading-[1.1]">
-          আপনার সফলতার জন্য <span className="text-red-500 curly-underline">সবকিছু</span> এক জায়গায়
+          আপনার সফলতার জন্য <span className="text-red-500 underline decoration-2 underline-offset-4">সবকিছু</span> এক জায়গায়
         </h2>
         <p className="mx-auto mt-6 max-w-2xl text-base sm:text-lg text-slate-400 font-medium leading-relaxed">
           শুধুমাত্র হাওয়ায় ভাসা মোটিভেশন নয়, বরং নিউরোসায়েন্স এবং প্রুভেন সিস্টেমের মাধ্যমে নিজেকে নতুন করে আবিষ্কার করুন।
@@ -38,9 +39,9 @@ export function Features() {
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 mt-10 items-center justify-center">
-          <a href="#pricing" className="inline-flex items-center gap-2 rounded-lg bg-white text-neutral-900 px-8 py-3.5 text-sm font-bold shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] hover:-translate-y-0.5 transition-all">
+          <Button as="a" href="#pricing">
             এনরোল করুন
-          </a>
+          </Button>
           
           <div className="inline-block group relative">
             <a href="#product" className="inline-flex gap-2 border border-white/10 hover:border-white/20 hover:text-white transition-all hover:-translate-y-0.5 text-sm font-bold text-white/80 bg-white/5 rounded-lg px-8 py-3.5 backdrop-blur-xl items-center">
