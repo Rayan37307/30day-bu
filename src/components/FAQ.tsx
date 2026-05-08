@@ -34,7 +34,7 @@ export function FAQ() {
 
   return (
     <section className="lg:py-32 pt-24 pb-24" id="faq">
-      <div className="lg:px-8 max-w-[1200px] mx-auto pr-6 pl-6 relative">
+      <div className="w-full lg:px-8 max-w-[1200px] mx-auto pr-6 pl-6 relative">
         {/* Header */}
         <section className="relative">
           <div className="md:mb-16 grid md:grid-cols-12 mb-16 gap-x-6 gap-y-6 items-end">
@@ -88,7 +88,7 @@ export function FAQ() {
         </section>
 
         {/* FAQ Layout */}
-        <div className="max-w-4xl mx-auto relative mt-8">
+        <div className="w-full max-w-4xl mx-auto relative mt-8">
           
           {/* FAQ list */}
           <motion.div 
@@ -96,7 +96,7 @@ export function FAQ() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
-            className="relative z-10"
+            className="relative z-10 w-full"
           >
             <div className="divide-y divide-white/10">
               {faqs.map((faq, idx) => {
