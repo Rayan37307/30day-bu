@@ -50,7 +50,8 @@ export function Hero() {
             <iframe
               className="w-full h-full"
               src="https://www.youtube.com/embed/RG6fjpBbGpA?start=0&end=20&autoplay=1&mute=1&loop=1&playlist=RG6fjpBbGpA&controls=0&modestbranding=1&rel=0"
-              title="YouTube video player"
+              title="Course Intro Video"
+              aria-label="Backbencher University Course Introduction Video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen

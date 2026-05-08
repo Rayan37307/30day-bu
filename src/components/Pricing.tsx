@@ -104,9 +104,9 @@ export function Pricing() {
                     <path d="M9 12H4s.55-3.03 2-4c1.62-1.1 4-1 4-1s.25 2.25 0 4z"></path>
                     <path d="M15 13v5s3.03-.55 4-2c1.1-1.62 1-4 1-4s-2.25-.25-4 0z"></path>
                   </svg>
-                  <span className="text-3xl font-normal text-white tracking-tight font-display">
+                  <h3 className="text-3xl font-normal text-white tracking-tight font-display">
                     প্রো প্ল্যান
-                  </span>
+                  </h3>
                 </div>
 
                 {/* Price */}

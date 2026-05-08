@@ -61,7 +61,7 @@ export function Features() {
       <div className="grid grid-cols-1 auto-rows-[220px] md:mt-16 md:grid-cols-6 lg:grid-cols-12 overflow-hidden mt-16 gap-5 relative">
         
         {/* Orbit Card: Psychology */}
-        <motion.section 
+        <motion.article 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -90,7 +90,7 @@ export function Features() {
               </div>
             </div>
           </div>
-        </motion.section>
+        </motion.article>
 
         {/* Code Card: Lifetime Access */}
         <motion.article 
@@ -121,7 +121,7 @@ export function Features() {
         </motion.article>
 
         {/* Stat Card: Productivity */}
-        <motion.div 
+        <motion.article 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -131,7 +131,7 @@ export function Features() {
           <div className="absolute right-0 top-0 w-40 h-40 bg-white/5 blur-3xl rounded-full -z-10 group-hover:bg-white/10 transition-colors duration-500"></div>
           <div className="flex justify-between items-start">
             <div>
-              <p className="text-5xl font-display tracking-tighter text-white drop-shadow-md">10x</p>
+              <h3 className="text-5xl font-display tracking-tighter text-white drop-shadow-md">10x</h3>
               <p className="mt-2 text-sm text-slate-300 font-medium">স্মার্ট প্রোডাক্টিভিটি</p>
             </div>
             <div className="h-12 w-12 rounded-md bg-white/5 flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform group-hover:shadow-[0_0_15px_rgba(255,255,255,0.1)]">
@@ -142,10 +142,10 @@ export function Features() {
             <TrendingUp size={14} />
             <span className="text-xs font-bold tracking-wider uppercase">GTD Framework</span>
           </div>
-        </motion.div>
+        </motion.article>
 
         {/* Testimonial/Privacy Card */}
-        <motion.div 
+        <motion.article 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -166,7 +166,7 @@ export function Features() {
           <p className="leading-relaxed text-sm font-medium text-slate-300 font-sans">
             "আপনার প্রাইভেসি আমাদের কাছে সবচেয়ে গুরুত্বপূর্ণ। সম্পূর্ণ নিরাপদ পরিবেশে আপনার রিকভারি এবং পার্সোনাল গ্রোথের সাপোর্ট পান।"
           </p>
-        </motion.div>
+        </motion.article>
 
       </div>
     </section>

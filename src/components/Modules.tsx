@@ -143,7 +143,7 @@ export function Modules() {
               origin-top: Scales from the top edge, not the center
               top: calc... Creates the visual "stacked edges" offset effect
             */}
-            <div
+            <article
               className="card-inner relative w-full max-w-[1400px] origin-top flex flex-col md:flex-row overflow-hidden glass-heavy rounded-2xl will-change-transform min-h-[550px] md:min-h-[600px]"
               style={{
                 top: `calc(-5vh + ${i * 30}px)`, 
@@ -223,7 +223,7 @@ export function Modules() {
                   ))}
                 </ul>
               </div>
-            </div>
+            </article>
 
           </div>
         ))}
