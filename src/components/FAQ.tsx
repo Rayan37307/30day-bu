@@ -10,7 +10,7 @@ export function FAQ() {
       id: "faq-0",
       category: "ফাউন্ডেশন",
       q: "এই কোর্সটি কি আসক্তি থেকে বের হতে সত্যি সাহায্য করবে?",
-      a: "হ্যাঁ। এখানে শুধু হাওয়ায় ভাসা মোটিভেশন নয়, নিউরোসায়েন্স এবং সাইকোলজির উপর ভিত্তি করে প্র্যাকটিক্যাল ফ্রেমওয়ার্ক শেয়ার করা হয়েছে যা বাজে অভ্যাস (যেমন: পর্ন বা সোশ্যাল মিডিয়া অ্যাডিকশন) ভাঙতে ধাপে ধাপে সাহায্য করে।"
+      a: "হ্যাঁ। এখানে শুধু হাওয়ায় ভাসা মোটিভেশন নয়, নিউরোসায়েন্স এবং সাইকোলজির উপর ভিত্তি করে প্র্যাকটিক্যাল ফ্রেমওয়ার্ক শেয়ার করা হয়েছে যা বাজে অভ্যাস (যেমন: পর্ন বা সোশ্যাল মিডিয়া অ্যাডিকশন) ভাঙতে ধাপে ধাপে সাহায্য করে।"
     },
     {
       id: "faq-1",
@@ -22,13 +22,13 @@ export function FAQ() {
       id: "faq-2",
       category: "অ্যাক্সেস",
       q: "আমি যদি লাইভ ক্লাস মিস করি তবে কি রেকর্ডিং দেওয়া হবে?",
-      a: "হ্যাঁ, প্রতিটি ক্লাসের লাইফটাইম রেকর্ডিং আপনার ড্যাশবোর্ডে সেভ থাকবে। আপনি যেকোনো সময়, যেকোনো জায়গা থেকে দেখতে পারবেন।"
+      a: "হ্যাঁ, প্রতিটি ক্লাসের লাইফটাইম রেকর্ডিং আপনার ড্যাশবোর্ডে সেভ থাকবে। আপনি যেকোনো সময়, যেকোনো জায়গা থেকে দেখতে পারবেন।"
     },
     {
       id: "faq-3",
       category: "স্কিলস",
       q: "কোর্স শেষে কি কোনো নির্দিষ্ট স্কিল শেখানো হবে?",
-      a: "এই কোর্সে আপনাকে সরাসরি কোনো নির্দিষ্ট স্কিল (যেমন ওয়েব ডেভেলপমেন্ট বা গ্রাফিক্স ডিজাইন) শেখানো হবে না, বরং 'কীভাবে দ্রুত এবং ফোকাসড ওয়েতে যেকোনো স্কিল শিখতে হয়' তার ফাউন্ডেশন এবং টাইম ম্যানেজমেন্ট ফ্রেমওয়ার্ক শেখানো হবে।"
+      a: "এই কোর্সে আপনাকে সরাসরি কোনো নির্দিষ্ট স্কিল (যেমন ওয়েব ডেভেলপমেন্ট বা গ্রাফিক্স ডিজাইন) শেখানো হবে না, বরং 'কীভাবে দ্রুত এবং ফোকাসড ওয়েতে যেকোনো স্কিল শিখতে হয়' তার ফাউন্ডেশন এবং টাইম ম্যানেজমেন্ট ফ্রেমওয়ার্ক শেখানো হবে।"
     }
   ];
 
@@ -67,7 +67,7 @@ export function FAQ() {
                 transition={{ delay: 0.2 }}
                 className="sm:text-base text-sm text-slate-400 max-w-2xl font-medium"
               >
-                কোর্স সম্পর্কে আপনার মনে থাকা সমস্ত প্রশ্নের উত্তর এখানে দেওয়া হলো।
+                কোর্স সম্পর্কে আপনার মনে থাকা সমস্ত প্রশ্নের উত্তর এখানে দেওয়া হলো।
               </motion.p>
             </div>
             
@@ -103,10 +103,7 @@ export function FAQ() {
                 const isOpen = openIndex === idx;
 
                 return (
-                  <div 
-                    key={faq.id} 
-                    className="pt-6 pb-6"
-                  >
+                  <div key={faq.id} className="pt-6 pb-6">
                     <div className="text-[11px] uppercase font-bold text-slate-500 tracking-wider font-mono mb-2">
                       {faq.category}
                     </div>
@@ -121,24 +118,28 @@ export function FAQ() {
                         <ChevronRight size={20} className="stroke-[2.5]" />
                       </span>
                     </button>
-                    
-                    <AnimatePresence>
-                      {isOpen && (
+
+                    {/* 
+                      KEY FIX: Use a grid rows trick instead of animating height.
+                      grid-rows-[0fr] -> grid-rows-[1fr] never causes width reflow
+                      because the element always occupies full width in the DOM.
+                    */}
+                    <div
+                      className="grid transition-all duration-300 ease-in-out"
+                      style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
+                    >
+                      <div className="overflow-hidden">
                         <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3, ease: "easeInOut" }}
-                          className="overflow-hidden"
+                          animate={{ opacity: isOpen ? 1 : 0 }}
+                          transition={{ duration: 0.2 }}
+                          className="pt-4 pb-2 px-6 mt-4 glass-light rounded-xl"
                         >
-                          <div className="pt-4 pb-2 px-6 mt-4 glass-light rounded-xl">
-                            <p className="text-slate-300 text-sm md:text-base leading-relaxed font-sans font-medium">
-                              {faq.a}
-                            </p>
-                          </div>
+                          <p className="text-slate-300 text-sm md:text-base leading-relaxed font-sans font-medium">
+                            {faq.a}
+                          </p>
                         </motion.div>
-                      )}
-                    </AnimatePresence>
+                      </div>
+                    </div>
                   </div>
                 );
               })}
