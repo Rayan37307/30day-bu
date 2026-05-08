@@ -64,8 +64,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
+          className="mt-4"
         >
-          <Button as="a" href="#pricing">
+          <Button as="a" href="#pricing" className="scale-[1.2] md:scale-[1.4] origin-top">
             এনরোল করুন
           </Button>
         </motion.div>

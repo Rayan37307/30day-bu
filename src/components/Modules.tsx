@@ -144,10 +144,10 @@ export function Modules() {
               top: calc... Creates the visual "stacked edges" offset effect
             */}
             <article
-              className="card-inner relative w-full max-w-[1400px] origin-top flex flex-col md:flex-row overflow-hidden glass-heavy rounded-2xl will-change-transform min-h-[550px] md:min-h-[600px]"
+              className="card-inner relative w-full max-w-[1400px] origin-top flex flex-col md:flex-row overflow-hidden bg-navy-card border border-border-subtle rounded-2xl will-change-transform min-h-[550px] md:min-h-[600px]"
               style={{
                 top: `calc(-5vh + ${i * 30}px)`, 
-                boxShadow: `0 0 0 1px rgba(255,255,255,0.04), 0 30px 60px rgba(0,0,0,0.6), 0 0 80px ${mod.glowColor}`,
+                boxShadow: `0 30px 60px rgba(0,0,0,0.6), 0 0 80px ${mod.glowColor}`,
               }}
             >
               {/* Accent top-edge line */}
@@ -198,15 +198,15 @@ export function Modules() {
               </div>
 
               {/* Right panel — steps */}
-              <div className="flex w-full items-center p-8 md:w-[60%] md:p-12 lg:p-16 bg-white/[0.01]">
+              <div className="flex w-full items-center p-8 md:w-[60%] md:p-12 lg:p-16 bg-black/10">
                 <ul className="relative w-full space-y-10">
                   <div className="absolute bottom-5 left-[22px] top-5 w-px bg-white/[0.08]" />
                   {mod.points.map((point, pIdx) => (
                     <li key={pIdx} className="relative flex items-start gap-7">
                       <div
-                        className="relative z-10 mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl glass-light shadow-xl"
+                        className="relative z-10 mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-navy-deep border border-border-subtle shadow-xl"
                         style={{
-                          boxShadow: `0 0 0 4px ${mod.accentColor}15, inset 0 1px 2px rgba(255,255,255,0.06)`,
+                          boxShadow: `0 0 0 4px ${mod.accentColor}15`,
                         }}
                       >
                         <span
