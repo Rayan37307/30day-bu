@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ShieldCheck, RefreshCw, Users, Gift, Clock, TrophyIcon } from 'lucide-react';
+import { ShieldCheck, RefreshCw, Users, Gift, Clock, TrophyIcon, Crown } from 'lucide-react';
 import { Button } from './Button';
 
 const perks = [
@@ -135,27 +135,60 @@ export function FoundingMember() {
           </motion.div>
 
           {/* ─── Founder Privilege Note ─── */}
-          <motion.div {...fadeUp(0.25)} className="w-full">
-            <div className="flex items-start gap-4 rounded-2xl bg-gradient-to-br from-[#1c1c1c] to-[#050505] border-1 border-red-500 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] px-10 py-6">
-              <div className="mt-0.5 flex-shrink-0">
-                {/* <Clock size={28} className="text-red-500" /> */}
-              </div>
-              <div className="flex flex-col gap-1 text-center">
-                <p className="text-white text-lg md:text-xl font-sans border-b border-red-400 leading-relaxed">
-                  এটা <span className="text-red-500">ডিসকাউন্ট না</span>
-                </p>
-                <p className="text-white text-lg md:text-xl font-bold font-sans leading-relaxed">
-                  এটা <span className="">FOUNDER MEMBER</span> দের <span className="text-green-500">SPECIAL ACCESS</span>
-                </p>
+          <motion.div {...fadeUp(0.25)} className="w-full flex justify-center">
+            <div 
+              className="relative w-full flex flex-col items-center justify-center rounded-2xl border-2 border-red-600/50 bg-[#09090b] px-6 py-10"
+              style={{
+                boxShadow: `0 20px 60px rgba(0,0,0,0.8), 0 0 60px rgba(255,59,59,0.15)`,
+              }}
+            >
+              {/* Top Accent line */}
+              <div
+                className="absolute top-0 left-0 right-0 h-[2px] z-20 rounded-t-2xl"
+                style={{
+                  background: `linear-gradient(90deg, transparent, #ff3b3b, transparent)`,
+                }}
+              />
+
+              {/* Red glow behind the crown */}
+              <div className="absolute top-10 w-24 h-24 bg-red-600/20 blur-xl rounded-xl pointer-events-none"></div>
+{/*               
+              <Crown size={40} className="text-[#ff2222] fill-[#ff2222] mb-4 relative z-10" style={{ filter: 'drop-shadow(0 0 10px rgba(255,34,34,0.6))' }} /> */}
+              
+              <div className="flex flex-col items-center w-full gap-3 relative z-10">
+                <div className="relative w-full text-center pb-5 mb-2 border-b border-white/10">
+                  {/* Faint line with a dot in middle */}
+                  <div className="absolute bottom-0 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-red-600/50 to-transparent"></div>
+                  <div className="absolute -bottom-[3px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-red-600 rotate-45 shadow-[0_0_5px_rgba(255,0,0,0.8)]"></div>
+                  
+                  <h3 className="text-white text-center font-sans text-2xl md:text-[32px] leading-tight">
+                    এটা <span className="text-[#ff3b3b] font-bold tracking-wide">ডিসকাউন্ট</span> না
+                  </h3>
+                </div>
+                
+                <h2 className="text-white text-center font-display text-[28px] md:text-5xl mt-1 font-bold tracking-wide">
+                  এটা <span className="text-white">FOUNDER MEMBER</span> দের
+                </h2>
+
+                <div className="mt-4 w-full bg-gradient-to-b from-[#1a0505] to-[#0a0000] border border-red-900/40 py-4 px-6 md:px-10 relative overflow-hidden flex justify-center items-center"
+                  style={{
+                    clipPath: "polygon(3% 0%, 97% 0%, 100% 50%, 97% 100%, 3% 100%, 0% 50%)",
+                    boxShadow: "inset 0 0 20px rgba(255,0,0,0.1)"
+                  }}
+                >
+                  <h1 className="text-[#ff2222] font-display text-4xl md:text-[64px] font-bold uppercase tracking-widest text-center" style={{ textShadow: "0 4px 10px rgba(255,0,0,0.3)" }}>
+                    SPECIAL ACCESS
+                  </h1>
+                </div>
               </div>
             </div>
           </motion.div>
 
           {/* ─── CTA Button ─── */}
-          <motion.div {...fadeUp(0.3)} className="w-full">
+          <motion.div {...fadeUp(0.3)} className="w-full flex justify-center items-center">
             <a
               href="#pricing"
-              className="relative w-full group block"
+              className="relative w-full max-w-md group block"
             >
               {/* Glow */}
               <div className="absolute inset-0 bg-red-600/20 blur-2xl rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
