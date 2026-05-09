@@ -121,8 +121,10 @@ export function FoundingMember() {
             {perks.map((perk, i) => (
               <div
                 key={i}
-                className="flex flex-col items-center gap-3 rounded-xl bg-white/[0.04] border border-white/10 px-4 py-6 text-center hover:border-red-500/30 transition-colors duration-300"
+                className="relative flex flex-col items-center gap-3 rounded-xl bg-gradient-to-br from-[#1c1c1c] to-[#050505] border-1 border-white px-4 py-6 text-center hover:border-white/20 hover:from-[#252525] transition-all duration-300 overflow-hidden group shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)]"
               >
+                {/* Subtle top glow */}
+                <div className="absolute top-0 left-1/4 right-1/4 h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <perk.icon size={28} className="text-red-400" />
                 <span className="text-[14px] font-bold uppercase leading-[1.1] tracking-tight text-white font-sans">
                   {perk.label}
@@ -133,7 +135,7 @@ export function FoundingMember() {
 
           {/* ─── Founder Privilege Note ─── */}
           <motion.div {...fadeUp(0.25)} className="w-full">
-            <div className="flex items-start gap-4 rounded-2xl bg-white/[0.03] border border-white/10 px-5 py-5 md:px-6 md:py-5">
+            <div className="flex items-start gap-4 rounded-2xl bg-gradient-to-br from-[#1c1c1c] to-[#050505] border-1 border-white shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] px-5 py-5 md:px-6 md:py-5">
               <div className="mt-0.5 flex-shrink-0">
                 <Clock size={28} className="text-red-400" />
               </div>
