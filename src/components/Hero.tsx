@@ -4,7 +4,7 @@ import { Button } from "./Button";
 
 export function Hero() {
   return (
-    <section className="w-full isolate min-h-[85vh] md:min-h-screen overflow-hidden relative bg-black flex flex-col items-center justify-center pt-8 md:pt-24 pb-16 md:pb-24">
+    <section className="w-full isolate min-h-[60vh] md:min-h-screen overflow-hidden relative bg-black flex flex-col items-center justify-center pt-2">
       
       {/* Red/Purple Gradient Background Glows for Glassmorphism */}
       <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-red-900/10 via-transparent to-transparent pointer-events-none -z-10" />
@@ -20,7 +20,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="leading-[1.2] font-display max-w-5xl mx-auto mb-8"
         >
-          <span className="text-3xl sm:text-4xl lg:text-5xl text-white align-middle block mb-3">নিজের ফিরিয়ে আনতে <span className="text-red-500">বেস্ট ভার্সনকে</span></span>
+          <span className="text-3xl sm:text-4xl lg:text-5xl text-white align-middle block mb-3">নিজের <span className="text-red-500">বেস্ট ভার্সনকে</span> ফিরিয়ে আনতে</span>
           <span className="text-4xl sm:text-5xl lg:text-5xl text-white align-middle">
             শুধু <span className="text-gradient-red drop-shadow-sm ">৩০ দিনই</span> যথেষ্ট
           </span>

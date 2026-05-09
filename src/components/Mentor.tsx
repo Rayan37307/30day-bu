@@ -3,8 +3,8 @@ import { Youtube, Facebook } from "lucide-react";
 
 export function Mentor() {
   return (
-    <section className="relative w-full max-w-[1200px] mx-auto px-6 py-32" id="mentor">
-      <div className="text-center mb-20">
+    <section className="relative w-full max-w-[1200px] mx-auto px-6 py-10" id="mentor">
+      <div className="text-center mb-5">
         <h2 className="text-5xl md:text-6xl lg:text-7xl font-display text-white tracking-tight leading-tight">
           তোমার <span className="text-white">ভাই</span>
         </h2>
@@ -22,11 +22,11 @@ export function Mentor() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative aspect-[5/5] rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/5 z-10"
+            className="relative aspect-[5/5] border-2 border-red-500 rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)]z z-10"
           >
             <img 
               src="/asifboss.webp" 
-              alt="Asif" 
+              alt="Asif"
               className="w-full h-full object-contain"
             />
           </motion.div>
@@ -55,21 +55,21 @@ export function Mentor() {
 
             {/* Social Stats (Square blocks like screenshot) */}
             <div className="flex flex-wrap gap-4">
-              <div className="bg-[#111] border-1 border-red-500 rounded-2xl p-5 flex flex-col w-[140px] shadow-lg transition-transform hover:-translate-y-1">
+              <a href="https://www.youtube.com/@backbenchersuniversity-111" target="_blank" rel="noopener noreferrer" className="bg-[#111] border-1 border-red-500 rounded-2xl p-5 flex flex-col w-[140px] shadow-lg transition-transform hover:-translate-y-1">
                 <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center mb-5">
                   <Youtube className="text-[#E50914]" size={22} />
                 </div>
                 <h4 className="text-xl font-bold text-white mb-1">151K+</h4>
                 <p className="text-xs text-slate-400 font-bold uppercase tracking-tighter">Subscribers</p>
-              </div>
+              </a>
               
-              <div className="bg-[#111] border-1 border-blue-500 rounded-2xl p-5 flex flex-col w-[140px] shadow-lg transition-transform hover:-translate-y-1">
+              <a href="https://www.facebook.com/MuhammadAsifRayhanOfficial" target="_blank" rel="noopener noreferrer" className="bg-[#111] border-1 border-blue-500 rounded-2xl p-5 flex flex-col w-[140px] shadow-lg transition-transform hover:-translate-y-1">
                 <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center mb-5">
                   <Facebook className="text-blue-500" size={22} />
                 </div>
                 <h4 className="text-xl font-bold text-white mb-1">323K+</h4>
                 <p className="text-xs text-slate-400 font-bold uppercase tracking-tighter">Followers</p>
-              </div>
+              </a>
             </div>
           </motion.div>
 

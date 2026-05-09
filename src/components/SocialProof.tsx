@@ -24,13 +24,13 @@ export function SocialProof() {
   ];
 
   const CommentImage = ({ src }: { src: string }) => (
-    <div className="shrink-0 w-[240px] md:w-[320px]">
+    <div className="shrink-0 w-[240px] md:w-[320px]"py-24>
       <img src={src} alt="User Feedback" className="w-full h-auto block rounded-lg border-gray-500 border-1" loading="lazy" />
     </div>
   );
 
   return (
-    <section className="relative w-full overflow-hidden py-24 px-6 bg-transparent">
+    <section className="relative w-full overflow-hidden py-10 px-6 bg-transparent">
       <div className="max-w-[1400px] mx-auto relative z-10">
       {/* Background Orb */}
       {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-red-600/5 blur-[150px] rounded-full pointer-events-none -z-10" /> */}

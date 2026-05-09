@@ -3,8 +3,8 @@ import { ShieldCheck, RefreshCw, Users, Gift, Clock, TrophyIcon } from 'lucide-r
 
 const perks = [
   { icon: ShieldCheck, label: "Exclusive Brotherhood Access" },
-  { icon: RefreshCw, label: "30 Days Transformation System"},
-  { icon: Users, label: "Private Community"},
+  { icon: RefreshCw, label: "30 Days Transformation System" },
+  { icon: Users, label: "Private Community" },
   { icon: Gift, label: "Premium Growth Resources" },
 ];
 
@@ -19,7 +19,7 @@ export function FoundingMember() {
   return (
     <section
       id="founding-member"
-      className="relative z-10 w-full max-w-[1200px] mx-auto px-4 sm:px-6 py-16 md:py-24"
+      className="relative z-10 w-full max-w-[1200px] mx-auto px-4 sm:px-6 py-10 md:py-10"
     >
       <motion.div
         {...fadeUp(0)}
@@ -59,7 +59,7 @@ export function FoundingMember() {
           </motion.div>
 
           {/* ─── Price Cards ─── */}
-             
+
           <motion.div {...fadeUp(0.15)} className="flex flex-col sm:flex-row items-stretch justify-center gap-5 md:gap-6 w-full">
             {/* Regular Price Card — RED */}
             <div className="flex flex-col w-full flex-1 gap-3">
@@ -112,7 +112,7 @@ export function FoundingMember() {
                     990
                   </span>
                 </div>
-             </div>
+              </div>
             </div>
           </motion.div>
 
@@ -135,7 +135,7 @@ export function FoundingMember() {
 
           {/* ─── Founder Privilege Note ─── */}
           <motion.div {...fadeUp(0.25)} className="w-full">
-            <div className="flex items-start gap-4 rounded-2xl bg-gradient-to-br from-[#1c1c1c] to-[#050505] border-1 border-red-500 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] px-5 py-5 md:px-6 md:py-5">
+            <div className="flex items-start gap-4 rounded-2xl bg-gradient-to-br from-[#1c1c1c] to-[#050505] border-1 border-red-500 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] px-5 py-10 md:px-6 md:py-10">
               <div className="mt-0.5 flex-shrink-0">
                 <Clock size={28} className="text-red-400" />
               </div>
@@ -144,7 +144,7 @@ export function FoundingMember() {
                   এটা ডিসকাউন্ট না
                 </p>
                 <p className="text-red-400 text-sm md:text-base font-bold font-sans leading-relaxed">
-                  এটা FOUNDER দের SPECIAL ACCESS 
+                  এটা FOUNDER দের SPECIAL ACCESS
                 </p>
               </div>
             </div>
@@ -158,7 +158,7 @@ export function FoundingMember() {
             >
               {/* Glow */}
               <div className="absolute inset-0 bg-red-600/20 blur-2xl rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
+
               <div className="relative w-full bg-gradient-to-b from-[#ff2222] to-[#cc0000] border-b-[5px] border-[#880000] rounded-xl py-4 px-8 flex items-center justify-center gap-3 transition-all duration-150 active:border-b-[0px] active:translate-y-[5px] group-hover:brightness-110 shadow-[0_8px_30px_rgba(204,0,0,0.4)]">
                 {/* <span className="text-white/70 text-lg">🔒</span> */}
                 <span className="relative z-10 text-white  text-xl md:text-lg tracking-[0.12em] uppercase font-sans">
