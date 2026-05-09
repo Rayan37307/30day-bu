@@ -104,14 +104,6 @@ export function Preloader({ onComplete }: PreloaderProps) {
         </h1>
       </div>
 
-      {/* Dashboard style boot-up counter */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex items-center gap-4 text-[#a1a1aa] font-mono text-[10px] tracking-[0.25em] uppercase opacity-80">
-        <span>SYS.BOOT</span>
-        <div className="h-[2px] w-16 bg-white/10 relative overflow-hidden rounded-full">
-          <div ref={progressBarRef} className="absolute inset-0 bg-[#ef4444] shadow-[0_0_8px_rgba(239,68,68,0.8)]" />
-        </div>
-        <span className="w-8 text-right tabular-nums text-white font-bold"><span ref={progressRef}>0</span>%</span>
-      </div>
     </div>
   );
 }
