@@ -50,14 +50,7 @@ const features = [
   },
 ];
 
-/* ─────────────────────────────────────────
-   Trust badges
-───────────────────────────────────────── */
-const badges = [
-  { Icon: BadgeCheck, text: "৩০-দিনের মানি-ব্যাক গ্যারান্টি" },
-  { Icon: Users, text: "৫০০০+ সফল স্টুডেন্ট" },
-  { Icon: Zap, text: "তাৎক্ষণিক অ্যাক্সেস" },
-];
+
 
 /* ─────────────────────────────────────────
    Animation variants
@@ -126,18 +119,7 @@ export function Features() {
           </Button>
         </div>
 
-        {/* ── Trust badges ── */}
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-5">
-          {badges.map(({ Icon, text }, i) => (
-            <div
-              key={i}
-              className="flex items-center gap-2 rounded-full border border-white/8 bg-white/[0.04] px-4 py-2"
-            >
-              <Icon size={14} className="text-red-400 shrink-0" />
-              <span className="text-xs font-medium text-slate-300">{text}</span>
-            </div>
-          ))}
-        </div>
+
       </motion.div>
 
       {/* ── Feature Cards ── */}
@@ -146,12 +128,13 @@ export function Features() {
           <motion.article
             key={i}
             {...fadeUp(0.15 + i * 0.1)}
-            className="group relative flex flex-col overflow-hidden rounded-2xl border border-white/[0.07] bg-[#0a0a0c] transition-all duration-500 hover:-translate-y-1.5"
+            className="group relative flex flex-col overflow-hidden rounded-2xl border-2 border-red-500/50 bg-[#0a0a0c] transition-all duration-500 hover:-translate-y-1.5"
             style={{
-              boxShadow: `0 0 0 0 ${feat.glow}`,
+              boxShadow: `0 0 20px 0 rgba(239, 68, 68, 0.4)`,
             }}
             whileHover={{
-              boxShadow: `0 0 60px ${feat.glow}`,
+              boxShadow: `0 0 50px rgba(239, 68, 68, 0.8)`,
+              borderColor: "#ef4444",
             }}
           >
             {/* Top accent stripe */}
