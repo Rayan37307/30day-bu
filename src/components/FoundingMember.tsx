@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ShieldCheck, RefreshCw, Users, Gift, Clock } from 'lucide-react';
+import { ShieldCheck, RefreshCw, Users, Gift, Clock, TrophyIcon } from 'lucide-react';
 
 const perks = [
   { icon: ShieldCheck, label: "FOUNDER'S SPECIAL ACCESS", labelBn: "ফাউন্ডারদের বিশেষ সুবিধা" },
@@ -39,11 +39,10 @@ export function FoundingMember() {
 
         {/* ── Content ── */}
         <div className="relative z-10 flex flex-col items-center px-6 md:px-12 lg:px-16 py-12 md:py-16 gap-10">
-
           {/* ─── Crown Badge ─── */}
           <motion.div {...fadeUp(0.05)} className="flex items-center gap-2.5 bg-red-600/15 border border-red-500/40 rounded-full px-5 py-2">
-            <span className="text-lg">👑</span>
-            <span className="text-[11px] md:text-xs font-bold uppercase tracking-[0.2em] text-red-400 font-sans">
+
+            <span className="text-[14px] md:text-xl font-bold uppercase tracking-[0.2em] text-white font-sans">
               Founding Member Access
             </span>
           </motion.div>
@@ -64,19 +63,17 @@ export function FoundingMember() {
           </motion.div>
 
           {/* ─── Price Cards ─── */}
+             
           <motion.div {...fadeUp(0.15)} className="flex flex-col sm:flex-row items-stretch justify-center gap-5 md:gap-6 w-full">
             {/* Regular Price Card — RED */}
+            
             <div className="relative flex flex-col items-center justify-center gap-2 rounded-2xl border-2 border-red-500/70 bg-gradient-to-b from-red-950/60 via-red-950/40 to-[#0d0000] px-8 py-8 sm:py-10 flex-1 shadow-[0_0_30px_rgba(239,68,68,0.1)]">
-              <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-red-400 font-sans mb-2">
-                Regular Price
-              </span>
               <div className="flex items-baseline gap-1">
-                <span className="text-white/50 text-2xl md:text-3xl font-display">৳</span>
-                <span className="text-white/50 text-5xl md:text-6xl font-display line-through decoration-red-500/80 decoration-[3px]">
+                <span className="text-white text-2xl md:text-3xl font-display">৳</span>
+                <span className="text-white text-6xl md:text-8xl font-display font-bold line-through decoration-red-500/80 decoration-[3px]">
                   9,900
                 </span>
               </div>
-              <span className="text-xs text-red-300/60 mt-1 font-sans">পুরো কোর্সের মূল্য</span>
             </div>
 
             {/* Arrow */}
@@ -84,19 +81,15 @@ export function FoundingMember() {
             <div className="text-red-500 text-3xl font-bold sm:hidden flex justify-center select-none rotate-90">›</div>
 
             {/* Founding Member Price Card — GREEN */}
+            
             <div className="relative flex flex-col items-center justify-center gap-2 rounded-2xl border-2 border-green-500/70 bg-gradient-to-b from-green-900/50 via-green-950/40 to-[#000d04] px-8 py-8 sm:py-10 flex-1 shadow-[0_0_40px_rgba(34,197,94,0.12)]">
-              <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-green-300 font-sans mb-2">
-                Founding Member Price
-              </span>
+              
               <div className="flex items-baseline gap-1.5">
                 <span className="text-white text-3xl md:text-4xl font-display">৳</span>
                 <span className="text-white text-6xl md:text-8xl font-display font-bold leading-none">
                   990
                 </span>
               </div>
-              <span className="inline-block mt-2 text-xs font-bold uppercase tracking-widest text-yellow-400 border-b-2 border-yellow-400/60 pb-0.5 font-sans">
-                এককালীন পেমেন্ট
-              </span>
             </div>
           </motion.div>
 
