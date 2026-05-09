@@ -25,14 +25,15 @@ export function SocialProof() {
 
   const CommentImage = ({ src }: { src: string }) => (
     <div className="shrink-0 w-[240px] md:w-[320px]">
-      <img src={src} alt="User Feedback" className="w-full h-auto block rounded-lg" loading="lazy" />
+      <img src={src} alt="User Feedback" className="w-full h-auto block rounded-lg border-gray-500 border-1" loading="lazy" />
     </div>
   );
 
   return (
-    <section className="relative w-full max-w-[1400px] mx-auto overflow-hidden py-24 px-6">
+    <section className="relative w-full overflow-hidden py-24 px-6 bg-[#1A1C1E]">
+      <div className="max-w-[1400px] mx-auto relative z-10">
       {/* Background Orb */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-red-600/5 blur-[150px] rounded-full pointer-events-none -z-10" />
+      {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-red-600/5 blur-[150px] rounded-full pointer-events-none -z-10" /> */}
 
       <div className="text-center mb-16 relative z-10 w-full">
         <h2 className="font-display font-normal text-5xl md:text-6xl mb-4 leading-[1.2]">
@@ -62,7 +63,8 @@ export function SocialProof() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
   );
 }
 
