@@ -45,14 +45,15 @@ body {
 p {
   font-family: "Li Shohid Shafkat Samir", system-ui !important;
   font-weight: normal !important;
-} */
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Teko", "Li Alinur Shishir Unicode", system-ui !important;
+  font-family: "Li Alinur Shishir Unicode", system-ui !important;
   font-weight: normal !important;
 }
 
