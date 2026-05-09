@@ -22,7 +22,7 @@ export function Mentor() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative aspect-[5/5] border-2 border-red-500 rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)]z z-10"
+            className="relative aspect-[5/5] border-2 border-blue-500 rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)]z z-10"
           >
             <img 
               src="/asifboss.webp" 
