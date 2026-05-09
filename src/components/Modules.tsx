@@ -197,10 +197,10 @@ export function Modules() {
       {/* ── Header ── */}
       <section className="py-12 md:py-20 text-center w-full">
         <div className="w-full max-w-[1200px] mx-auto px-4 md:px-6">
-          <h2 className="font-display font-medium text-3xl md:text-5xl mb-3 md:mb-4 text-white">
+          <h2 className="font-display font-medium text-4xl md:text-6xl mb-3 md:mb-4 text-white">
             ৩০-দিনের{" "}
             <span className="text-gradient-red font-bold font-display ">
-              রোডম্যাপ
+              MASTERPLAN
             </span>
           </h2>
         </div>
@@ -284,7 +284,20 @@ export function Modules() {
                             </span>
                           </div>
                           <span className="pt-1 text-sm leading-relaxed text-slate-200 font-medium">
-                            {point}
+                            {point.split(/([A-Za-z0-9&]+(?:[-\s]+[A-Za-z0-9&]+)*)/g).map((part, i) => {
+                              if (/^[A-Za-z0-9&]/.test(part)) {
+                                return (
+                                  <span
+                                    key={i}
+                                    className="font-display font-bold uppercase mx-1"
+                                    style={{ color: mod.accentColor }}
+                                  >
+                                    {part}
+                                  </span>
+                                );
+                              }
+                              return <span key={i}>{part}</span>;
+                            })}
                           </span>
                         </li>
                       ))}
@@ -355,7 +368,20 @@ export function Modules() {
                             </span>
                           </div>
                           <span className="pt-2 text-[17px] md:text-[19px] leading-relaxed text-slate-200 font-medium tracking-wide">
-                            {point}
+                            {point.split(/([A-Za-z0-9&]+(?:[-\s]+[A-Za-z0-9&]+)*)/g).map((part, i) => {
+                              if (/^[A-Za-z0-9&]/.test(part)) {
+                                return (
+                                  <span
+                                    key={i}
+                                    className="font-display font-bold uppercase mx-1"
+                                    style={{ color: mod.accentColor }}
+                                  >
+                                    {part}
+                                  </span>
+                                );
+                              }
+                              return <span key={i}>{part}</span>;
+                            })}
                           </span>
                         </li>
                       ))}
