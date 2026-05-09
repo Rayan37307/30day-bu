@@ -18,10 +18,10 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="leading-[1.2] tracking-tight font-display max-w-5xl mx-auto mb-16"
+          className="leading-[1.2] font-display max-w-5xl mx-auto mb-16"
         >
-          <span className="text-3xl sm:text-4xl lg:text-5xl text-white align-middle block mb-3">আরেকবার নিজেকে ফিরে পাওয়ার জন্য</span>
-          <span className="text-4xl sm:text-5xl lg:text-[64px] text-white align-middle leading-tight">
+          <span className="text-3xl sm:text-4xl lg:text-5xl text-white align-middle block mb-3">নিজের <span className="text-blue-500 drop-shadow-sm font-bold">BEST VERSION</span> কে ফিরিয়ে আনতে</span>
+          <span className="text-4xl sm:text-5xl lg:text-[64px] text-white align-middle">
             শুধু <span className="text-gradient-red drop-shadow-sm font-bold">৩০ দিনই</span> যথেষ্ট
           </span>
         </motion.h1>

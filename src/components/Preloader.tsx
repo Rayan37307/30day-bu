@@ -8,7 +8,6 @@ interface PreloaderProps {
 export function Preloader({ onComplete }: PreloaderProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLHeadingElement>(null);
-  const countRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     const tl = gsap.timeline({
@@ -20,30 +19,17 @@ export function Preloader({ onComplete }: PreloaderProps) {
     // Initial state
     gsap.set(textRef.current, { y: 60, opacity: 0 });
 
-    const counterObj = { val: 0 };
-
     tl.to(textRef.current, {
       y: 0,
       opacity: 1,
-      duration: 0.4,
+      duration: 0.8,
       ease: "expo.out",
     })
-      .to(counterObj, {
-        val: 30,
-        duration: 2.5,
-        roundProps: "val",
-        onUpdate: () => {
-          if (countRef.current) {
-            countRef.current.innerText = Math.round(counterObj.val).toString();
-          }
-        },
-        ease: "power2.out"
-      })
       .to(containerRef.current, {
         yPercent: -100,
         duration: 0.8,
         ease: "expo.inOut",
-        delay: 0.3,
+        delay: 1.0,
       })
       .to(containerRef.current, {
         pointerEvents: "none",
@@ -80,8 +66,8 @@ export function Preloader({ onComplete }: PreloaderProps) {
             textShadow: '0 0 25px rgba(255, 59, 59, 0.4), 0 0 50px rgba(255, 59, 59, 0.2)',
           }}
         >
-          THE <span ref={countRef} className="text-electric-blue">0</span> DAYS LIFE<br />
-          CHANGING PROGRAM
+          REBUILD YOURSELF IN <br className="md:hidden" />
+          <span className="text-[#ef4444]">"30 DAYS"</span>
         </h1>
       </div>
     </div>
