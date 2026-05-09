@@ -17,11 +17,11 @@ export function Button({ children, as = 'button', href, onClick, className = '',
       ></span>
 
       <span
-        className="absolute top-0 left-0 w-full h-full rounded-lg bg-gradient-to-l from-red-900 via-red-800 to-red-900"
+        className="absolute top-0 left-0 w-full h-full rounded-lg bg-red-900"
       ></span>
 
       <div
-        className="relative flex w-full items-center justify-center py-3 px-6 text-lg text-white rounded-lg transform -translate-y-1 bg-gradient-to-r from-red-600 to-orange-500 gap-3 transition duration-[600ms] ease-[cubic-bezier(0.3,0.7,0.4,1)] group-hover:-translate-y-1.5 group-hover:duration-[250ms] group-active:-translate-y-0.5 brightness-100 group-hover:brightness-110"
+        className="relative flex w-full items-center justify-center py-3 px-6 text-lg text-white rounded-lg transform -translate-y-1 bg-electric-blue gap-3 transition duration-[600ms] ease-[cubic-bezier(0.3,0.7,0.4,1)] group-hover:-translate-y-1.5 group-hover:duration-[250ms] group-active:-translate-y-0.5 brightness-100 group-hover:brightness-110"
       >
         <span className="select-none font-bold tracking-wide font-sans">{children}</span>
 

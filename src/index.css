@@ -1,18 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Atma:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Hind+Siliguri:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Anton&display=swap');
 @import "tailwindcss";
 
-@font-face {
-  font-family: "Sabbir Shorolota";
-  src: url("/fonts/sabbir-shorolota.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
 
 @font-face {
   font-family: "Li Shohid Shafkat Samir";
   src: url("/fonts/Li%20Shohid%20Shafkat%20Samir%20Unicode.ttf") format("truetype");
   font-weight: normal;
-  font-style: normal;
 }
 
 @theme {
@@ -73,11 +66,11 @@ h6 {
 }
 
 .text-gradient-red {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-orange-400;
+  @apply text-electric-blue;
 }
 
 .text-gradient-purple {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500;
+  @apply text-electric-blue;
 }
 
 .section-container {

@@ -15,6 +15,7 @@ import { Mentor } from './components/Mentor';
 import { Preloader } from './components/Preloader';
 import { Approach } from './components/Approach';
 import { Features } from './components/Features';
+import { StickyBottomBar } from './components/StickyBottomBar';
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -87,6 +88,7 @@ export default function App() {
           <CTABanner />
           <Footer />
         </div>
+        <StickyBottomBar />
       </div>
     </>
   );
