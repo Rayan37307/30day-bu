@@ -24,8 +24,8 @@ export function SocialProof() {
   ];
 
   const CommentImage = ({ src }: { src: string }) => (
-    <div className="shrink-0 w-[280px] md:w-[350px] overflow-hidden rounded-xl border border-red-900/20 bg-[#09090b] shadow-2xl transition-transform hover:scale-[1.02] hover:border-red-600/30">
-      <img src={src} alt="User Feedback" className="w-full h-auto object-contain" loading="lazy" />
+    <div className="shrink-0 w-[240px] md:w-[320px]">
+      <img src={src} alt="User Feedback" className="w-full h-auto block rounded-lg" loading="lazy" />
     </div>
   );
 
