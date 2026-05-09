@@ -27,12 +27,16 @@ export default function App() {
     // Register ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
 
-    // Initialize Lenis only after loading
+    // Initialize Lenis
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
       smoothWheel: true,
+      wheelMultiplier: 1,
       touchMultiplier: 2,
+      infinite: false,
     });
 
     // Synchronize Lenis with ScrollTrigger
@@ -44,18 +48,26 @@ export default function App() {
     };
     gsap.ticker.add(tickerCallback);
 
-    // Disable GSAP's default lag smoothing to avoid sync issues
+    // Disable GSAP's default lag smoothing
     gsap.ticker.lagSmoothing(0);
 
-    // Refresh ScrollTrigger after a short delay to account for layout shifts
-    const refreshTimeout = setTimeout(() => {
+    // Handle layout shifts and dynamic content
+    const resizeObserver = new ResizeObserver(() => {
+      lenis.resize();
       ScrollTrigger.refresh();
-    }, 100);
+    });
+    resizeObserver.observe(document.body);
+
+    // Initial refresh
+    setTimeout(() => {
+      lenis.resize();
+      ScrollTrigger.refresh();
+    }, 500);
 
     return () => {
       lenis.destroy();
       gsap.ticker.remove(tickerCallback);
-      clearTimeout(refreshTimeout);
+      resizeObserver.disconnect();
     };
   }, [isLoading]);
 
