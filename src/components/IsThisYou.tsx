@@ -72,7 +72,7 @@ export function IsThisYou() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-[44px] font-display font-bold text-center mb-12 tracking-wide"
+            className="text-3xl md:text-[44px] h2 font-bold text-center mb-12 tracking-wide"
           >
             <span className="text-white">এটা কি</span> <span className="text-[#E50914]">তুমি?</span>
           </motion.h2>
@@ -115,7 +115,7 @@ export function IsThisYou() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-[50px] font-display font-bold text-center mb-3"
+            className="text-4xl md:text-[50px] h2font-bold text-center mb-3"
           >
             <span className="text-white">৩০ দিন</span> <span className="text-[#22c55e] drop-shadow-[0_0_12px_rgba(34,197,94,0.3)]">পরে...</span>
           </motion.h2>
