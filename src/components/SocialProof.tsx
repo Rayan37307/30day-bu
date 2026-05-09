@@ -24,7 +24,7 @@ export function SocialProof() {
   ];
 
   const CommentImage = ({ src }: { src: string }) => (
-    <div className="shrink-0 w-[240px] md:w-[320px]"py-24>
+    <div className="shrink-0 w-[240px] md:w-[320px]">
       <img src={src} alt="User Feedback" className="w-full h-auto block rounded-lg border-gray-500 border-1" loading="lazy" />
     </div>
   );
@@ -37,7 +37,8 @@ export function SocialProof() {
 
       <div className="text-center mb-16 relative z-10 w-full">
         <h2 className="font-display font-normal text-5xl md:text-6xl mb-4 leading-[1.2]">
-          4,74,000+ <span className="text-gradient-red">Backbenchers</span>-দের ভরসা
+          Trusted by 
+ <span className="text-gradient-red"> 4,74,000 </span>Backbenchers
         </h2>
       </div>
 
