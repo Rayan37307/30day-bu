@@ -16,8 +16,8 @@ gsap.registerPlugin(ScrollTrigger);
 const modules = [
   {
     id: "01",
-    title: "ADDICTION DESTRUCTION PROTOCOL",
-    subtitle: "কালকে থেকে বদলে যাবো- এই FAKE PROMISE এর LOOP থেকে বের হতে হবে এবার।",
+    title: "ADDICTION RECOVERY PROTOCOL",
+    subtitle: "কালকে থেকে বদলে যাবো-এই FAKE PROMISE এর LOOP থেকে বের হতে হবে এবার।",
     Icon: ShieldOff,
     accentColor: "#ff3b3b",
     glowColor: "rgba(255,59,59,0.18)",
