@@ -167,16 +167,16 @@ export function FoundingMember() {
                 </div>
                 
                 <h2 className="text-white text-center font-display text-[28px] md:text-5xl mt-1 font-bold tracking-wide">
-                  এটা <span className="text-white">FOUNDER MEMBER</span> দের
+                  <span className="text-white">FOUNDER MEMBER</span> দের
                 </h2>
 
                 <div className="mt-4 w-full bg-gradient-to-b from-[#1a0505] to-[#0a0000] border border-red-900/40 py-4 px-6 md:px-10 relative overflow-hidden flex justify-center items-center"
                   style={{
-                    clipPath: "polygon(3% 0%, 97% 0%, 100% 50%, 97% 100%, 3% 100%, 0% 50%)",
+                    
                     boxShadow: "inset 0 0 20px rgba(255,0,0,0.1)"
                   }}
                 >
-                  <h1 className="text-[#ff2222] font-display text-4xl md:text-[64px] font-bold uppercase tracking-widest text-center" style={{ textShadow: "0 4px 10px rgba(255,0,0,0.3)" }}>
+                  <h1 className="text-[#ff2222] font-display text-4xl md:text-[64px] font-bold uppercase tracking-tight text-center" style={{ textShadow: "0 4px 10px rgba(255,0,0,0.3)" }}>
                     SPECIAL ACCESS
                   </h1>
                 </div>
