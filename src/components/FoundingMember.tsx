@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ShieldCheck, RefreshCw, Users, Gift, Clock, TrophyIcon, Crown } from 'lucide-react';
+import { ShieldCheck, RefreshCw, Users, Gift, Clock, TrophyIcon, Crown, ChevronsDown } from 'lucide-react';
 import { Button } from './Button';
 
 const perks = [
@@ -151,15 +151,14 @@ export function FoundingMember() {
               />
 
               {/* Red glow behind the crown */}
-              <div className="absolute top-10 w-24 h-24 bg-red-600/20 blur-xl rounded-xl pointer-events-none"></div>
+              {/* <div className="absolute top-10 w-24 h-24 bg-red-600/20 blur-xl rounded-xl pointer-events-none"></div> */}
 {/*               
               <Crown size={40} className="text-[#ff2222] fill-[#ff2222] mb-4 relative z-10" style={{ filter: 'drop-shadow(0 0 10px rgba(255,34,34,0.6))' }} /> */}
               
               <div className="flex flex-col items-center w-full gap-3 relative z-10">
-                <div className="relative w-full text-center pb-5 mb-2 border-b border-white/10">
-                  {/* Faint line with a dot in middle */}
-                  <div className="absolute bottom-0 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-red-600/50 to-transparent"></div>
-                  <div className="absolute -bottom-[3px] left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-red-600 rotate-45 shadow-[0_0_5px_rgba(255,0,0,0.8)]"></div>
+                <div className="relative w-full text-center pb-5 mb-4">
+                  {/* Faint line with an icon in middle */}
+                  <ChevronsDown size={50} className="absolute -bottom-[30px] left-1/2 -translate-x-1/2 text-red-600 px-1 animate-pulse" />
                   
                   <h3 className="text-white text-center font-sans text-2xl md:text-[32px] leading-tight">
                     এটা <span className="text-[#ff3b3b] font-bold tracking-wide">ডিসকাউন্ট</span> না
@@ -167,14 +166,10 @@ export function FoundingMember() {
                 </div>
                 
                 <h2 className="text-white text-center font-display text-[28px] md:text-5xl mt-1 font-bold tracking-wide">
-                  <span className="text-white">FOUNDER MEMBER</span> দের
+                  <span className="text-white">FOUNDING MEMBER</span> দের
                 </h2>
 
-                <div className="mt-4 w-full bg-gradient-to-b from-[#1a0505] to-[#0a0000] border border-red-900/40 py-4 px-6 md:px-10 relative overflow-hidden flex justify-center items-center"
-                  style={{
-                    
-                    boxShadow: "inset 0 0 20px rgba(255,0,0,0.1)"
-                  }}
+                <div className="mt-4 w-full py-4 px-6 md:px-10 relative overflow-hidden flex justify-center items-center"
                 >
                   <h1 className="text-[#ff2222] font-display text-4xl md:text-[64px] font-bold uppercase tracking-tight text-center" style={{ textShadow: "0 4px 10px rgba(255,0,0,0.3)" }}>
                     SPECIAL ACCESS
