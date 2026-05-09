@@ -6,7 +6,7 @@ const symptoms = [
   "কালকে থেকে সবরকম আকাম বাদ দিয়ে ভালো হয়ে যাবো।",
   "সারাদিন কিছু করতে মনে চায় না। সবকিছু বিরক্ত লাগে।",
   "কোনো কাজে ৫ মিনিটের বেশি ফোকাস নাই।",
-  "জীবনের কোনো লক্ষ্য নাই। এমনেই বেঁচে আছি কোনোমতে।"
+  "জীবনের কোনো লক্ষ্য নাই। এমনেই বেঁচে আছি কোনোমতো।"
 ];
 
 const benefits = [
@@ -126,7 +126,7 @@ export function IsThisYou() {
             transition={{ delay: 0.2 }}
             className="text-white text-lg md:text-2xl mb-12 font-medium"
           >
-            তোমার <span className="text-[#22c55e]">নতুন <span className="font-display uppercase">version</span> </span> কেমন হতে পারে?
+            তোমার <span className="text-[#22c55e]"> <span className="font-display uppercase">new version</span> </span> কেমন হতে পারে?
           </motion.p>
 
           <div className="w-full max-w-[850px] flex flex-col gap-4">
