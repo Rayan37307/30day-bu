@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ShieldCheck, RefreshCw, Users, Gift, Clock, TrophyIcon } from 'lucide-react';
+import { Button } from './Button';
 
 const perks = [
   { icon: ShieldCheck, label: "Exclusive Brotherhood Access" },
@@ -107,7 +108,7 @@ export function FoundingMember() {
               </span>
               <div className="relative flex flex-col items-center justify-center gap-2 rounded-2xl border-2 border-green-500/70 bg-gradient-to-b from-green-900/50 via-green-950/40 to-[#000d04] px-8 py-8 sm:py-10 shadow-[0_0_40px_rgba(34,197,94,0.12)] h-full">
                 <div className="flex items-baseline gap-1.5">
-                  <span className="text-white text-3xl md:text-4xl font-display">৳</span>
+                  <span className="text-white text-3xl md:text-4xl font-sans">৳</span>
                   <span className="text-white text-6xl md:text-8xl font-display font-bold leading-none">
                     990
                   </span>
@@ -135,16 +136,16 @@ export function FoundingMember() {
 
           {/* ─── Founder Privilege Note ─── */}
           <motion.div {...fadeUp(0.25)} className="w-full">
-            <div className="flex items-start gap-4 rounded-2xl bg-gradient-to-br from-[#1c1c1c] to-[#050505] border-1 border-red-500 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] px-5 py-10 md:px-6 md:py-10">
+            <div className="flex items-start gap-4 rounded-2xl bg-gradient-to-br from-[#1c1c1c] to-[#050505] border-1 border-red-500 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] px-10 py-6">
               <div className="mt-0.5 flex-shrink-0">
-                <Clock size={28} className="text-red-400" />
+                {/* <Clock size={28} className="text-red-500" /> */}
               </div>
-              <div className="flex flex-col gap-1">
-                <p className="text-white text-sm md:text-base font-sans leading-relaxed">
-                  এটা ডিসকাউন্ট না
+              <div className="flex flex-col gap-1 text-center">
+                <p className="text-white text-lg md:text-xl font-sans border-b border-red-400 leading-relaxed">
+                  এটা <span className="text-red-500">ডিসকাউন্ট না</span>
                 </p>
-                <p className="text-red-400 text-sm md:text-base font-bold font-sans leading-relaxed">
-                  এটা FOUNDER দের SPECIAL ACCESS
+                <p className="text-white text-lg md:text-xl font-bold font-sans leading-relaxed">
+                  এটা <span className="">FOUNDER MEMBER</span> দের <span className="text-green-500">SPECIAL ACCESS</span>
                 </p>
               </div>
             </div>
@@ -159,13 +160,9 @@ export function FoundingMember() {
               {/* Glow */}
               <div className="absolute inset-0 bg-red-600/20 blur-2xl rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-              <div className="relative w-full bg-gradient-to-b from-[#ff2222] to-[#cc0000] border-b-[5px] border-[#880000] rounded-xl py-4 px-8 flex items-center justify-center gap-3 transition-all duration-150 active:border-b-[0px] active:translate-y-[5px] group-hover:brightness-110 shadow-[0_8px_30px_rgba(204,0,0,0.4)]">
-                {/* <span className="text-white/70 text-lg">🔒</span> */}
-                <span className="relative z-10 text-white  text-xl md:text-lg tracking-[0.12em] uppercase font-sans">
-                  BECOME A FOUNDING MEMBER
-                </span>
-                {/* <span className="relative z-10 text-white/70 text-lg">›</span> */}
-              </div>
+              <Button className="relative z-10 text-white text-center  text-xl md:text-lg tracking-[0.12em] uppercase font-sans">
+                BECOME A FOUNDING MEMBER
+              </Button>
             </a>
           </motion.div>
 

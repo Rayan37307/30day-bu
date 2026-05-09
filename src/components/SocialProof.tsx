@@ -1,7 +1,9 @@
-import { motion } from "framer-motion";
-import { ThumbsUp, ThumbsDown } from "lucide-react";
+import { useRef, useCallback } from "react";
 
 export function SocialProof() {
+  const row1Ref = useRef<HTMLDivElement>(null);
+  const row2Ref = useRef<HTMLDivElement>(null);
+
   const row1Images = [
     "/comments/IMG_3247.PNG",
     "/comments/IMG_3248.PNG",
@@ -23,8 +25,22 @@ export function SocialProof() {
     "/comments/IMG_3262.PNG",
   ];
 
-  const CommentImage = ({ src }: { src: string }) => (
-    <div className="shrink-0 w-[240px] md:w-[320px]">
+  const pauseRow = useCallback((ref: React.RefObject<HTMLDivElement | null>) => {
+    if (ref.current) ref.current.style.animationPlayState = "paused";
+  }, []);
+
+  const resumeRow = useCallback((ref: React.RefObject<HTMLDivElement | null>) => {
+    if (ref.current) ref.current.style.animationPlayState = "running";
+  }, []);
+
+  const CommentImage = ({ src, rowRef }: { src: string; rowRef: React.RefObject<HTMLDivElement | null> }) => (
+    <div
+      className="shrink-0 w-[240px] md:w-[320px] cursor-pointer"
+      onMouseEnter={() => pauseRow(rowRef)}
+      onMouseLeave={() => resumeRow(rowRef)}
+      onTouchStart={() => pauseRow(rowRef)}
+      onTouchEnd={() => resumeRow(rowRef)}
+    >
       <img src={src} alt="User Feedback" className="w-full h-auto block rounded-lg border-gray-500 border-1" loading="lazy" />
     </div>
   );
@@ -44,19 +60,19 @@ export function SocialProof() {
 
       <div className="flex flex-col gap-8 relative z-10 w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
         {/* Row 1: Slides Left */}
-        <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
+        <div ref={row1Ref} className="flex w-max animate-marquee">
           <div className="flex gap-6 px-3">
             {[...row1Images, ...row1Images].map((src, idx) => (
-              <CommentImage key={`r1-${idx}`} src={src} />
+              <CommentImage key={`r1-${idx}`} src={src} rowRef={row1Ref} />
             ))}
           </div>
         </div>
 
         {/* Row 2: Slides Right */}
-        <div className="flex w-max animate-marquee-reverse hover:[animation-play-state:paused]">
+        <div ref={row2Ref} className="flex w-max animate-marquee-reverse">
           <div className="flex gap-6 px-3">
             {[...row2Images, ...row2Images].map((src, idx) => (
-              <CommentImage key={`r2-${idx}`} src={src} />
+              <CommentImage key={`r2-${idx}`} src={src} rowRef={row2Ref} />
             ))}
           </div>
         </div>
@@ -65,4 +81,3 @@ export function SocialProof() {
   </section>
   );
 }
-

@@ -49,22 +49,22 @@ export function Mentor() {
             <div className="space-y-6 text-slate-300 font-display text-[15px] md:text-[17px] leading-[1.8] mb-12">
               <p>
                 আমি চাই সবাইকে নিয়ে আগাতে । মানুষকে সত্যের পথে ডাকতে।তুমিও অনেক talented,boss । হয়তো তুমি খুব ভালো student না, কিন্তু তোমার মাঝেও অসাধারণ কিছু করার potential আছে । আমাদের journey তো কেবল শুরু । যেতে হবে বহুদূর ।
-                বাংলাদেশের প্রতিটা backbencher যেন আবার ঘুরে দাঁড়ানোর সুযোগ পায় — সেই চেষ্টা করবো, ইনশাআল্লাহ ।
+                বাংলাদেশের প্রতিটা backbencher যেন আবার ঘুরে দাঁড়ানোর সুযোগ পায় সেই চেষ্টা করবো, ইনশাআল্লাহ ।
               </p>
             </div>
 
             {/* Social Stats (Square blocks like screenshot) */}
             <div className="flex flex-wrap gap-4">
-              <a href="https://www.youtube.com/@backbenchersuniversity-111" target="_blank" rel="noopener noreferrer" className="bg-[#111] border-1 border-red-500 rounded-2xl p-5 flex flex-col w-[140px] shadow-lg transition-transform hover:-translate-y-1">
-                <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center mb-5">
+              <a href="https://www.youtube.com/@backbenchersuniversity-111" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-br from-[#1c1c1c] to-black border-1 border-red-500 rounded-2xl p-5 flex flex-col w-[140px] shadow-lg transition-transform hover:-translate-y-1">
+                <div className="w-10 h-10 bg-gradient-to-br from-neutral-800 to-black rounded-lg flex items-center justify-center mb-5">
                   <Youtube className="text-[#E50914]" size={22} />
                 </div>
                 <h4 className="text-xl font-bold text-white mb-1">151K+</h4>
                 <p className="text-xs text-slate-400 font-bold uppercase tracking-tighter">Subscribers</p>
               </a>
               
-              <a href="https://www.facebook.com/MuhammadAsifRayhanOfficial" target="_blank" rel="noopener noreferrer" className="bg-[#111] border-1 border-blue-500 rounded-2xl p-5 flex flex-col w-[140px] shadow-lg transition-transform hover:-translate-y-1">
-                <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center mb-5">
+              <a href="https://www.facebook.com/MuhammadAsifRayhanOfficial" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-br from-[#1c1c1c] to-black border-1 border-blue-500 rounded-2xl p-5 flex flex-col w-[140px] shadow-lg transition-transform hover:-translate-y-1">
+                <div className="w-10 h-10 bg-gradient-to-br from-neutral-800 to-black rounded-lg flex items-center justify-center mb-5">
                   <Facebook className="text-blue-500" size={22} />
                 </div>
                 <h4 className="text-xl font-bold text-white mb-1">323K+</h4>
