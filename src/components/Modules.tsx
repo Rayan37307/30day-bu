@@ -220,18 +220,19 @@ export function Modules() {
               style={{ zIndex: i + 1 }}
             >
               <article
-                className="card-inner relative w-full max-w-[1200px] origin-top flex flex-col md:flex-row overflow-hidden rounded-xl md:rounded-2xl will-change-transform border border-red-600/80 md:border-2 md:border-red-600"
+                className="card-inner relative w-full max-w-[1200px] origin-top flex flex-col md:flex-row overflow-hidden rounded-xl md:rounded-2xl will-change-transform border md:border-2"
                 style={{
                   background: "#09090b",
                   top: `calc(-2vh + ${i * 16}px)`,
                   boxShadow: `0 20px 60px rgba(0,0,0,0.8), 0 0 80px ${mod.glowColor}`,
+                  borderColor: `${mod.accentColor}80`,
                 }}
               >
                 {/* Accent top-edge line */}
                 <div
                   className="absolute top-0 left-0 right-0 h-[2px] z-20"
                   style={{
-                    background: `linear-gradient(90deg, transparent, #ff3b3b, transparent)`,
+                    background: `linear-gradient(90deg, transparent, ${mod.accentColor}, transparent)`,
                   }}
                 />
 
