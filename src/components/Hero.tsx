@@ -31,9 +31,9 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="leading-[1.2] tracking-tight font-display max-w-5xl mx-auto mb-16"
         >
-          <span className="text-3xl sm:text-4xl lg:text-5xl text-white align-middle block mb-3">শুধু 30 টা দিন আমার সাথে থাকো</span>
+          <span className="text-3xl sm:text-4xl lg:text-5xl text-white align-middle block mb-3">আরেকবার নিজেকে ফিরে পাওয়ার জন্য</span>
           <span className="text-4xl sm:text-5xl lg:text-[64px] text-white align-middle leading-tight">
-            সেরা একটা <span className="font-anton uppercase text-gradient-red drop-shadow-sm align-middle tracking-tighter text-[1.1em]">COMEBACK</span><br className="block sm:hidden" /> হবেই ইনশাআল্লাহ
+            শুধু <span className="text-gradient-red drop-shadow-sm font-bold">৩০ দিনই</span> যথেষ্ট
           </span>
         </motion.h1>
 

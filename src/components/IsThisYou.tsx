@@ -2,27 +2,67 @@ import { motion } from "framer-motion";
 import { ChevronsDown, CheckCircle2 } from "lucide-react";
 
 const symptoms = [
+  "আজকে শেষ বারের মতো হাত মারবো। আজকেই লাস্ট। প্রমিস!",
   "কালকে থেকে ভালো হয়ে যাবো।",
-  "আজকে শেষ বারের মতো হাত মারবো, আজকেই লাস্ট। প্রমিস!",
-  "সারাদিন কিছু করতে মনে চায় না, সবকিছু বিরক্ত লাগে।",
-  "জীবনের কোনো লক্ষ্য নাই, এমনেই বেঁচে আছি কোনোমতে।",
-  "কোনো কাজে ৫ মিনিটের বেশি ফোকাস নাই।"
+  "সারাদিন কিছু করতে মনে চায় না। সবকিছু বিরক্ত লাগে।",
+  "কোনো কাজে ৫ মিনিটের বেশি ফোকাস নাই।",
+  "জীবনের কোনো লক্ষ্য নাই। এমনেই বেঁচে আছি কোনোমতে।"
 ];
 
 const benefits = [
-  { text: "আসক্তি থেকে পুরোপুরি বের হয়ে গেছো তুমি।", highlight: "", textEnd: "" },
-  { text: "দিন শেষে regret না, বরং নিজের উপর", highlight: "proud feel", textEnd: "করতেছো।" },
-  { text: "জীবনের ছোট ছোট মুহুর্তগুলো আবার", highlight: "genuinely enjoy", textEnd: "করতে পারতেছো।" },
-  { text: "ঘন্টার পর ঘন্টা", highlight: "deep focus", textEnd: "নিয়ে কাজ করতে পারতেছো।" },
-  { text: "জীবনে আবার একটা", highlight: "clear direction", textEnd: "খুঁজে পাইছো।" }
+  { text: "আসক্তি থেকে পুরোপুরি বের হয়ে গেছো তুমি", highlight: "", textEnd: "" },
+  { text: "ঘন্টার পর ঘন্টা", highlight: "deep focus", textEnd: "নিয়ে কাজ করতে পারতেছো" },
+  { text: "দিন শেষে নিজের উপর", highlight: "proud feel", textEnd: "করতেছো" },
+  { text: "জীবনে আবার", highlight: "clear direction", textEnd: "খুঁজে পাইছো" },
+  { text: "ছোট ছোট মুহূর্তগুলো", highlight: "genuinely enjoy", textEnd: "করতে পারতেছো" }
 ];
+
+const redParticles = [...Array(20)].map(() => ({
+  top: `${Math.random() * 45}%`,
+  left: `${Math.random() * 100}%`,
+  width: `${Math.random() * 4 + 2}px`,
+  height: `${Math.random() * 4 + 2}px`,
+  opacity: Math.random() * 0.6 + 0.1,
+}));
+
+const greenParticles = [...Array(20)].map(() => ({
+  top: `${Math.random() * 45 + 55}%`,
+  left: `${Math.random() * 100}%`,
+  width: `${Math.random() * 4 + 2}px`,
+  height: `${Math.random() * 4 + 2}px`,
+  opacity: Math.random() * 0.6 + 0.1,
+}));
 
 export function IsThisYou() {
   return (
     <section className="w-full relative py-24 bg-[#030000] overflow-hidden">
       {/* Background ambient glows */}
-      <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-red-600/5 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-green-500/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-1/2 bg-gradient-to-b from-[#E50914]/5 to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-[#22c55e]/5 to-transparent pointer-events-none" />
+      
+      <div className="absolute top-[10%] left-[10%] w-[400px] h-[400px] bg-red-600/10 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-[20%] right-[10%] w-[300px] h-[300px] bg-red-600/5 blur-[100px] rounded-full pointer-events-none" />
+      
+      <div className="absolute bottom-[10%] right-[10%] w-[400px] h-[400px] bg-green-500/10 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-[20%] left-[10%] w-[300px] h-[300px] bg-green-500/5 blur-[100px] rounded-full pointer-events-none" />
+
+      {/* Red Particles */}
+      {redParticles.map((p, i) => (
+        <div 
+          key={`red-${i}`}
+          className="absolute rounded-full bg-[#E50914] shadow-[0_0_10px_rgba(229,9,20,0.8)] pointer-events-none"
+          style={{ top: p.top, left: p.left, width: p.width, height: p.height, opacity: p.opacity }}
+        />
+      ))}
+
+      {/* Green Particles */}
+      {greenParticles.map((p, i) => (
+        <div 
+          key={`green-${i}`}
+          className="absolute rounded-full bg-[#22c55e] shadow-[0_0_10px_rgba(34,197,94,0.8)] pointer-events-none"
+          style={{ top: p.top, left: p.left, width: p.width, height: p.height, opacity: p.opacity }}
+        />
+      ))}
 
       <div className="max-w-[1000px] mx-auto px-6 relative z-10 flex flex-col items-center">
         
@@ -48,7 +88,7 @@ export function IsThisYou() {
                 className="bg-[#110303] border border-white/5 rounded-2xl p-5 md:p-6 flex items-start gap-4 hover:border-[#E50914]/40 transition-colors shadow-[0_0_20px_rgba(229,9,20,0.02)]"
               >
                 <div className="mt-2.5 w-[5px] h-[5px] rounded-full bg-[#E50914] shadow-[0_0_8px_rgba(229,9,20,0.8)] shrink-0"></div>
-                <p className="text-slate-300 text-[15px] md:text-[16px] font-medium leading-relaxed font-sans">
+                <p className="text-slate-300 text-base md:text-[18px] font-medium leading-relaxed font-sans">
                   {text}
                 </p>
               </motion.div>
@@ -105,7 +145,7 @@ export function IsThisYou() {
                 
                 <div className="w-px h-10 bg-white/10 shrink-0 hidden md:block"></div>
                 
-                <p className="text-slate-300 text-[15px] md:text-[17px] font-medium leading-relaxed font-sans">
+                <p className="text-slate-300 text-[17px] md:text-[19px] font-medium leading-relaxed font-sans">
                   {benefit.text}
                   {benefit.highlight && <span className="text-[#22c55e] font-bold"> {benefit.highlight} </span>}
                   {benefit.textEnd && <span>{benefit.textEnd}</span>}

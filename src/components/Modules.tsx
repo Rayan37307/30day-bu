@@ -11,59 +11,67 @@ gsap.registerPlugin(ScrollTrigger);
 const modules = [
   {
     id: "01",
-    title: "দ্য রিবুট",
-    subtitle: "দিন ১-৭: ডোপামিন ডিটক্স এবং অ্যাডিকশন রিকভারি",
+    title: "Addiction Destruction Protocol",
+    subtitle: "“কালকে থেকে বদলে যাবো”- এই fake promise এর loop থেকে বের হতে হবে এবার।",
     icon: <Brain className="text-red-400" size={28} strokeWidth={1.5} />,
     accentColor: "#ff3b3b",
     accentBg: "rgba(255,59,59,0.08)",
     glowColor: "rgba(255,59,59,0.15)",
     points: [
-      "ডোপামিন লুপ বোঝা এবং পর্ন/সোশ্যাল মিডিয়া আসক্তি থেকে বিজ্ঞানসম্মত উপায়ে বের হয়ে আসার রুটম্যাপ।",
-      "সাবকনশাস মাইন্ডের ট্রিগারগুলো আইডেন্টিফাই করা এবং বাজে অভ্যাস ভাঙার সাইকোলজিক্যাল হ্যাকস।",
-      "ব্রেইনকে রিবুট করে হারিয়ে যাওয়া ড্রাইভ, ফোকাস এবং সেলফ-কনফিডেন্স পুনরায় ফিরে পাওয়া।",
+      "কিভাবে আজকেই action নেওয়া শুরু করবে",
+      "কিভাবে urges control করবে",
+      "কিভাবে porn addiction-এর dangerous cycle completely break করবে",
+      "কিভাবে guilt আর shame থেকে বের হয়ে mentally strong হবে",
     ],
+    footer: "“এই phase এ dedicatedly পর্ন এডিকশন থেকে বের হওয়ার scintific method নিয়ে আলাপ হবে”"
   },
   {
     id: "02",
-    title: "মাস্টার অফ টাইম",
-    subtitle: "দিন ৮-১৫: টাইম ম্যানেজমেন্ট এবং প্রোডাক্টিভিটি",
+    title: "Discipline Rebuilding System",
+    subtitle: "জীবনে কিছু করতে হলে discipline লাগবেই বস। টাকা কামাতে হলে আগে তো কাজে focus করা শিখতে হবে নাকি?",
     icon: <Video className="text-purple-400" size={28} strokeWidth={1.5} />,
     accentColor: "#a855f7",
     accentBg: "rgba(168,85,247,0.08)",
     glowColor: "rgba(168,85,247,0.15)",
     points: [
-      "Getting Things Done (GTD) মেথড ব্যবহার করে ব্রেইনের ওভারলোড কমানো এবং কাজের সিস্টেম তৈরি করা।",
-      "প্রোকাস্টিনেশন (অলসতা) দূর করে প্রতিদিনের কাজের একটি সলিড রুটিন ও ডিসিপ্লিন ডেভেলপ করা।",
-      "টাইম-ব্লকিং এবং প্রমোডোরো টেকনিকের মাধ্যমে দিনে ৪ ঘণ্টার কাজ ২ ঘণ্টায় শেষ করার ফর্মুলা।",
+      "কিভাবে সব distraction বাদ দিয়ে deep focus-এ কাজ করবে",
+      "কিভাবে একটা proper routine build করবে",
+      "কিভাবে consistency maintain করবে",
+      "কিভাবে discipline-এর মাধ্যমে অল্প সময়ে massive improvement আনবে",
     ],
+    footer: "“এই phase-এ তুমি শিখবে কিভাবে নিজের mind-কে control করে একজন real action taker হতে হয়”"
   },
   {
     id: "03",
-    title: "দ্য ডিপ ওয়ার্ক",
-    subtitle: "দিন ১৬-২৫: ফোকাস এবং স্কিল ডেভেলপমেন্ট",
+    title: "The Recovery Framework",
+    subtitle: "নিজের সবথেকে শক্তিশালী version কে ফিরিয়ে আনতে হবে এবার",
     icon: <Cpu className="text-emerald-400" size={28} strokeWidth={1.5} />,
     accentColor: "#10b981",
     accentBg: "rgba(16,185,129,0.08)",
     glowColor: "rgba(16,185,129,0.15)",
     points: [
-      "সম্পূর্ণ ডিস্ট্রাকশন-ফ্রি এনভায়রনমেন্ট তৈরি করে হাই-ইনকাম স্কিল শেখার মানসিক প্রস্তুতি।",
-      "দ্রুত এবং কার্যকরী উপায়ে যেকোনো নতুন স্কিল (কোডিং, এডিটিং বা ডিজাইন) আয়ত্ত করার 'লার্নিং হাউ টু লার্ন' টেকনিক।",
-      "স্কিল শেখার সময় লার্নিং কার্ভকে ছোট করে দ্রুত প্র্যাকটিক্যাল প্রজেক্টে কাজ শুরু করার গাইডলাইন।",
+      "কিভাবে brain fog থেকে বের হয়ে mental clarity ফিরিয়ে আনবে",
+      "Masturbation এর কারণে হওয়া damage কিভাবে recover করবে",
+      "Dopamine abuse এর পর brain & body কিভাবে rebuild করবে",
+      "কিভাবে আবার energy আর motivation ফিরে পাবে",
     ],
+    footer: "Porn আর masturbation তোমার শরীরের ওপর যেই ক্ষতিগুলা করছে। সেগুলা ঠিক করতে হবে এই phase এ।"
   },
   {
     id: "04",
-    title: "দ্য 'Aura Boss' মাইন্ডসেট",
-    subtitle: "দিন ২৬-৩০: ইন্টিগ্রেশন এবং কনসিস্টেন্সি",
+    title: "Masculinity & Purpose Blueprint",
+    subtitle: "তুমি শুধু addiction থেকে বের হওয়ার জন্য আসো নাই। তুমি আসছো নিজের strongest version এ transform হওয়ার জন্য",
     icon: <Rocket className="text-amber-400" size={28} strokeWidth={1.5} />,
     accentColor: "#f59e0b",
     accentBg: "rgba(245,158,11,0.08)",
     glowColor: "rgba(245,158,11,0.15)",
     points: [
-      "আপনার নতুন ডিসিপ্লিন এবং স্কিলগুলোকে প্রতিদিনের লাইফস্টাইলের সাথে মানিয়ে নেওয়া।",
-      "রিল্যাপ্স ঠেকানোর জন্য একটি শক্তিশালী এবং প্র্যাকটিক্যাল ৯০-দিনের অ্যাকশন প্ল্যান তৈরি করা।",
-      "ফাইনাল প্রশ্নোত্তর, পার্সোনাল গ্রোথ রিভিউ এবং ভবিষ্যতের সফলতার জন্য রোডম্যাপ।",
+      "কিভাবে weak mindset destroy করে powerful mentality build করবে",
+      "কিভাবে masculine confidence build করবে",
+      "কিভাবে purpose-driven life build করবে",
+      "কিভাবে নিজের emotions control করবে",
     ],
+    footer: "তুমি যেন নিজেকে নিয়ে proud feel করতে পারো। আয়নার সামনে দাঁড়ালে যেনো লজ্জা না লাগে, সেই বেবস্থা করা হবে বস।"
   },
 ];
 
@@ -172,7 +180,7 @@ export function Modules() {
                       background: `${mod.accentColor}10`,
                     }}
                   >
-                    Module {mod.id}
+                    Phase {mod.id}
                   </span>
                   <div
                     className="flex h-14 w-14 items-center justify-center rounded-xl border border-border-subtle"
@@ -199,29 +207,39 @@ export function Modules() {
 
               {/* Right panel — steps */}
               <div className="flex w-full items-center p-8 md:w-[60%] md:p-12 lg:p-16 bg-black/10">
-                <ul className="relative w-full space-y-10">
-                  <div className="absolute bottom-5 left-[22px] top-5 w-px bg-white/[0.08]" />
-                  {mod.points.map((point, pIdx) => (
-                    <li key={pIdx} className="relative flex items-start gap-7">
-                      <div
-                        className="relative z-10 mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-navy-deep border border-border-subtle shadow-xl"
-                        style={{
-                          boxShadow: `0 0 0 4px ${mod.accentColor}15`,
-                        }}
-                      >
-                        <span
-                          className="text-lg font-bold"
-                          style={{ color: mod.accentColor }}
+                <div className="w-full">
+                  <ul className="relative w-full space-y-10">
+                    <div className="absolute bottom-5 left-[22px] top-5 w-px bg-white/[0.08]" />
+                    {mod.points.map((point, pIdx) => (
+                      <li key={pIdx} className="relative flex items-start gap-7">
+                        <div
+                          className="relative z-10 mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-navy-deep border border-border-subtle shadow-xl"
+                          style={{
+                            boxShadow: `0 0 0 4px ${mod.accentColor}15`,
+                          }}
                         >
-                          {pIdx + 1}
+                          <span
+                            className="text-lg font-bold"
+                            style={{ color: mod.accentColor }}
+                          >
+                            {pIdx + 1}
+                          </span>
+                        </div>
+                        <span className="pt-2 text-[17px] md:text-[19px] leading-relaxed text-slate-200 font-medium tracking-wide">
+                          {point}
                         </span>
-                      </div>
-                      <span className="pt-2 text-[17px] md:text-[19px] leading-relaxed text-slate-200 font-medium tracking-wide">
-                        {point}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {mod.footer && (
+                    <div className="mt-12 p-6 rounded-xl bg-white/5 border border-white/10">
+                      <p className="text-slate-300 text-lg font-medium leading-relaxed italic">
+                        "{mod.footer}"
+                      </p>
+                    </div>
+                  )}
+                </div>
               </div>
             </article>
 
