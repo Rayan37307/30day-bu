@@ -141,13 +141,10 @@ export function FoundingMember() {
               </div>
               <div className="flex flex-col gap-1">
                 <p className="text-white text-sm md:text-base font-sans leading-relaxed">
-                  এটা ডিসকাউন্ট না, <span className="inline-block">✓</span>
+                  এটা ডিসকাউন্ট না
                 </p>
                 <p className="text-red-400 text-sm md:text-base font-bold font-sans leading-relaxed">
-                  এটা শুরু থেকেই নিয়মিতদের জন্য privilege.
-                </p>
-                <p className="text-gray-400 text-xs md:text-sm font-sans leading-relaxed">
-                  Launch-এর পর এই price আর কখনো আসবে না।
+                  এটা FOUNDER দের SPECIAL ACCESS 
                 </p>
               </div>
             </div>
@@ -163,11 +160,11 @@ export function FoundingMember() {
               <div className="absolute inset-0 bg-red-600/20 blur-2xl rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div className="relative w-full bg-gradient-to-b from-[#ff2222] to-[#cc0000] border-b-[5px] border-[#880000] rounded-xl py-4 px-8 flex items-center justify-center gap-3 transition-all duration-150 active:border-b-[0px] active:translate-y-[5px] group-hover:brightness-110 shadow-[0_8px_30px_rgba(204,0,0,0.4)]">
-                <span className="text-white/70 text-lg">🔒</span>
-                <span className="relative z-10 text-white font-bold text-base md:text-lg tracking-[0.12em] uppercase font-sans">
-                  আমি FOUNDING MEMBER হতে চাই
+                {/* <span className="text-white/70 text-lg">🔒</span> */}
+                <span className="relative z-10 text-white  text-xl md:text-lg tracking-[0.12em] uppercase font-sans">
+                  BECOME A FOUNDING MEMBER
                 </span>
-                <span className="relative z-10 text-white/70 text-lg">›</span>
+                {/* <span className="relative z-10 text-white/70 text-lg">›</span> */}
               </div>
             </a>
           </motion.div>

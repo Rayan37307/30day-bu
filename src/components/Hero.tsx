@@ -4,7 +4,7 @@ import { Button } from "./Button";
 
 export function Hero() {
   return (
-    <section className="w-full isolate min-h-screen overflow-hidden relative bg-black flex flex-col items-center justify-center pt-24 pb-16">
+    <section className="w-full isolate min-h-[85vh] md:min-h-screen overflow-hidden relative bg-black flex flex-col items-center justify-center pt-8 md:pt-24 pb-16 md:pb-24">
       
       {/* Red/Purple Gradient Background Glows for Glassmorphism */}
       <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-red-900/10 via-transparent to-transparent pointer-events-none -z-10" />
@@ -20,7 +20,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="leading-[1.2] font-display max-w-5xl mx-auto mb-8"
         >
-          <span className="text-3xl sm:text-4xl lg:text-5xl text-white align-middle block mb-3">নিজের বেস্ট ভার্সনকে ফিরিয়ে আনতে</span>
+          <span className="text-3xl sm:text-4xl lg:text-5xl text-white align-middle block mb-3">নিজের ফিরিয়ে আনতে <span className="text-red-500">বেস্ট ভার্সনকে</span></span>
           <span className="text-4xl sm:text-5xl lg:text-5xl text-white align-middle">
             শুধু <span className="text-gradient-red drop-shadow-sm ">৩০ দিনই</span> যথেষ্ট
           </span>
@@ -54,12 +54,12 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mt-2 flex flex-col items-center gap-4"
         >
-          <Button as="a" href="#pricing" className="scale-[1.1] md:scale-[1.2] origin-top w-full max-w-[320px]">
-            START YOUR RESET
+          <Button as="a" href="#pricing" className="scale-[1.2] font-anton md:scale-[1.3] origin-top w-full leading-[1.1] tracking-tightest max-w-[400px] text-xl">
+            START YOUR COMEBACK
           </Button>
           
           {/* Micro Trust Element */}
-          <div className="flex items-center gap-2 mt-1 opacity-80">
+          {/* <div className="flex items-center gap-2 mt-1 opacity-80">
             <div className="flex items-center text-yellow-500">
               {[...Array(5)].map((_, i) => (
                 <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
@@ -68,7 +68,7 @@ export function Hero() {
               ))}
             </div>
             <span className="text-slate-300 text-sm font-medium tracking-wide">Join 5,000+ action takers.</span>
-          </div>
+          </div> */}
         </motion.div>
 
       </div>

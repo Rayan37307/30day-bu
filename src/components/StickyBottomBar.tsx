@@ -50,7 +50,7 @@ export function StickyBottomBar() {
              <img src="/IMG_2718-removebg-preview.png" alt="Mentor" className="w-full h-full object-contain object-bottom drop-shadow-md" />
           </div>
           
-          <span className="hidden lg:inline text-white/90 text-[15px] font-sans tracking-wide">
+          {/* <span className="hidden lg:inline text-white/90 text-[15px] font-sans tracking-wide">
             Hurry Up!! Time is running out.
           </span>
           
@@ -59,21 +59,21 @@ export function StickyBottomBar() {
             <TimeUnit value={timeLeft.hours} />
             <TimeUnit value={timeLeft.minutes} />
             <TimeUnit value={timeLeft.seconds} />
-          </div>
+          </div> */}
         </div>
 
         {/* Right: Discount & Button */}
         <div className="flex items-center gap-4 lg:gap-6">
           <span className="hidden lg:inline text-white/90 text-sm tracking-wider uppercase font-sans">
-            GET AT <span className="text-electric-blue font-bold">50%</span> DISCOUNT
+            GET AT <span className="text-electric-blue font-bold">90%</span> DISCOUNT
           </span>
           
           <a 
             href="#pricing" 
             className="py-2 lg:py-2.5 px-6 rounded-full border border-electric-blue/60 bg-gradient-to-r from-[#3a0000] to-[#5a0000] text-white font-bold text-sm tracking-wide transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(255,59,59,0.3)] whitespace-nowrap"
           >
-            <span className="lg:hidden">Join</span>
-            <span className="hidden lg:inline">Register Today for ৳৯৯৯</span>
+            <span className="lg:hidden">BECOME A FOUNDING MEMBER</span>
+            <span className="hidden lg:inline">BECOME A FOUNDING MEMBER AT 990</span>
           </a>
         </div>
 

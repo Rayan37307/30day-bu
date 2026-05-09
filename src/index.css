@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Atma:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Hind+Siliguri:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import "tailwindcss";
 
 
@@ -34,6 +35,7 @@
   --font-display: "Archivo Black", "Li Alinur Shishir Unicode", "Sabbir Shorolota", "Anek Bangla", "Atma", system-ui;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
   --font-teko: "Teko", sans-serif;
+  --font-anton: "Anton", sans-serif;
 }
 
 body {

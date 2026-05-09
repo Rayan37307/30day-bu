@@ -94,7 +94,7 @@ export function Preloader({ onComplete }: PreloaderProps) {
       <div className="relative z-10 px-6 text-center flex flex-col items-center">
         <h1
           ref={textRef}
-          className="text-4xl md:text-6xl lg:text-7xl font-teko uppercase text-white leading-tight font-bold"
+          className="text-4xl md:text-6xl lg:text-7xl font-display uppercase text-white leading-tight font-bold"
           style={{
             textShadow: '0 10px 30px rgba(0, 0, 0, 0.5)',
           }}
