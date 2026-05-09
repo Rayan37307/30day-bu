@@ -46,7 +46,7 @@ export function StickyBottomBar() {
         
         {/* Left: Image, Text & Timer */}
         <div className="flex items-center gap-6 h-full">
-          <div className="h-[90px] w-[80px] -mt-[18px] relative overflow-visible">
+          <div className="h-[150px] w-[150px] -mt-[18px] relative overflow-visible">
              <img src="/IMG_2718-removebg-preview.png" alt="Mentor" className="w-full h-full object-contain object-bottom drop-shadow-md" />
           </div>
           

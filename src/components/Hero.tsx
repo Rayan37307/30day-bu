@@ -12,17 +12,6 @@ export function Hero() {
 
       <div className="z-10 relative w-full max-w-[1200px] mx-auto px-6 text-center flex flex-col items-center">
         
-        {/* Pill */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mb-8 inline-flex items-center rounded-full glass-light px-4 py-1.5"
-        >
-          <span className="text-sm font-bold tracking-widest uppercase text-slate-300">
-            নতুন ব্যাচ <span className="mx-2 text-white/20">•</span> রেজিস্ট্রেশন চলছে
-          </span>
-        </motion.div>
 
         {/* Heading */}
         <motion.h1

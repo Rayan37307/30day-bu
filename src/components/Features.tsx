@@ -11,20 +11,6 @@ export function Features() {
       <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-red-600/5 blur-[120px] rounded-full pointer-events-none -z-10 translate-y-[-50%] -translate-x-1/2" />
       <div className="absolute top-1/3 right-0 w-[600px] h-[600px] bg-red-600/5 blur-[150px] rounded-full pointer-events-none -z-10 translate-x-1/3" />
       
-      {/* Pill */}
-      <motion.div 
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="mx-auto w-fit mb-6"
-      >
-        <div className="inline-flex items-center gap-2 rounded-full glass-light px-3 py-1.5 text-xs text-neutral-300">
-          <span className="inline-flex items-center justify-center rounded-full bg-red-500/20 text-red-500 px-2 py-0.5 font-bold tracking-widest uppercase">
-            নতুন ব্যাচ
-          </span>
-          <span className="font-medium tracking-widest uppercase text-[10px]">কেন আমাদের বেছে নিবেন?</span>
-        </div>
-      </motion.div>
 
       {/* Heading */}
       <motion.div 
@@ -37,9 +23,6 @@ export function Features() {
         <h2 className="mx-auto max-w-4xl font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tighter text-white leading-[1.1]">
           আপনার সফলতার জন্য <span className="text-gradient-red">সবকিছু</span> এক জায়গায়
         </h2>
-        <p className="mx-auto mt-6 max-w-2xl text-base sm:text-lg text-slate-400 font-medium leading-relaxed">
-          শুধুমাত্র হাওয়ায় ভাসা মোটিভেশন নয়, বরং নিউরোসায়েন্স এবং প্রুভেন সিস্টেমের মাধ্যমে নিজেকে নতুন করে আবিষ্কার করুন।
-        </p>
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 mt-10 items-center justify-center">

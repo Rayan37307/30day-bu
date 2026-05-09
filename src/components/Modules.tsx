@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef } from "react";
-import { Brain, Video, Cpu, Rocket } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -13,7 +12,7 @@ const modules = [
     id: "01",
     title: "Addiction Destruction Protocol",
     subtitle: "“কালকে থেকে বদলে যাবো”- এই fake promise এর loop থেকে বের হতে হবে এবার।",
-    icon: <Brain className="text-red-400" size={28} strokeWidth={1.5} />,
+    icon: "/phases/phase-01.png",
     accentColor: "#ff3b3b",
     accentBg: "rgba(255,59,59,0.08)",
     glowColor: "rgba(255,59,59,0.15)",
@@ -29,7 +28,7 @@ const modules = [
     id: "02",
     title: "Discipline Rebuilding System",
     subtitle: "জীবনে কিছু করতে হলে discipline লাগবেই বস। টাকা কামাতে হলে আগে তো কাজে focus করা শিখতে হবে নাকি?",
-    icon: <Video className="text-purple-400" size={28} strokeWidth={1.5} />,
+    icon: "/phases/phase-02.png",
     accentColor: "#a855f7",
     accentBg: "rgba(168,85,247,0.08)",
     glowColor: "rgba(168,85,247,0.15)",
@@ -45,7 +44,7 @@ const modules = [
     id: "03",
     title: "The Recovery Framework",
     subtitle: "নিজের সবথেকে শক্তিশালী version কে ফিরিয়ে আনতে হবে এবার",
-    icon: <Cpu className="text-emerald-400" size={28} strokeWidth={1.5} />,
+    icon: "/phases/phase-03.png",
     accentColor: "#10b981",
     accentBg: "rgba(16,185,129,0.08)",
     glowColor: "rgba(16,185,129,0.15)",
@@ -61,7 +60,7 @@ const modules = [
     id: "04",
     title: "Masculinity & Purpose Blueprint",
     subtitle: "তুমি শুধু addiction থেকে বের হওয়ার জন্য আসো নাই। তুমি আসছো নিজের strongest version এ transform হওয়ার জন্য",
-    icon: <Rocket className="text-amber-400" size={28} strokeWidth={1.5} />,
+    icon: "/phases/phase-04.png",
     accentColor: "#f59e0b",
     accentBg: "rgba(245,158,11,0.08)",
     glowColor: "rgba(245,158,11,0.15)",
@@ -152,24 +151,24 @@ export function Modules() {
               top: calc... Creates the visual "stacked edges" offset effect
             */}
             <article
-              className="card-inner relative w-full max-w-[1200px] origin-top flex flex-col md:flex-row overflow-hidden bg-navy-card border border-border-subtle rounded-2xl will-change-transform min-h-[550px] md:min-h-[600px]"
+              className="card-inner relative w-full max-w-[1200px] origin-top flex flex-col md:flex-row overflow-hidden rounded-2xl will-change-transform min-h-[550px] md:min-h-[600px] border-2 border-red-600 shadow-2xl"
               style={{
+                background: "#09090b",
                 top: `calc(-5vh + ${i * 30}px)`, 
-                boxShadow: `0 30px 60px rgba(0,0,0,0.6), 0 0 80px ${mod.glowColor}`,
+                boxShadow: `0 30px 100px rgba(0,0,0,0.8), 0 0 120px ${mod.glowColor}`,
               }}
             >
               {/* Accent top-edge line */}
               <div
-                className="absolute top-0 left-[10%] right-[10%] h-[1px] rounded-sm"
+                className="absolute top-0 left-0 right-0 h-[2px] z-20"
                 style={{
-                  background: `linear-gradient(90deg, transparent, ${mod.accentColor}55, transparent)`,
+                  background: `linear-gradient(90deg, transparent, #ff3b3b, transparent)`,
                 }}
               />
 
               {/* Left panel */}
               <div
-                className="relative flex w-full flex-col justify-between border-b border-border-subtle p-8 md:w-[40%] md:border-b-0 md:border-r md:p-12 lg:p-16"
-                style={{ background: mod.accentBg }}
+                className="relative flex w-full flex-col justify-between border-b border-border-subtle p-8 md:w-[40%] md:border-b-0 md:border-r md:p-12 lg:p-16 bg-[#0c0c0e]"
               >
                 <div className="mb-12 flex items-center justify-between">
                   <span
@@ -183,10 +182,13 @@ export function Modules() {
                     Phase {mod.id}
                   </span>
                   <div
-                    className="flex h-14 w-14 items-center justify-center rounded-xl border border-border-subtle"
-                    style={{ background: `${mod.accentColor}15` }}
+                    className="flex h-24 w-24 items-center justify-center rounded-2xl border-2 border-red-500 overflow-hidden shadow-[0_0_40px_rgba(255,59,59,0.2)] bg-[#121214]"
                   >
-                    {mod.icon}
+                    {typeof mod.icon === 'string' ? (
+                      <img src={mod.icon} alt="" className="w-full h-full object-cover scale-110" />
+                    ) : (
+                      mod.icon
+                    )}
                   </div>
                 </div>
 
@@ -206,7 +208,7 @@ export function Modules() {
               </div>
 
               {/* Right panel — steps */}
-              <div className="flex w-full items-center p-8 md:w-[60%] md:p-12 lg:p-16 bg-black/10">
+              <div className="flex w-full items-center p-8 md:w-[60%] md:p-12 lg:p-16 bg-[#050505]">
                 <div className="w-full">
                   <ul className="relative w-full space-y-10">
                     <div className="absolute bottom-5 left-[22px] top-5 w-px bg-white/[0.08]" />
@@ -233,7 +235,7 @@ export function Modules() {
                   </ul>
 
                   {mod.footer && (
-                    <div className="mt-12 p-6 rounded-xl bg-white/5 border border-white/10">
+                    <div className="mt-12 p-6 rounded-xl bg-[#121214] border border-red-900/30">
                       <p className="text-slate-300 text-lg font-medium leading-relaxed italic">
                         "{mod.footer}"
                       </p>
