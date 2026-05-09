@@ -21,13 +21,17 @@ export function Mentor() {
 
       <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
         {/* Left: Mentor Image */}
-        <div className="w-full lg:w-[45%] shrink-0">
+        <div className="w-full lg:w-[45%] shrink-0 relative group">
+          {/* Red Glowing Background */}
+          <div className="absolute -inset-4 bg-red-600/20 blur-[60px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-red-600/10 blur-[100px] rounded-full pointer-events-none" />
+          
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative aspect-[5/5] rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/5"
+            className="relative aspect-[5/5] rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/5 z-10"
           >
             <img 
               src="/asifvaii.jpeg" 
