@@ -37,7 +37,7 @@ export function Hero() {
           <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-[#09090b] border border-red-900/30 p-2">
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/RG6fjpBbGpA?modestbranding=1&rel=0"
+              src="https://www.youtube.com/embed/41CRIo6VDZo?modestbranding=1&rel=0"
               title="Course Intro Video"
               aria-label="Backbencher University Course Introduction Video"
               frameBorder="0"
