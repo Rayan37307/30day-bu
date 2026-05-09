@@ -126,13 +126,13 @@ export function Modules() {
       {/* Header Section (Scrolls normally) */}
       <section className="py-20 text-center w-full">
         <div className="w-full max-w-[1200px] mx-auto px-6">
-          <p className="text-xs font-mono font-bold tracking-[0.2em] uppercase text-text-secondary mb-4">
+          <p className="text-xs font-mono font-bold tracking-[0.2em] uppercase text-slate-400 mb-4">
             কোর্স কারিকুলাম
           </p>
           <h2 className="font-display font-medium text-4xl md:text-5xl mb-4 text-white">
             ৩০-দিনের <span className="text-gradient-red font-bold font-display underline decoration-2 underline-offset-4">রোডম্যাপ</span>
           </h2>
-          <p className="text-slate-400 max-w-xl mx-auto text-lg pt-2 leading-relaxed">
+          <p className="text-slate-300/90 max-w-xl mx-auto text-lg pt-2 leading-relaxed">
             প্রতিদিন নিজেকে নতুন করে গড়ুন। নিচে কোর্সের ৪টি ধাপের মাস্টার ব্রেকডাউন দেওয়া হলো।
           </p>
         </div>

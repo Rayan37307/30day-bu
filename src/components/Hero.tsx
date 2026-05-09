@@ -33,10 +33,8 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="w-full max-w-[1200px] mx-auto mb-16 relative group"
         >
-          {/* Edge Glow */}
-          <div className="absolute -inset-0.5 bg-gradient-to-br from-red-500/30 to-purple-500/30 rounded-2xl opacity-50 group-hover:opacity-100 transition duration-700 pointer-events-none z-20 blur-sm"></div>
           
-          <div className="relative aspect-video w-full overflow-hidden rounded-2xl glass-heavy p-2">
+          <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-[#09090b] border border-red-900/30 p-2">
             <iframe
               className="w-full h-full"
               src="https://www.youtube.com/embed/RG6fjpBbGpA?start=0&end=20&autoplay=1&mute=1&loop=1&playlist=RG6fjpBbGpA&controls=0&modestbranding=1&rel=0"

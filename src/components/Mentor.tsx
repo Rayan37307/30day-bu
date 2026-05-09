@@ -15,7 +15,7 @@ export function Mentor() {
       <div className="text-center mb-20">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white tracking-tight leading-tight">
           স্টুডেন্ট থেকে <span className="text-[#E50914]">ক্রিয়েটর</span>... <br/>
-          গল্পটি ভাগ্যের নয়, <span className="text-slate-400">সিস্টেমের।</span>
+          গল্পটি ভাগ্যের নয়, <span className="text-slate-300">সিস্টেমের।</span>
         </h2>
       </div>
 
@@ -30,9 +30,9 @@ export function Mentor() {
             className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/5"
           >
             <img 
-              src="/IMG_2718.jpg" 
+              src="/asifvaii.jpeg" 
               alt="Asif" 
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
           </motion.div>
         </div>
@@ -47,8 +47,8 @@ export function Mentor() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="mb-8">
-              <h3 className="text-4xl md:text-[44px] font-display font-bold text-[#E50914] mb-2 leading-none">আসিফ</h3>
-              <p className="text-slate-400 text-[15px] md:text-[17px] font-medium">Digital Creator & Founder of Backbencher's University</p>
+              <h3 className="text-4xl md:text-[44px] font-display font-bold text-[#E50914] mb-2 leading-none">MUHAMMAD ASIF RAYHAN</h3>
+              <p className="text-slate-400 text-[15px] md:text-[17px] font-medium uppercase tracking-wider">Digital Creator & CO-Founder of Backbencher's University</p>
             </div>
 
             <div className="space-y-6 text-slate-300 text-[15px] md:text-[17px] leading-[1.8] mb-12">
@@ -69,16 +69,16 @@ export function Mentor() {
                 <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center mb-5">
                   <Youtube className="text-[#E50914]" size={22} />
                 </div>
-                <h4 className="text-xl font-bold text-white mb-1">২০০K+</h4>
-                <p className="text-xs text-slate-400">Subscribers</p>
+                <h4 className="text-xl font-bold text-white mb-1">151K+</h4>
+                <p className="text-xs text-slate-400 font-bold uppercase tracking-tighter">Subscribers</p>
               </div>
               
               <div className="bg-[#111] border border-white/5 rounded-2xl p-5 flex flex-col w-[140px] shadow-lg transition-transform hover:-translate-y-1">
                 <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center mb-5">
                   <Facebook className="text-blue-500" size={22} />
                 </div>
-                <h4 className="text-xl font-bold text-white mb-1">৩০০K+</h4>
-                <p className="text-xs text-slate-400">Followers</p>
+                <h4 className="text-xl font-bold text-white mb-1">300K+</h4>
+                <p className="text-xs text-slate-400 font-bold uppercase tracking-tighter">Followers</p>
               </div>
             </div>
           </motion.div>

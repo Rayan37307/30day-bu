@@ -124,7 +124,7 @@ export function IsThisYou() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-slate-400 text-base md:text-lg mb-12 font-medium"
+            className="text-slate-300/90 text-base md:text-lg mb-12 font-medium"
           >
             তোমার <span className="text-[#22c55e]">নতুন versionটা</span> কেমন হতে পারে?
           </motion.p>
