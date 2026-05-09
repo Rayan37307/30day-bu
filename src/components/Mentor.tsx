@@ -4,18 +4,9 @@ import { Youtube, Facebook } from "lucide-react";
 export function Mentor() {
   return (
     <section className="relative w-full max-w-[1200px] mx-auto px-6 py-32" id="mentor">
-      
-      {/* Title block matching screenshot */}
-      <div className="text-center mb-6">
-        <h3 className="text-2xl md:text-3xl font-display font-medium text-white tracking-wide">
-          আপনার <span className="text-[#E50914] font-bold">মেন্টরের</span> সাথে পরিচিত হোন
-        </h3>
-      </div>
-
       <div className="text-center mb-20">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white tracking-tight leading-tight">
-          স্টুডেন্ট থেকে <span className="text-[#E50914]">ক্রিয়েটর</span>... <br/>
-          গল্পটি ভাগ্যের নয়, <span className="text-slate-300">সিস্টেমের।</span>
+        <h2 className="text-5xl md:text-6xl lg:text-7xl font-display text-white tracking-tight leading-tight">
+          তোমার <span className="text-white">ভাই</span>
         </h2>
       </div>
 
@@ -34,7 +25,7 @@ export function Mentor() {
             className="relative aspect-[5/5] rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/5 z-10"
           >
             <img 
-              src="/asifvaii.jpeg" 
+              src="/asifboss.webp" 
               alt="Asif" 
               className="w-full h-full object-contain"
             />
@@ -52,24 +43,19 @@ export function Mentor() {
           >
             <div className="mb-8">
               <h3 className="text-4xl md:text-[44px] font-display font-bold text-[#E50914] mb-2 leading-none">MUHAMMAD ASIF RAYHAN</h3>
-              <p className="text-slate-400 text-[15px] md:text-[17px] font-medium uppercase tracking-wider">Digital Creator & CO-Founder of Backbencher's University</p>
+              <p className="text-white text-[15px] md:text-[17px] font-medium uppercase tracking-wider">CO-Founder of Backbenchers University</p>
             </div>
 
-            <div className="space-y-6 text-slate-300 text-[15px] md:text-[17px] leading-[1.8] mb-12">
+            <div className="space-y-6 text-slate-300 font-display text-[15px] md:text-[17px] leading-[1.8] mb-12">
               <p>
-                আমি আসিফ। সিএসই-র একজন স্টুডেন্ট হিসেবে যখন যাত্রা শুরু করি, তখন আমার সবচেয়ে বড় শত্রু ছিল প্রোকাস্টিনেশন আর সোশ্যাল মিডিয়া অ্যাডিকশন। ঘন্টার পর ঘন্টা স্ক্রল করে দিন শেষে নিজেকে শূন্য লাগত। কিন্তু আমি জানতাম, এভাবে চললে "ব্যাকবেঞ্চার্স ইউনিভার্সিটি" কখনো বাস্তব হবে না।
-              </p>
-              <p>
-                আমি ডাইভে দিলাম নিউরোসায়েন্স আর প্রোডাক্টিভিটি সিস্টেমের গভীরে। GTD ফ্রেমওয়ার্ক আর এআই-কে সঙ্গী করে আমি আমার ব্রেইনকে রিবুট করলাম। ফলাফল? মাত্র কয়েক বছরে ২ লাখেরও বেশি মানুষের একটি কমিউনিটি এবং "Aura Boss" অ্যাপের জন্ম।
-              </p>
-              <p className="font-semibold text-white italic">
-                "এই জার্নিতে আমি যা শিখেছি, তা কোনো থিওরিটিক্যাল বইয়ের জ্ঞান নয়। এটি রক্ত-মাংসের অভিজ্ঞতা যা আপনাকে শেখাবে কীভাবে ডিস্ট্রাকশনের সমুদ্র থেকে মাথা তুলে দাঁড়িয়ে নিজের স্বপ্নকে বাস্তবে রূপ দিতে হয়।"
+                আমি চাই সবাইকে নিয়ে আগাতে । মানুষকে সত্যের পথে ডাকতে।তুমিও অনেক talented,boss । হয়তো তুমি খুব ভালো student না, কিন্তু তোমার মাঝেও অসাধারণ কিছু করার potential আছে । আমাদের journey তো কেবল শুরু । যেতে হবে বহুদূর ।
+                বাংলাদেশের প্রতিটা backbencher যেন আবার ঘুরে দাঁড়ানোর সুযোগ পায় — সেই চেষ্টা করবো, ইনশাআল্লাহ ।
               </p>
             </div>
 
             {/* Social Stats (Square blocks like screenshot) */}
             <div className="flex flex-wrap gap-4">
-              <div className="bg-[#111] border border-white/5 rounded-2xl p-5 flex flex-col w-[140px] shadow-lg transition-transform hover:-translate-y-1">
+              <div className="bg-[#111] border-1 border-red-500 rounded-2xl p-5 flex flex-col w-[140px] shadow-lg transition-transform hover:-translate-y-1">
                 <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center mb-5">
                   <Youtube className="text-[#E50914]" size={22} />
                 </div>
@@ -77,11 +63,11 @@ export function Mentor() {
                 <p className="text-xs text-slate-400 font-bold uppercase tracking-tighter">Subscribers</p>
               </div>
               
-              <div className="bg-[#111] border border-white/5 rounded-2xl p-5 flex flex-col w-[140px] shadow-lg transition-transform hover:-translate-y-1">
+              <div className="bg-[#111] border-1 border-blue-500 rounded-2xl p-5 flex flex-col w-[140px] shadow-lg transition-transform hover:-translate-y-1">
                 <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center mb-5">
                   <Facebook className="text-blue-500" size={22} />
                 </div>
-                <h4 className="text-xl font-bold text-white mb-1">300K+</h4>
+                <h4 className="text-xl font-bold text-white mb-1">323K+</h4>
                 <p className="text-xs text-slate-400 font-bold uppercase tracking-tighter">Followers</p>
               </div>
             </div>

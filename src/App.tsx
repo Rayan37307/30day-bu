@@ -101,7 +101,7 @@ export default function App() {
           <FoundingMember />
           {/* <Pricing /> */}
           {/* <CTABanner /> */}
-          <FAQ />
+          {/* <FAQ /> */}
           <Footer />
         </div>
         <StickyBottomBar />

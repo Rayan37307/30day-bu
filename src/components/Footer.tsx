@@ -2,7 +2,7 @@ import { Youtube, Facebook } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="w-full bg-transparent py-12">
+    <footer className="w-full bg-transparent py-12 pb-[40px]">
       <div className="max-w-[1200px] mx-auto px-6 border-t border-border-subtle pt-10">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           {/* Credits Section */}

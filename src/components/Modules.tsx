@@ -61,7 +61,7 @@ const modules = [
       "কিভাবে আবার ENERGY আর MOTIVATION ফিরে পাবে",
     ],
     footer:
-      "PORN আর MASTURBATION তোমার শরীরের ওপর যেই ক্ষতিগুলা করছে। সেগুলা ঠিক করতে হবে এই PHASE এ।",
+      "PORN আর MASTURBATION তোমার শরীরের ওপর যেই ক্ষতিগুলা করছে। সেগুলা ঠিক করতে হবে এই PHASE এ",
   },
   {
     id: "04",
@@ -78,7 +78,7 @@ const modules = [
       "কিভাবে নিজের EMOTIONS CONTROL করবে",
     ],
     footer:
-      "তুমি যেন নিজেকে নিয়ে PROUD FEEL করতে পারো। আয়নার সামনে দাঁড়ালে যেনো লজ্জা না লাগে, সেই বেবস্থা করা হবে বস।",
+      "তুমি যেন নিজেকে নিয়ে PROUD FEEL করতে পারো। আয়নার সামনে দাঁড়ালে যেনো লজ্জা না লাগে, সেই ব্যবস্থা করা হবে বস",
   },
 ];
 
@@ -257,8 +257,14 @@ export function Modules() {
                   </div>
 
                   {/* Title block */}
-                  <div className="px-4 pt-4 pb-3 bg-[#0c0c0e]">
-                    <h3 className="font-display text-xl font-bold uppercase leading-tight text-white mb-2">
+                  <div 
+                    className="px-4 pt-4 pb-3 bg-[#0c0c0e] border-b"
+                    style={{ borderColor: `${mod.accentColor}50` }}
+                  >
+                    <h3 
+                      className="font-display text-xl font-bold uppercase leading-tight mb-2"
+                      style={{ color: mod.accentColor }}
+                    >
                       {mod.title}
                     </h3>
                     <p className="text-sm font-medium leading-relaxed text-slate-300/90">
@@ -304,7 +310,10 @@ export function Modules() {
                     </ul>
 
                     {mod.footer && (
-                      <div className="mt-4 mb-2 p-3 rounded-lg bg-[#121214] border border-red-900/30">
+                      <div 
+                        className="mt-4 mb-2 p-3 rounded-lg bg-[#121214] border"
+                        style={{ borderColor: `${mod.accentColor}50` }}
+                      >
                         <p className="text-slate-300 text-sm font-medium leading-relaxed italic">
                           "{mod.footer}"
                         </p>
@@ -315,7 +324,10 @@ export function Modules() {
 
                 {/* ── DESKTOP LAYOUT ── */}
                 {/* Left panel */}
-                <div className="hidden md:relative md:flex w-full flex-col justify-between border-b border-white/[0.06] p-8 md:w-[40%] md:border-b-0 md:border-r md:p-12 lg:p-16 bg-[#0c0c0e]">
+                <div 
+                  className="hidden md:relative md:flex w-full flex-col justify-between border-b p-8 md:w-[40%] md:border-b-0 md:border-r md:p-12 md:pr-16 lg:p-16 lg:pr-24 bg-[#0c0c0e]"
+                  style={{ borderColor: `${mod.accentColor}50` }}
+                >
                   <div className="mb-10 flex items-center justify-between">
                     <span
                       className="rounded-sm border px-4 py-2 text-[12px] font-bold uppercase tracking-[0.2em]"
@@ -335,7 +347,10 @@ export function Modules() {
                   </div>
 
                   <div>
-                    <h3 className="mb-4 font-display text-3xl uppercase font-bold leading-tight text-white md:text-[2.2rem] lg:text-[2.8rem]">
+                    <h3 
+                      className="mb-4 font-display text-3xl uppercase font-bold leading-tight md:text-[2.2rem] lg:text-[2.8rem]"
+                      style={{ color: mod.accentColor }}
+                    >
                       {mod.title}
                     </h3>
                     <p className="text-lg md:text-xl font-medium leading-relaxed text-slate-300 opacity-90">
@@ -388,7 +403,10 @@ export function Modules() {
                     </ul>
 
                     {mod.footer && (
-                      <div className="mt-12 p-6 rounded-xl bg-[#121214] border border-red-900/30">
+                      <div 
+                        className="mt-12 p-6 rounded-xl bg-[#121214] border"
+                        style={{ borderColor: `${mod.accentColor}50` }}
+                      >
                         <p className="text-slate-300 text-lg font-medium leading-relaxed italic">
                           "{mod.footer}"
                         </p>

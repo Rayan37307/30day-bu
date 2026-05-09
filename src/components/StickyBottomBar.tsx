@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from './Button';
+import { ChevronRight, ChevronsRight } from 'lucide-react';
 
 export function StickyBottomBar() {
   const [timeLeft, setTimeLeft] = useState({
@@ -50,11 +51,15 @@ export function StickyBottomBar() {
              <img src="/IMG_2718-removebg-preview.png" alt="Mentor" className="w-full h-full object-contain object-bottom drop-shadow-md" />
           </div>
           
-          {/* <span className="hidden lg:inline text-white/90 text-[15px] font-sans tracking-wide">
-            Hurry Up!! Time is running out.
-          </span>
+          <span className="hidden lg:flex text-white uppercase tracking-tight text-[19px] font-display items-center gap-2 whitespace-nowrap">
+  Become a Founding Member
+  <ChevronsRight
+    size={32}
+    className="shrink-0 drop-shadow-[0_0_15px_rgba(34,197,94,0.6)] text-red-500 animate-pulse"
+  />
+</span>
           
-          <div className="hidden lg:flex items-center gap-2 ml-2">
+          {/* <div className="hidden lg:flex items-center gap-2 ml-2">
             <TimeUnit value={timeLeft.days} />
             <TimeUnit value={timeLeft.hours} />
             <TimeUnit value={timeLeft.minutes} />
@@ -64,7 +69,7 @@ export function StickyBottomBar() {
 
         {/* Right: Discount & Button */}
         <div className="flex items-center gap-4 lg:gap-6">
-          <span className="hidden lg:inline text-white/90 text-sm tracking-wider uppercase font-sans">
+          {/* <span className="hidden lg:inline text-white/90 text-sm tracking-wider uppercase font-sans">
             GET AT <span className="text-electric-blue font-bold">90%</span> DISCOUNT
           </span>
           
@@ -74,7 +79,8 @@ export function StickyBottomBar() {
           >
             <span className="lg:hidden">BECOME A FOUNDING MEMBER</span>
             <span className="hidden lg:inline">BECOME A FOUNDING MEMBER AT 990</span>
-          </a>
+          </a> */}
+          <Button href="#pricing" >CLAIM 90% OFF</Button>
         </div>
 
       </div>
