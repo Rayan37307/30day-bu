@@ -68,7 +68,7 @@ export function Hero() {
           className="mt-4"
         >
           <Button as="a" href="#pricing" className="scale-[1.2] md:scale-[1.4] origin-top">
-            এনরোল করুন
+            JOIN THE REVOLUTION
           </Button>
         </motion.div>
 

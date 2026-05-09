@@ -24,20 +24,6 @@ export function Button({ children, as = 'button', href, onClick, className = '',
         className="relative flex w-full items-center justify-center py-3 px-6 text-lg text-white rounded-lg transform -translate-y-1 bg-electric-blue gap-3 transition duration-[600ms] ease-[cubic-bezier(0.3,0.7,0.4,1)] group-hover:-translate-y-1.5 group-hover:duration-[250ms] group-active:-translate-y-0.5 brightness-100 group-hover:brightness-110"
       >
         <span className="select-none font-bold tracking-wide font-sans">{children}</span>
-
-        {icon !== undefined ? icon : (
-          <svg
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            className="w-5 h-5 ml-2 -mr-1 transition duration-250 group-hover:translate-x-1"
-          >
-            <path
-              clipRule="evenodd"
-              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-              fillRule="evenodd"
-            ></path>
-          </svg>
-        )}
       </div>
     </>
   );

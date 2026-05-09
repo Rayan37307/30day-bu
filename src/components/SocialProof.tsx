@@ -142,7 +142,7 @@ export function SocialProof() {
 
       <div className="text-center mb-16 relative z-10 w-full">
         <h2 className="font-display font-normal text-5xl md:text-6xl mb-4 leading-[1.2]">
-          ১০,০০০+ <span className="text-gradient-red">Backbenchers</span>-দের ভরসা
+          4,74000+ <span className="text-gradient-red">Backbenchers</span>-দের ভরসা
         </h2>
         <p className="text-slate-400 max-w-2xl mx-auto text-lg">
           শুধু আমাদের কথায় বিশ্বাস করবেন না। যারা এই জার্নিতে অংশ নিয়েছে তাদের অভিজ্ঞতা শুনুন।
