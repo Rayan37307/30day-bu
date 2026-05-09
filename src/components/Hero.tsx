@@ -4,7 +4,7 @@ import { Button } from "./Button";
 
 export function Hero() {
   return (
-    <section className="w-full isolate min-h-[60vh] md:min-h-screen overflow-hidden relative bg-black flex flex-col items-center justify-center pt-2">
+    <section className="w-full isolate min-h-[60vh] md:min-h-screen overflow-hidden relative bg-black flex flex-col items-center justify-center py-10 lg:py-18">
       
       {/* Red/Purple Gradient Background Glows for Glassmorphism */}
       <div className="absolute top-0 inset-x-0 h-[600px] bg-gradient-to-b from-red-900/10 via-transparent to-transparent pointer-events-none -z-10" />

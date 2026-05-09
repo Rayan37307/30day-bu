@@ -35,7 +35,7 @@ const greenParticles = [...Array(20)].map(() => ({
 
 export function IsThisYou() {
   return (
-    <section className="w-full relative py-10 bg-[#030000] overflow-hidden">
+    <section className="w-full relative py-10 lg:py-18 bg-[#030000] overflow-hidden">
       {/* Background ambient glows */}
       <div className="absolute top-0 left-0 right-0 h-1/2 bg-gradient-to-b from-[#E50914]/5 to-transparent pointer-events-none" />
       <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-[#22c55e]/5 to-transparent pointer-events-none" />

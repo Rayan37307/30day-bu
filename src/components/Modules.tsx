@@ -195,7 +195,7 @@ export function Modules() {
   return (
     <div className="bg-transparent w-full">
       {/* ── Header ── */}
-      <section className="pt-12 md:pt-20 text-center w-full">
+      <section className="py-10 lg:py-18 text-center w-full">
         <div className="w-full max-w-[1200px] mx-auto px-4 md:px-6">
           <h2 className="font-display font-medium text-4xl md:text-6xl mb-3 md:mb-4 text-white">
             ৩০-দিনের{" "}

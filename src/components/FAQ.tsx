@@ -33,7 +33,7 @@ export function FAQ() {
   ];
 
   return (
-    <section className="lg:py-32 pt-24 pb-24" id="faq">
+    <section className="py-10 lg:py-18" id="faq">
       <div className="w-full lg:px-8 max-w-[1200px] mx-auto pr-6 pl-6 relative">
         {/* Header */}
         <section className="relative">

@@ -19,7 +19,7 @@ export function FoundingMember() {
   return (
     <section
       id="founding-member"
-      className="relative z-10 w-full max-w-[1200px] mx-auto px-4 sm:px-6 py-10 md:py-10"
+      className="relative z-10 w-full max-w-[1200px] mx-auto px-4 sm:px-6 py-10 lg:py-18"
     >
       <motion.div
         {...fadeUp(0)}

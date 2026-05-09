@@ -163,7 +163,7 @@ export function Features() {
   return (
     <section
       id="features"
-      className="relative z-10 overflow-hidden px-4 pt-16 pb-20 sm:px-6 md:pb-28 lg:px-8 lg:pt-24 max-w-[1200px] mx-auto"
+      className="relative z-10 overflow-hidden px-4 sm:px-6 lg:px-8 py-10 lg:py-18 max-w-[1200px] mx-auto"
       style={{ perspective: 1500 }}
     >
       {/* ── Background atmosphere ── */}

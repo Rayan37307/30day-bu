@@ -3,7 +3,7 @@ import { Youtube, Facebook } from "lucide-react";
 
 export function Mentor() {
   return (
-    <section className="relative w-full max-w-[1200px] mx-auto px-6 py-10" id="mentor">
+    <section className="relative w-full max-w-[1200px] mx-auto px-6 py-10 lg:py-18" id="mentor">
       <div className="text-center mb-5">
         <h2 className="text-5xl md:text-6xl lg:text-7xl mb-12 font-display text-white tracking-tight leading-tight">
           তোমার <span className="text-white">ভাই</span>
