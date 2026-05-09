@@ -219,20 +219,7 @@ export function Features() {
                 {feat.body}
               </p>
 
-              {/* Bottom divider + micro CTA */}
-              <div className="mt-6 flex items-center gap-2 border-t border-white/[0.06] pt-5">
-                <span
-                  className="h-1.5 w-1.5 rounded-full"
-                  style={{ background: feat.accent }}
-                />
-                <span className="text-xs font-semibold text-slate-400 group-hover:text-white transition-colors">
-                  আরও জানুন
-                </span>
-                <ArrowRight
-                  size={12}
-                  className="text-slate-500 group-hover:text-white group-hover:translate-x-0.5 transition-all"
-                />
-              </div>
+
             </div>
 
             {/* Corner glow blob */}
@@ -244,42 +231,7 @@ export function Features() {
         ))}
       </div>
 
-      {/* ── Bottom Banner CTA ── */}
-      <motion.div
-        {...fadeUp(0.5)}
-        className="relative mt-12 overflow-hidden rounded-2xl border border-red-900/30 bg-gradient-to-br from-[#120808] via-[#0d0505] to-[#09090b] p-8 sm:p-10 lg:p-12"
-      >
-        {/* Glow pulse behind */}
-        <div className="pointer-events-none absolute -top-20 left-1/2 h-64 w-[600px] -translate-x-1/2 rounded-full bg-red-600/10 blur-[80px]" />
 
-        <div className="relative z-10 flex flex-col items-center gap-6 text-center sm:flex-row sm:text-left sm:gap-10">
-          {/* Left copy */}
-          <div className="flex-1">
-            <p className="mb-1 text-xs font-bold uppercase tracking-[0.2em] text-red-400">
-              সীমিত আসন বাকি আছে
-            </p>
-            <h3 className="font-display text-2xl font-bold text-white sm:text-3xl leading-tight">
-              আজই শুরু করো। কালকের অপেক্ষা করো না।
-            </h3>
-            <p className="mt-2 text-sm text-slate-400 leading-relaxed max-w-md">
-              প্রতিটি দিন দেরি করলে, প্রতিটি দিন তুমি নিজের থেকে আরও দূরে সরে যাচ্ছ।
-            </p>
-          </div>
-
-          {/* Right action */}
-          <div className="flex shrink-0 flex-col items-center gap-3">
-            <Button as="a" href="#pricing">
-              এখনই এনরোল করুন
-            </Button>
-            <p className="text-xs text-slate-500">
-              ৩০-দিনের মানি-ব্যাক গ্যারান্টি সহ
-            </p>
-          </div>
-        </div>
-
-        {/* Left border accent */}
-        <div className="absolute left-0 top-8 bottom-8 w-[3px] rounded-full bg-gradient-to-b from-transparent via-red-500 to-transparent" />
-      </motion.div>
     </section>
   );
 }
