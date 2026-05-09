@@ -20,7 +20,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="leading-[1.2] font-display max-w-5xl mx-auto mb-8"
         >
-          <span className="text-3xl sm:text-4xl lg:text-5xl text-white align-middle block mb-3">নিজের <span className="text-blue-500 drop-shadow-sm">BEST VERSION</span> কে ফিরিয়ে আনতে</span>
+          <span className="text-3xl sm:text-4xl lg:text-5xl text-white align-middle block mb-3">নিজের বেস্ট ভার্সনকে ফিরিয়ে আনতে</span>
           <span className="text-4xl sm:text-5xl lg:text-5xl text-white align-middle">
             শুধু <span className="text-gradient-red drop-shadow-sm ">৩০ দিনই</span> যথেষ্ট
           </span>
@@ -37,7 +37,7 @@ export function Hero() {
           <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-[#09090b] border border-red-900/30 p-2">
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/RG6fjpBbGpA?start=0&end=20&autoplay=1&mute=1&loop=1&playlist=RG6fjpBbGpA&controls=0&modestbranding=1&rel=0"
+              src="https://www.youtube.com/embed/RG6fjpBbGpA?modestbranding=1&rel=0"
               title="Course Intro Video"
               aria-label="Backbencher University Course Introduction Video"
               frameBorder="0"

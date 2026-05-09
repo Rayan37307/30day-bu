@@ -85,7 +85,7 @@ export function IsThisYou() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-[#110303] border border-white/5 rounded-2xl p-5 md:p-6 flex items-start gap-4 hover:border-[#E50914]/40 transition-colors shadow-[0_0_20px_rgba(229,9,20,0.02)]"
+                className="bg-[#1A1A1A] border border-white/5 rounded-2xl p-5 md:p-6 flex items-start gap-4 hover:border-[#E50914]/40 transition-colors shadow-[0_0_20px_rgba(229,9,20,0.02)]"
               >
                 <div className="mt-2.5 w-[5px] h-[5px] rounded-full bg-[#E50914] shadow-[0_0_8px_rgba(229,9,20,0.8)] shrink-0"></div>
                 <p className="text-slate-300 text-base md:text-[18px] font-medium leading-relaxed font-sans">

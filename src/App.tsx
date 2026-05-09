@@ -17,6 +17,7 @@ import { Approach } from './components/Approach';
 import { Features } from './components/Features';
 import { StickyBottomBar } from './components/StickyBottomBar';
 import { IsThisYou } from './components/IsThisYou';
+import { FoundingMember } from './components/FoundingMember';
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -97,8 +98,9 @@ export default function App() {
           <Modules />
           <Mentor />
           <SocialProof />
+          <FoundingMember />
           {/* <Pricing /> */}
-          <CTABanner />
+          {/* <CTABanner /> */}
           <FAQ />
           <Footer />
         </div>
