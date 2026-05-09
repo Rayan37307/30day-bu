@@ -42,7 +42,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 40, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full max-w-[1000px] mx-auto mb-16 relative group"
+          className="w-full max-w-[1200px] mx-auto mb-16 relative group"
         >
           {/* Edge Glow */}
           <div className="absolute -inset-0.5 bg-gradient-to-br from-red-500/30 to-purple-500/30 rounded-2xl opacity-50 group-hover:opacity-100 transition duration-700 pointer-events-none z-20 blur-sm"></div>

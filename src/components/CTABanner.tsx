@@ -41,7 +41,7 @@ export function CTABanner() {
   }, []);
 
   return (
-    <section className="w-full max-w-[900px] mx-auto px-6 mb-32 mt-12 relative z-20">
+    <section className="w-full max-w-[1200px] mx-auto px-6 mb-32 mt-12 relative z-20">
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -65,7 +65,7 @@ export function CTABanner() {
         {/* Button */}
         <a 
           href="#pricing"
-          className="relative w-full max-w-[600px] group block"
+          className="relative w-full group block"
         >
           {/* Subtle Outer Glow */}
           <div className="absolute inset-0 bg-[#E50914]/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

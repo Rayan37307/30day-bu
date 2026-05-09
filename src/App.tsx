@@ -86,8 +86,8 @@ export default function App() {
           <Mentor />
           <SocialProof />
           <Pricing />
-          <FAQ />
           <CTABanner />
+          <FAQ />
           <Footer />
         </div>
         <StickyBottomBar />

@@ -88,7 +88,7 @@ export function FAQ() {
         </section>
 
         {/* FAQ Layout */}
-        <div className="w-full max-w-4xl mx-auto relative mt-8">
+        <div className="w-full max-w-[1200px] mx-auto relative mt-8">
           
           {/* FAQ list */}
           <motion.div 

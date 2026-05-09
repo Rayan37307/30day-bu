@@ -132,7 +132,7 @@ export function Modules() {
       </section>
 
       {/* Pinned Stacking Cards Section */}
-      <section ref={containerRef} className="relative flex items-center justify-center h-screen w-full max-w-[1400px] mx-auto overflow-hidden px-6">
+      <section ref={containerRef} className="relative flex items-center justify-center h-screen w-full max-w-[1200px] mx-auto overflow-hidden px-6">
         {modules.map((mod, i) => (
           <div
             key={mod.id}
@@ -144,7 +144,7 @@ export function Modules() {
               top: calc... Creates the visual "stacked edges" offset effect
             */}
             <article
-              className="card-inner relative w-full max-w-[1400px] origin-top flex flex-col md:flex-row overflow-hidden bg-navy-card border border-border-subtle rounded-2xl will-change-transform min-h-[550px] md:min-h-[600px]"
+              className="card-inner relative w-full max-w-[1200px] origin-top flex flex-col md:flex-row overflow-hidden bg-navy-card border border-border-subtle rounded-2xl will-change-transform min-h-[550px] md:min-h-[600px]"
               style={{
                 top: `calc(-5vh + ${i * 30}px)`, 
                 boxShadow: `0 30px 60px rgba(0,0,0,0.6), 0 0 80px ${mod.glowColor}`,
