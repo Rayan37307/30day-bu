@@ -89,7 +89,7 @@ export default function App() {
         </div>
 
         {/* Main Content Hierarchy */}
-        <div className="relative z-10 flex flex-col items-center w-full">
+        <div className="relative z-10 flex flex-col items-center mb-10 w-full">
           {/* <Navbar /> */}
           <Hero />
           <IsThisYou />
@@ -102,7 +102,7 @@ export default function App() {
           {/* <Pricing /> */}
           {/* <CTABanner /> */}
           {/* <FAQ /> */}
-          <Footer />
+          {/* <Footer /> */}
         </div>
         <StickyBottomBar />
       </div>
