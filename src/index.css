@@ -185,3 +185,8 @@ h6 {
   animation: red-glow 3s ease-in-out infinite;
 }
 
+@keyframes stickyGradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

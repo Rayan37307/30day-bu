@@ -113,10 +113,10 @@ export function Pricing() {
                 <div>
                   <div className="flex items-baseline gap-3 mb-2">
                     <span className="text-5xl md:text-7xl lg:text-8xl font-normal text-white tracking-tight font-display">
-                      ৳১০০০
+                      ১০০০/=
                     </span>
                     <span className="text-lg md:text-xl lg:text-2xl font-normal text-white tracking-tight font-display opacity-90 line-through decoration-red-500/50">
-                      ৳৫০০০
+                      ৫০০০/=
                     </span>
                   </div>
                   <p className="text-gray-400 text-base md:text-lg font-light font-sans">

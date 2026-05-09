@@ -42,7 +42,14 @@ export function StickyBottomBar() {
   }, []);
 
   return (
-    <div className="fixed bottom-0 left-0 w-full bg-gradient-to-r from-[#1a0000] via-[#2a0000] to-[#1a0000] border-t border-[#E50914]/30 z-[100] shadow-[0_-10px_40px_rgba(0,0,0,0.5)]">
+    <div
+      className="fixed bottom-0 left-0 w-full h-[72px] border-t border-[#E50914]/30 z-[100] shadow-[0_-10px_40px_rgba(0,0,0,0.5)] overflow-visible"
+      style={{
+        background: 'linear-gradient(270deg, #0d0000, #1a0000, #2e0505, #5a0a0a, #2e0505, #1a0000, #0d0000)',
+        backgroundSize: '400% 400%',
+        animation: 'stickyGradientFlow 5s ease infinite',
+      }}
+    >
       <div className="max-w-[1200px] mx-auto px-4 lg:px-6 h-[72px] flex items-center justify-between">
         
         {/* Left: Image, Text & Timer */}
@@ -51,7 +58,7 @@ export function StickyBottomBar() {
              <img src="/IMG_2718-removebg-preview.png" alt="Mentor" className="w-full h-full object-contain object-bottom drop-shadow-md" />
           </div>
           
-          <span className="hidden lg:flex text-white uppercase tracking-tight text-[19px] font-display items-center gap-2 whitespace-nowrap">
+          <span className="hidden lg:flex text-white uppercase tracking-tight lg:mr-16 text-[19px] font-display items-center gap-2 whitespace-nowrap">
   Become a Founding Member
   <ChevronsRight
     size={32}

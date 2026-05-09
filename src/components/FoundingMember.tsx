@@ -69,7 +69,6 @@ export function FoundingMember() {
               </span>
               <div className="relative flex flex-col items-center justify-center gap-2 rounded-2xl border-2 border-red-500/70 bg-gradient-to-b from-red-950/60 via-red-950/40 to-[#0d0000] px-8 py-8 sm:py-10 shadow-[0_0_30px_rgba(239,68,68,0.1)] h-full">
                 <div className="flex items-baseline gap-1">
-                  <span className="text-white text-2xl md:text-3xl font-display">৳</span>
                   <div className="relative inline-block">
                     <motion.span
                       className="block text-white text-6xl md:text-8xl font-display font-bold"
@@ -78,7 +77,7 @@ export function FoundingMember() {
                       viewport={{ once: true }}
                       transition={{ duration: 0.6, delay: 2.1, ease: 'easeIn' }}
                     >
-                      9,900
+                      9,900/=
                     </motion.span>
                     {/* Animated slash */}
                     <motion.div
@@ -108,9 +107,8 @@ export function FoundingMember() {
               </span>
               <div className="relative flex flex-col items-center justify-center gap-2 rounded-2xl border-2 border-green-500/70 bg-gradient-to-b from-green-900/50 via-green-950/40 to-[#000d04] px-8 py-8 sm:py-10 shadow-[0_0_40px_rgba(34,197,94,0.12)] h-full">
                 <div className="flex items-baseline gap-1.5">
-                  <span className="text-white text-3xl md:text-4xl font-sans">৳</span>
                   <span className="text-white text-6xl md:text-8xl font-display font-bold leading-none">
-                    990
+                    990/=
                   </span>
                 </div>
               </div>

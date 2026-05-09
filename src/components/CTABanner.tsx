@@ -71,8 +71,8 @@ export function CTABanner() {
           <div className="absolute inset-0 bg-[#E50914]/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           
           <div className="relative w-full bg-gradient-to-r from-[#2a0000] via-[#110000] to-[#2a0000] border border-[#E50914]/60 rounded-full py-4 px-6 md:px-8 flex items-center justify-center gap-3 transition-transform duration-300 group-hover:scale-[1.02] shadow-[inset_0_-5px_15px_rgba(0,0,0,0.6)]">
-            <span className="text-white font-bold text-lg md:text-xl font-sans tracking-wide">Secure Your Seat ৳৯৯৯</span>
-            <span className="text-slate-400 font-medium text-base md:text-lg line-through decoration-slate-500 font-sans">৳২০০০</span>
+            <span className="text-white font-bold text-lg md:text-xl font-sans tracking-wide">Secure Your Seat ৯৯৯/=</span>
+            <span className="text-slate-400 font-medium text-base md:text-lg line-through decoration-slate-500 font-sans">২০০০/=</span>
           </div>
         </a>
 
