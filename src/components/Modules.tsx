@@ -202,7 +202,7 @@ export function Modules() {
           </p>
           <h2 className="font-display font-medium text-3xl md:text-5xl mb-3 md:mb-4 text-white">
             ৩০-দিনের{" "}
-            <span className="text-gradient-red font-bold font-display underline decoration-2 underline-offset-4">
+            <span className="text-gradient-red font-bold font-display ">
               রোডম্যাপ
             </span>
           </h2>
