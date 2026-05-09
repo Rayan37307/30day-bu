@@ -17,7 +17,7 @@ export function Button({ children, as = 'button', href, onClick, className = '',
       ></span>
 
       <span
-        className="absolute top-0 left-0 w-full h-full rounded-lg bg-red-900"
+        className="absolute top-0 left-0 w-full h-full rounded-lg bg-[#5a0000]"
       ></span>
 
       <div
