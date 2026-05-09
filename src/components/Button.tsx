@@ -11,18 +11,13 @@ interface ButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 
 export function Button({ children, as = 'button', href, onClick, className = '', icon, ...props }: ButtonProps) {
   const content = (
-    <div className="relative w-full cursor-pointer group">
-      {/* Weighted 3D Button Body */}
-      <div className="relative flex w-full items-center justify-center py-4 px-8 text-[1.1rem] font-bold text-white bg-gradient-to-b from-[#ff3333] to-[#cc0000] rounded-xl overflow-hidden border-b-[6px] border-[#8a0000] shadow-[0_10px_30px_rgba(204,0,0,0.4)] transition-all duration-150 ease-out active:border-b-[0px] active:translate-y-[6px] active:shadow-[0_2px_10px_rgba(204,0,0,0.6)] group-hover:brightness-110">
-        
-        <span className="relative z-10 tracking-[0.15em] uppercase font-sans drop-shadow-md">
-          {children}
-        </span>
-      </div>
-    </div>
+    <span className="relative inline-flex items-center gap-2 px-6 py-3 border-1 border-red-500 font-semibold text-red-50 bg-gradient-to-tr from-red-900/50 via-red-900/90 to-red-900/50 ring-4 ring-red-900/20 rounded-full overflow-hidden hover:opacity-90 transition-opacity before:absolute before:top-4 before:left-1/2 before:-translate-x-1/2 before:w-[100px] before:h-[100px] before:rounded-full before:bg-gradient-to-b before:from-red-50/10 before:blur-xl cursor-pointer">
+      {icon && <span className="relative z-10">{icon}</span>}
+      <span className="relative z-10">{children}</span>
+    </span>
   );
 
-  const baseClasses = `relative group border-none bg-transparent p-0 outline-none cursor-pointer font-sans uppercase text-base inline-block ${className}`;
+  const baseClasses = `border-none bg-transparent p-0 outline-none font-sans inline-block ${className}`;
 
   if (as === 'a') {
     return (

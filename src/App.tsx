@@ -94,7 +94,7 @@ export default function App() {
           <Hero />
           <IsThisYou />
           {/* <Approach /> */}
-          <Features />
+          {/* <Features /> */}
           <Modules />
           <Mentor />
           <SocialProof />

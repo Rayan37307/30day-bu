@@ -182,19 +182,8 @@ export function Features() {
       {/* ── Eyebrow + Headline ── */}
       <motion.div {...fadeUp(0.05)} className="text-center">
         <h2 className="mx-auto max-w-4xl font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tighter text-white leading-[1.08]">
-          তোমার সফলতার জন্য <span className="text-white font-bold">সবকিছু</span> এক জায়গায়
+          এবার <span className="text-red-500">খেলা</span> হবে
         </h2>
-
-        <p className="mx-auto mt-5 max-w-xl text-base sm:text-lg leading-relaxed text-slate-400">
-          তোমার জীবন বদলে দেওয়ার জন্য দরকার শুধু একটা সিদ্ধান্ত। বাকি সব আমরা দিচ্ছি।
-        </p>
-
-        {/* ── CTAs ── */}
-        <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button as="a" href="#pricing" className="scale-[1.1] origin-top w-[250px]">
-            এনরোল করুন
-          </Button>
-        </div>
       </motion.div>
 
       {/* ── Feature Cards ── */}

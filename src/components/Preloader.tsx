@@ -103,7 +103,6 @@ export function Preloader({ onComplete }: PreloaderProps) {
           <span className="text-[#ef4444]">30-DAY</span>
         </h1>
       </div>
-
     </div>
   );
 }

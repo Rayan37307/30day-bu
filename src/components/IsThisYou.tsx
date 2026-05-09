@@ -3,7 +3,7 @@ import { ChevronsDown, CheckCircle2 } from "lucide-react";
 
 const symptoms = [
   "আজকে শেষ বারের মতো হাত মারবো। আজকেই লাস্ট। প্রমিস!",
-  "কালকে থেকে ভালো হয়ে যাবো।",
+  "কালকে থেকে সবরকম আকাম বাদ দিয়ে ভালো হয়ে যাবো।",
   "সারাদিন কিছু করতে মনে চায় না। সবকিছু বিরক্ত লাগে।",
   "কোনো কাজে ৫ মিনিটের বেশি ফোকাস নাই।",
   "জীবনের কোনো লক্ষ্য নাই। এমনেই বেঁচে আছি কোনোমতে।"
@@ -11,10 +11,10 @@ const symptoms = [
 
 const benefits = [
   { text: "আসক্তি থেকে পুরোপুরি বের হয়ে গেছো তুমি", highlight: "", textEnd: "" },
-  { text: "ঘন্টার পর ঘন্টা", highlight: "deep focus", textEnd: "নিয়ে কাজ করতে পারতেছো" },
-  { text: "দিন শেষে নিজের উপর", highlight: "proud feel", textEnd: "করতেছো" },
-  { text: "জীবনে আবার", highlight: "clear direction", textEnd: "খুঁজে পাইছো" },
-  { text: "ছোট ছোট মুহূর্তগুলো", highlight: "genuinely enjoy", textEnd: "করতে পারতেছো" }
+  { text: "ঘন্টার পর ঘন্টা", highlight: "DEEP FOCUS", textEnd: "নিয়ে কাজ করতে পারতেছো" },
+  { text: "দিন শেষে নিজের উপর", highlight: "PROUD FEEL", textEnd: "করতেছো" },
+  { text: "জীবনে আবার", highlight: "CLEAR DIRECTION", textEnd: "খুঁজে পাইছো" },
+  { text: "ছোট ছোট মুহূর্তগুলো", highlight: "GENUINELY ENJOY", textEnd: "করতে পারতেছো" }
 ];
 
 const redParticles = [...Array(20)].map(() => ({
@@ -85,7 +85,7 @@ export function IsThisYou() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-[#1c1c1c] to-[#050505] border border-white/10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05),0_0_20px_rgba(229,9,20,0.02)] rounded-2xl p-5 md:p-6 flex items-start gap-4 hover:border-[#E50914]/40 hover:from-[#252525] transition-all duration-300"
+                className="bg-gradient-to-br from-[#1c1c1c] to-[#050505] border-1 border-red-500 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05),0_0_20px_rgba(229,9,20,0.02)] rounded-2xl p-5 md:p-6 flex items-start gap-4 transition-all duration-300"
               >
                 <div className="mt-2.5 w-[5px] h-[5px] rounded-full bg-[#E50914] shadow-[0_0_8px_rgba(229,9,20,0.8)] shrink-0"></div>
                 <p className="text-slate-300 text-base md:text-[18px] font-medium leading-relaxed font-sans">
@@ -105,7 +105,7 @@ export function IsThisYou() {
             viewport={{ once: true }}
             className="relative bg-[#030000] px-4 text-[#22c55e]"
           >
-            <ChevronsDown size={44} className="drop-shadow-[0_0_15px_rgba(34,197,94,0.6)]" />
+            <ChevronsDown size={100} className="drop-shadow-[0_0_15px_rgba(34,197,94,0.6)] animate-pulse" />
           </motion.div>
         </div>
 
@@ -124,9 +124,9 @@ export function IsThisYou() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-slate-300/90 text-base md:text-lg mb-12 font-medium"
+            className="text-white text-lg md:text-2xl mb-12 font-medium"
           >
-            তোমার <span className="text-[#22c55e]">নতুন versionটা</span> কেমন হতে পারে?
+            তোমার <span className="text-[#22c55e]">নতুন <span className="font-display uppercase">version</span> </span> কেমন হতে পারে?
           </motion.p>
 
           <div className="w-full max-w-[850px] flex flex-col gap-4">
@@ -137,7 +137,7 @@ export function IsThisYou() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-[#051108] border border-white/5 rounded-xl p-4 md:p-5 flex items-center gap-4 md:gap-6 hover:border-[#22c55e]/30 transition-colors shadow-[0_0_20px_rgba(34,197,94,0.03)]"
+                className="bg-[#051108] border-1 border-green-500 rounded-xl p-4 md:p-5 flex items-center gap-4 md:gap-6 transition-colors shadow-[0_0_20px_rgba(34,197,94,0.03)]"
               >
                 <div className="shrink-0 flex items-center justify-center">
                   <CheckCircle2 className="text-[#22c55e] drop-shadow-[0_0_8px_rgba(34,197,94,0.4)]" size={26} strokeWidth={2.5} />
@@ -147,7 +147,7 @@ export function IsThisYou() {
                 
                 <p className="text-slate-300 text-[17px] md:text-[19px] font-medium leading-relaxed font-sans">
                   {benefit.text}
-                  {benefit.highlight && <span className="text-[#22c55e] font-bold"> {benefit.highlight} </span>}
+                  {benefit.highlight && <span className="text-[#22c55e] text-[18px] md:text-[22px] font-display"> {benefit.highlight} </span>}
                   {benefit.textEnd && <span>{benefit.textEnd}</span>}
                 </p>
               </motion.div>

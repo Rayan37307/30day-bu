@@ -197,19 +197,12 @@ export function Modules() {
       {/* ── Header ── */}
       <section className="py-12 md:py-20 text-center w-full">
         <div className="w-full max-w-[1200px] mx-auto px-4 md:px-6">
-          <p className="text-xs font-mono font-bold tracking-[0.2em] uppercase text-slate-400 mb-3 md:mb-4">
-            কোর্স কারিকুলাম
-          </p>
           <h2 className="font-display font-medium text-3xl md:text-5xl mb-3 md:mb-4 text-white">
             ৩০-দিনের{" "}
             <span className="text-gradient-red font-bold font-display ">
               রোডম্যাপ
             </span>
           </h2>
-          <p className="text-slate-300/90 max-w-xl mx-auto text-base md:text-lg pt-2 leading-relaxed px-2">
-            প্রতিদিন নিজেকে নতুন করে গড়ুন। নিচে কোর্সের ৪টি ধাপের মাস্টার
-            ব্রেকডাউন দেওয়া হলো।
-          </p>
         </div>
       </section>
 
