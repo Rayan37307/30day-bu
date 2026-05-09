@@ -24,7 +24,7 @@ const modules = [
     points: [
       "কিভাবে আজকেই ACTION নেওয়া শুরু করবে",
       "কিভাবে URGES CONTROL করবে",
-      "কিভাবে PORN ADDICTION-এর DANGEROUS CYCLE COMPLETELY BREAK করবে",
+      "কিভাবে PORN ADDICTION এর DANGEROUS CYCLE COMPLETELY BREAK করবে",
       "কিভাবে GUILT আর SHAME থেকে বের হয়ে MENTALLY STRONG হবে",
     ],
     footer:
@@ -39,13 +39,13 @@ const modules = [
     accentColor: "#a855f7",
     glowColor: "rgba(168,85,247,0.18)",
     points: [
-      "কিভাবে সব DISTRACTION বাদ দিয়ে DEEP FOCUS-এ কাজ করবে",
+      "কিভাবে সব DISTRACTION বাদ দিয়ে DEEP FOCUS এ কাজ করবে",
       "কিভাবে একটা PROPER ROUTINE BUILD করবে",
       "কিভাবে CONSISTENCY MAINTAIN করবে",
-      "কিভাবে DISCIPLINE-এর মাধ্যমে অল্প সময়ে MASSIVE IMPROVEMENT আনবে",
+      "কিভাবে DISCIPLINE এর মাধ্যমে অল্প সময়ে MASSIVE IMPROVEMENT আনবে",
     ],
     footer:
-      "এই PHASE-এ তুমি শিখবে কিভাবে নিজের MIND-কে CONTROL করে একজন REAL ACTION TAKER হতে হয়",
+      "এই PHASE এ তুমি শিখবে কিভাবে নিজের MIND কে CONTROL করে একজন REAL ACTION TAKER হতে হয়",
   },
   {
     id: "03",
