@@ -5,11 +5,6 @@ interface PreloaderProps {
   onComplete: () => void;
 }
 
-const convertToBengali = (num: number) => {
-  const banglaDigits = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
-  return num.toString().split('').map(digit => banglaDigits[parseInt(digit)]).join('');
-};
-
 export function Preloader({ onComplete }: PreloaderProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLHeadingElement>(null);
@@ -39,7 +34,7 @@ export function Preloader({ onComplete }: PreloaderProps) {
         roundProps: "val",
         onUpdate: () => {
           if (countRef.current) {
-            countRef.current.innerText = convertToBengali(Math.round(counterObj.val));
+            countRef.current.innerText = Math.round(counterObj.val).toString();
           }
         },
         ease: "power2.out"
@@ -80,13 +75,13 @@ export function Preloader({ onComplete }: PreloaderProps) {
       <div className="relative z-10 px-6 text-center">
         <h1
           ref={textRef}
-          className="text-4xl md:text-7xl font-display font-bold text-white tracking-tight leading-tight"
+          className="text-4xl md:text-7xl font-anton uppercase text-white tracking-tight leading-tight"
           style={{
             textShadow: '0 0 25px rgba(255, 59, 59, 0.4), 0 0 50px rgba(255, 59, 59, 0.2)',
           }}
         >
-          <span ref={countRef}>০</span>-দিনের জীবন <br />
-          <span className="text-electric-blue underline decoration-2 underline-offset-4">পরিবর্তনের</span> প্রোগ্রাম
+          THE <span ref={countRef} className="text-electric-blue">0</span> DAYS LIFE<br />
+          CHANGING PROGRAM
         </h1>
       </div>
     </div>

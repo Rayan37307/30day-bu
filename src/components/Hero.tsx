@@ -31,9 +31,10 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="leading-[1.2] tracking-tight font-display max-w-5xl mx-auto mb-16"
         >
-          <span className="text-3xl sm:text-4xl lg:text-5xl text-white align-middle mr-3">মাস্টার</span>
-          <span className="text-4xl sm:text-6xl lg:text-[72px] text-gradient-red drop-shadow-sm align-middle">ইউর মাইন্ড: অ্যাডিকশন থেকে</span><br className="hidden sm:block" />
-          <span className="text-3xl sm:text-4xl lg:text-5xl text-white block mt-2">সেলফ-মাস্টারি অর্জন করুন</span>
+          <span className="text-3xl sm:text-4xl lg:text-5xl text-white align-middle block mb-3">শুধু 30 টা দিন আমার সাথে থাকো</span>
+          <span className="text-4xl sm:text-5xl lg:text-[64px] text-white align-middle leading-tight">
+            সেরা একটা <span className="font-anton uppercase text-gradient-red drop-shadow-sm align-middle tracking-tighter text-[1.1em]">COMEBACK</span><br className="block sm:hidden" /> হবেই ইনশাআল্লাহ
+          </span>
         </motion.h1>
 
         {/* Massive Video */}

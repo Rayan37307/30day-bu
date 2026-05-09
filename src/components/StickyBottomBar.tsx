@@ -46,8 +46,8 @@ export function StickyBottomBar() {
         
         {/* Left: Image, Text & Timer */}
         <div className="flex items-center gap-6 h-full">
-          <div className="h-[90px] w-[80px] -mt-[18px] relative overflow-hidden rounded-t-lg shadow-lg border-x border-t border-[#E50914]/20 bg-[#111]">
-             <img src="/IMG_2718.jpg" alt="Mentor" className="w-full h-full object-cover object-[center_10%]" />
+          <div className="h-[90px] w-[80px] -mt-[18px] relative overflow-visible">
+             <img src="/IMG_2718-removebg-preview.png" alt="Mentor" className="w-full h-full object-contain object-bottom drop-shadow-md" />
           </div>
           
           <span className="text-white/90 text-[15px] font-sans tracking-wide">
@@ -68,9 +68,12 @@ export function StickyBottomBar() {
             GET AT <span className="text-electric-blue font-bold">50%</span> DISCOUNT
           </span>
           
-          <Button as="a" href="#pricing" className="!py-2.5 !px-6 text-sm">
+          <a 
+            href="#pricing" 
+            className="py-2.5 px-6 rounded-full border border-electric-blue/60 bg-gradient-to-r from-[#3a0000] to-[#5a0000] text-white font-bold text-sm tracking-wide transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(255,59,59,0.3)] whitespace-nowrap"
+          >
             Register Today for ৳৯৯৯
-          </Button>
+          </a>
         </div>
 
       </div>

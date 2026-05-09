@@ -16,6 +16,7 @@ import { Preloader } from './components/Preloader';
 import { Approach } from './components/Approach';
 import { Features } from './components/Features';
 import { StickyBottomBar } from './components/StickyBottomBar';
+import { IsThisYou } from './components/IsThisYou';
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -78,6 +79,7 @@ export default function App() {
         <div className="relative z-10 flex flex-col items-center w-full">
           {/* <Navbar /> */}
           <Hero />
+          <IsThisYou />
           {/* <Approach /> */}
           <Features />
           <Modules />
