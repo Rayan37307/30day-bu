@@ -2,10 +2,10 @@ import { motion } from 'framer-motion';
 import { ShieldCheck, RefreshCw, Users, Gift, Clock, TrophyIcon } from 'lucide-react';
 
 const perks = [
-  { icon: ShieldCheck, label: "FOUNDER'S SPECIAL ACCESS", labelBn: "ফাউন্ডারদের বিশেষ সুবিধা" },
-  { icon: RefreshCw, label: "LIFETIME UPDATES", labelBn: "সব আপডেট ফ্রি" },
-  { icon: Users, label: "PRIVATE COMMUNITY", labelBn: "এক্সক্লুসিভ কমিউনিটি" },
-  { icon: Gift, label: "BONUS RESOURCES", labelBn: "এক্সক্লুসিভ বোনাস" },
+  { icon: ShieldCheck, label: "Exclusive Brotherhood Access" },
+  { icon: RefreshCw, label: "30 Days Transformation System"},
+  { icon: Users, label: "Private Community"},
+  { icon: Gift, label: "Premium Growth Resources" },
 ];
 
 const fadeUp = (delay = 0) => ({
@@ -56,40 +56,63 @@ export function FoundingMember() {
               <br className="hidden sm:block" />
               <span className="text-red-500 font-bold">FOUNDING MEMBER</span>
             </h2>
-            <p className="mt-4 text-sm md:text-base text-gray-400 leading-relaxed">
-              শুরু থেকেই যারা এই journey-এর আশি হবে,{' '}
-              তাদের জন্য lifetime lowest price.
-            </p>
           </motion.div>
 
           {/* ─── Price Cards ─── */}
              
           <motion.div {...fadeUp(0.15)} className="flex flex-col sm:flex-row items-stretch justify-center gap-5 md:gap-6 w-full">
             {/* Regular Price Card — RED */}
-            
-            <div className="relative flex flex-col items-center justify-center gap-2 rounded-2xl border-2 border-red-500/70 bg-gradient-to-b from-red-950/60 via-red-950/40 to-[#0d0000] px-8 py-8 sm:py-10 flex-1 shadow-[0_0_30px_rgba(239,68,68,0.1)]">
-              <div className="flex items-baseline gap-1">
-                <span className="text-white text-2xl md:text-3xl font-display">৳</span>
-                <span className="text-white text-6xl md:text-8xl font-display font-bold line-through decoration-red-500/80 decoration-[3px]">
-                  9,900
-                </span>
+            <div className="flex flex-col w-full flex-1 gap-3">
+              <span className="text-[30px] font-bold uppercase text-center leading-[1.1] tracking-tight text-red-500 font-display">
+                ORIGINAL <span className='text-white'>PRICE</span>
+              </span>
+              <div className="relative flex flex-col items-center justify-center gap-2 rounded-2xl border-2 border-red-500/70 bg-gradient-to-b from-red-950/60 via-red-950/40 to-[#0d0000] px-8 py-8 sm:py-10 shadow-[0_0_30px_rgba(239,68,68,0.1)] h-full">
+                <div className="flex items-baseline gap-1">
+                  <span className="text-white text-2xl md:text-3xl font-display">৳</span>
+                  <div className="relative inline-block">
+                    <motion.span
+                      className="block text-white text-6xl md:text-8xl font-display font-bold"
+                      initial={{ opacity: 1 }}
+                      whileInView={{ opacity: 0.45 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: 2.1, ease: 'easeIn' }}
+                    >
+                      9,900
+                    </motion.span>
+                    {/* Animated slash */}
+                    <motion.div
+                      className="absolute left-[-6px] right-[-6px] h-[4px] md:h-[5px] bg-red-500 top-[52%] -translate-y-1/2 origin-left rounded-full pointer-events-none"
+                      style={{
+                        rotate: -6,
+                        boxShadow: '0 0 10px rgba(239,68,68,0.9), 0 0 28px rgba(239,68,68,0.5)',
+                      }}
+                      initial={{ scaleX: 0 }}
+                      whileInView={{ scaleX: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1.4, delay: 0.95, ease: [0.25, 0.1, 0.25, 1] }}
+                    />
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* Arrow */}
-            <div className="text-red-500 text-3xl font-bold hidden sm:flex items-center select-none">›</div>
+            <div className="text-red-500 text-3xl font-bold hidden sm:flex items-center select-none pt-8">›</div>
             <div className="text-red-500 text-3xl font-bold sm:hidden flex justify-center select-none rotate-90">›</div>
 
             {/* Founding Member Price Card — GREEN */}
-            
-            <div className="relative flex flex-col items-center justify-center gap-2 rounded-2xl border-2 border-green-500/70 bg-gradient-to-b from-green-900/50 via-green-950/40 to-[#000d04] px-8 py-8 sm:py-10 flex-1 shadow-[0_0_40px_rgba(34,197,94,0.12)]">
-              
-              <div className="flex items-baseline gap-1.5">
-                <span className="text-white text-3xl md:text-4xl font-display">৳</span>
-                <span className="text-white text-6xl md:text-8xl font-display font-bold leading-none">
-                  990
-                </span>
-              </div>
+            <div className="flex flex-col w-full flex-1 gap-3">
+              <span className="text-[30px] font-bold uppercase text-center leading-[1.1] tracking-tight text-green-500 font-display">
+                FOUNDING MEMBER <span className='text-white'>PRICE</span>
+              </span>
+              <div className="relative flex flex-col items-center justify-center gap-2 rounded-2xl border-2 border-green-500/70 bg-gradient-to-b from-green-900/50 via-green-950/40 to-[#000d04] px-8 py-8 sm:py-10 shadow-[0_0_40px_rgba(34,197,94,0.12)] h-full">
+                <div className="flex items-baseline gap-1.5">
+                  <span className="text-white text-3xl md:text-4xl font-display">৳</span>
+                  <span className="text-white text-6xl md:text-8xl font-display font-bold leading-none">
+                    990
+                  </span>
+                </div>
+             </div>
             </div>
           </motion.div>
 
@@ -101,11 +124,8 @@ export function FoundingMember() {
                 className="flex flex-col items-center gap-3 rounded-xl bg-white/[0.04] border border-white/10 px-4 py-6 text-center hover:border-red-500/30 transition-colors duration-300"
               >
                 <perk.icon size={28} className="text-red-400" />
-                <span className="text-[13px] font-bold uppercase tracking-[0.12em] text-white font-sans leading-snug">
+                <span className="text-[14px] font-bold uppercase leading-[1.1] tracking-tight text-white font-sans">
                   {perk.label}
-                </span>
-                <span className="text-[12px] text-gray-300 font-sans leading-snug">
-                  {perk.labelBn}
                 </span>
               </div>
             ))}
