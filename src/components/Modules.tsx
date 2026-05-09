@@ -223,7 +223,7 @@ export function Modules() {
           return (
             <div
               key={mod.id}
-              className="card-wrapper absolute inset-0 flex items-center justify-center w-full h-full will-change-transform"
+              className="card-wrapper absolute inset-0 flex items-center justify-center w-full h-full px-4 md:px-0 will-change-transform"
               style={{ zIndex: i + 1 }}
             >
               <article

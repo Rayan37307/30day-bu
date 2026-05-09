@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Atma:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Hind+Siliguri:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Atma:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Hind+Siliguri:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Teko:wght@300..700&display=swap');
 @import "tailwindcss";
 
 
@@ -23,10 +23,10 @@
   --color-border-subtle: #18181b;
   --color-text-secondary: #A1A1AA;
   
-  --font-sans: "Anton", "Li Alinur Shishir Unicode", "Hind Siliguri", "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Anton", "Li Alinur Shishir Unicode", "Sabbir Shorolota", "Anek Bangla", "Atma", system-ui;
+  --font-sans: "Teko", "Li Alinur Shishir Unicode", "Hind Siliguri", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Teko", "Li Alinur Shishir Unicode", "Sabbir Shorolota", "Anek Bangla", "Atma", system-ui;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
-  --font-anton: "Anton", sans-serif;
+  --font-teko: "Teko", sans-serif;
 }
 
 body {
@@ -43,7 +43,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Anton", "Li Alinur Shishir Unicode", system-ui !important;
+  font-family: "Teko", "Li Alinur Shishir Unicode", system-ui !important;
   font-weight: normal !important;
 }
 
@@ -164,7 +164,7 @@ h6 {
 }
 
 .footer-brand-text {
-  font-family: "Anton", sans-serif !important;
+  font-family: "Teko", sans-serif !important;
 }
 
 @keyframes red-glow {

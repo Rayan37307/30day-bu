@@ -9,6 +9,7 @@ export function Preloader({ onComplete }: PreloaderProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLHeadingElement>(null);
   const progressRef = useRef<HTMLSpanElement>(null);
+  const progressBarRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const tl = gsap.timeline({
@@ -17,35 +18,49 @@ export function Preloader({ onComplete }: PreloaderProps) {
       },
     });
 
-    // Initial state
-    gsap.set(textRef.current, { y: 20, opacity: 0, letterSpacing: "0px" });
+    // Initial state: Text is blurred, slightly smaller, and shifted down
+    gsap.set(textRef.current, { y: 40, opacity: 0, scale: 0.95, filter: "blur(10px)" });
+    gsap.set(progressBarRef.current, { scaleX: 0, transformOrigin: "left" });
 
     const progressObj = { val: 0 };
 
-    tl.to(textRef.current, {
-      y: 0,
-      opacity: 1,
-      letterSpacing: "4px",
-      duration: 1.8,
-      ease: "power2.out",
-    }, 0)
-      .to(progressObj, {
+    // Dashboard boot-up sequence
+    tl.to(progressObj, {
         val: 100,
-        duration: 1.8,
+        duration: 1.2,
         roundProps: "val",
         onUpdate: () => {
           if (progressRef.current) {
             progressRef.current.innerText = Math.round(progressObj.val).toString();
           }
         },
-        ease: "power2.inOut"
+        ease: "power4.inOut" // Fast acceleration and deceleration
       }, 0)
+      .to(progressBarRef.current, {
+        scaleX: 1,
+        duration: 1.2,
+        ease: "power4.inOut"
+      }, 0)
+      .to(textRef.current, {
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        filter: "blur(0px)",
+        duration: 1.0,
+        ease: "expo.out", // Sharp snap into place
+      }, 0.2)
+      .to(textRef.current, {
+        letterSpacing: "4px",
+        duration: 1.0,
+        ease: "power2.out"
+      }, 0.2)
       .to(containerRef.current, {
         yPercent: -100,
-        duration: 0.8,
+        scale: 1.02, // Subtle zoom as it exits
+        opacity: 0,
+        duration: 0.7,
         ease: "expo.inOut",
-        delay: 0.3,
-      })
+      }, 1.4) // 0.2s pause after boot completes before exiting
       .to(containerRef.current, {
         pointerEvents: "none",
         duration: 0.1,
@@ -79,7 +94,7 @@ export function Preloader({ onComplete }: PreloaderProps) {
       <div className="relative z-10 px-6 text-center flex flex-col items-center">
         <h1
           ref={textRef}
-          className="text-4xl md:text-6xl lg:text-7xl font-anton uppercase text-white leading-tight font-bold"
+          className="text-4xl md:text-6xl lg:text-7xl font-teko uppercase text-white leading-tight font-bold"
           style={{
             textShadow: '0 10px 30px rgba(0, 0, 0, 0.5)',
           }}
@@ -89,22 +104,14 @@ export function Preloader({ onComplete }: PreloaderProps) {
         </h1>
       </div>
 
-      {/* Tiny sophisticated counter at the bottom */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex items-center gap-3 text-[#a1a1aa] font-mono text-[10px] tracking-[0.2em] uppercase opacity-70">
-        <span>Loading</span>
-        <div className="h-[1px] w-8 bg-white/20 relative overflow-hidden">
-          <div className="absolute inset-0 bg-white/80 origin-left" style={{ transform: 'scaleX(0)', animation: 'progressLine 1.8s ease-in-out forwards' }} />
+      {/* Dashboard style boot-up counter */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex items-center gap-4 text-[#a1a1aa] font-mono text-[10px] tracking-[0.25em] uppercase opacity-80">
+        <span>SYS.BOOT</span>
+        <div className="h-[2px] w-16 bg-white/10 relative overflow-hidden rounded-full">
+          <div ref={progressBarRef} className="absolute inset-0 bg-[#ef4444] shadow-[0_0_8px_rgba(239,68,68,0.8)]" />
         </div>
-        <span className="w-6 text-right tabular-nums"><span ref={progressRef}>0</span>%</span>
+        <span className="w-8 text-right tabular-nums text-white font-bold"><span ref={progressRef}>0</span>%</span>
       </div>
-
-      {/* Inline styles for the progress line animation */}
-      <style>{`
-        @keyframes progressLine {
-          from { transform: scaleX(0); }
-          to { transform: scaleX(1); }
-        }
-      `}</style>
     </div>
   );
 }

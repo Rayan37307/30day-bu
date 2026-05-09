@@ -11,21 +11,26 @@ interface ButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 
 export function Button({ children, as = 'button', href, onClick, className = '', icon, ...props }: ButtonProps) {
   const content = (
-    <>
-      <span
-        className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-25 rounded-lg transform translate-y-0.5 transition duration-[600ms] ease-[cubic-bezier(0.3,0.7,0.4,1)] group-hover:translate-y-1 group-hover:duration-[250ms] group-active:translate-y-px"
-      ></span>
-
-      <span
-        className="absolute top-0 left-0 w-full h-full rounded-lg bg-[#5a0000]"
-      ></span>
-
-      <div
-        className="relative flex w-full items-center justify-center py-3 px-6 text-lg text-white rounded-lg transform -translate-y-1 bg-electric-blue gap-3 transition duration-[600ms] ease-[cubic-bezier(0.3,0.7,0.4,1)] group-hover:-translate-y-1.5 group-hover:duration-[250ms] group-active:-translate-y-0.5 brightness-100 group-hover:brightness-110"
-      >
-        <span className="select-none font-bold tracking-wide font-sans">{children}</span>
+    <div className="relative w-full cursor-pointer group">
+      {/* Weighted 3D Button Body */}
+      <div className="relative flex w-full items-center justify-center py-4 px-8 text-[1.1rem] font-bold text-white bg-gradient-to-b from-[#ff3333] to-[#cc0000] rounded-xl overflow-hidden border-b-[6px] border-[#8a0000] shadow-[0_10px_30px_rgba(204,0,0,0.4)] transition-all duration-100 ease-out active:border-b-[0px] active:translate-y-[6px] active:shadow-[0_2px_10px_rgba(204,0,0,0.6)] group-hover:brightness-110">
+        
+        {/* Shimmer Effect */}
+        <div className="absolute inset-0 w-[200%] -translate-x-[150%] bg-gradient-to-r from-transparent via-white/30 to-transparent animate-[shimmer_2.5s_infinite]" />
+        
+        <span className="relative z-10 tracking-[0.15em] uppercase font-sans drop-shadow-md">
+          {children}
+        </span>
+        
+        {/* Keyframes for Shimmer */}
+        <style>{`
+          @keyframes shimmer {
+            0% { transform: translateX(-150%) skewX(-20deg); }
+            100% { transform: translateX(100%) skewX(-20deg); }
+          }
+        `}</style>
       </div>
-    </>
+    </div>
   );
 
   const baseClasses = `relative group border-none bg-transparent p-0 outline-none cursor-pointer font-sans uppercase text-base inline-block ${className}`;
