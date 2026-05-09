@@ -74,7 +74,7 @@ export function IsThisYou() {
             viewport={{ once: true }}
             className="text-3xl md:text-[44px] h2 font-bold text-center mb-12 tracking-wide"
           >
-            <span className="text-white">এটা কি</span> <span className="text-[#E50914]">তুমি?</span>
+            <span className="text-white">এটা কী</span> <span className="text-[#E50914]">তুমি?</span>
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
